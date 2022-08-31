@@ -1,0 +1,645 @@
+@charset "utf-8";
+/* CSS Document */
+
+html{
+	font-size: 2vw;
+}
+.cpContainer *, .cpContainer *::before, .cpContainer *::after{
+	box-sizing: border-box;
+}
+.cpContainer img{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+body .cpContainer{
+	background-color: #eaeaea;
+	font-family: "Noto Sans Japanese", sans-serif;
+	font-weight: 400;
+	color: #000000;
+}
+@media print, screen and (min-width:691px) {
+	html{
+		font-size: 20px;
+	}
+	.cpContainer .oSP{
+		display: none;
+	}
+}
+@media print, screen and (max-width: 1175px) and (min-width: 691px){
+	html{
+		font-size:1.73913vw;
+	}
+}
+@media only screen and (max-width: 690px) {
+	.cpContainer .oPC{
+		display: none;
+	}
+}
+/*====================================*/
+
+/*FOOTER*/
+/*====================================*/
+footer {
+  background-color: #000;
+  text-align: center;
+}
+
+footer .inner {
+  padding: 80px 0;
+}
+
+.snsList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.snsList li {
+  max-width: 50px;
+  margin-right: 35px;
+}
+
+.snsList li:last-child {
+  margin-right: 0;
+}
+
+.footer_logo {
+  margin: 40px auto 20px;
+}
+.footer_logo a{
+	display: block;
+	width: 200px;
+	margin: 0 auto;
+}
+.footer_logo img {
+  max-width: 200px;
+}
+
+@media only screen and (max-width: 690px) {
+  footer .inner {
+    padding: 40px 0;
+  }
+
+  .footer_logo {
+    width: 240px;
+    margin: 20px auto;
+  }
+
+  .snsList li {
+    width: 12%;
+    margin-right: 20px;
+  }
+}
+ 
+
+/*====================================*/
+
+/*共通アイテム*/
+/*====================================*/
+.cpW1120{
+	width: 44rem;
+	margin: 0 auto 6rem;
+}
+.cpCont{
+	padding-top: 4.5rem;
+}
+.cpCont h3{
+	padding-bottom: 0.6rem;
+	border-bottom: solid 1px #000000;
+	text-align: center;
+	font-size: 2.4rem;
+	font-weight: bold;
+}
+.cpBtn01 a{
+	position: relative;
+	display: block;
+	padding: 1.675rem 2rem 1.675rem 0;
+	background-color: #ffffff;
+	border: solid 1px #000000;
+	text-align: center;
+	font-size: 1.6rem;
+	font-weight: bold;
+}
+.cpBtn01 a::before{
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 1rem;
+	display: block;
+	width: 0.75rem;
+	height: 0.75rem;
+	margin-top: -0.375rem;
+	border-top: solid 1px #000000;
+	border-right: solid 1px #000000;
+	transform: rotate(45deg);
+}
+.cpBtn01 a:hover{
+	background-color: #000000;
+	color: #ffffff;
+}
+.cpBtn01 a:hover::before{
+	border-color: #ffffff;
+}
+.cpBottom .cpBtn01{
+	margin-top: 2rem;
+}
+@media print, screen and (min-width:691px) {
+	.cpW1120{
+		max-width: 1160px;
+		width: 100%;
+		margin: 0 auto 80px;
+		padding: 0 20px;
+	}
+	.cpCont{
+		padding-top: 100px;
+	}
+	.cpCont h3{
+		padding-bottom: 0.3rem;
+		font-size: 25px;
+	}
+	.cpBtn01 a{
+		padding: 16px 40px 16px 0;
+		font-size: 20px;
+	}
+	.cpBtn01 a::before{
+		right: 20px;
+		width: 12px;
+		height: 12px;
+		margin-top: -6px;
+	}
+	.cpBottom{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.cpBottom .cpBtn01{
+		width: 100%;
+	}
+	.cpBottom .cpBtn01:nth-of-type(-n+2){
+		width: 48%;
+	}
+	.cpBottom .cpBtn01 a{
+		display: flex;
+		justify-content:center;
+		align-items:center;
+		height: 88px;
+		padding: 0 2rem 0 0;
+	}
+	.cpBottom .cpBtn01{
+		margin-top: 40px;
+	}
+}
+@media print, screen and (min-width:691px) and (max-width:850px) {
+	.cpBottom .cpBtn01:nth-of-type(1) a{
+		font-size: 1.3rem;
+	}
+}
+
+/*====================================*/
+
+/*リード*/
+/*====================================*/
+.cpLead{
+	padding: 3.6rem 0 2.5rem;
+	text-align: center;
+}
+.cpLead h2{
+	margin-bottom: 2.1rem;
+	font-size: 2.6rem;
+	font-weight: bold;
+}
+.cpLead p{
+	line-height: 2.85rem;
+	font-size: 1.8rem;
+}
+ @media print, screen and (min-width:691px) {
+	.cpLead{
+		padding: 70px 0 90px;
+	}
+	.cpLead h2{
+		margin-bottom: 30px;
+		font-size: 29px;
+	}
+	.cpLead p{
+		line-height: 33px;
+		font-size: 20px;
+	}
+}
+
+
+/*====================================*/
+
+/*ナビ*/
+/*====================================*/
+.cpNav{
+	display: flex;
+	margin-bottom: 4.8rem;
+	border-top: solid 1px #000000;
+	border-bottom: solid 1px #000000;
+}
+.cpNav > li{
+	width: 33.3%;
+}
+.cpNav > li:nth-of-type(2){
+	width: 33.4%;
+	border-left: solid 1px #000000;
+	border-right: solid 1px #000000;
+}
+.cpNav li a{
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	height: 6.45rem;
+	background-color: #ffffff;
+	text-align: center;
+	line-height: 2.25rem;
+	font-size: 1.8rem;
+	font-weight: bold;
+}
+.cpNav li a:hover{
+	background-color: #000000;
+	color: #ffffff;
+}
+@media print, screen and (min-width:691px) {
+	.cpNav{
+		justify-content: space-between;
+		width: 640px;
+		margin: 0 auto 70px;
+		border: none;
+	}
+	.cpNav > li{
+		width: 200px;
+		border: solid 1px #000000;
+	}
+	.cpNav > li:nth-of-type(2){
+		width: 200px;
+	}
+	.cpNav li a{
+		height: 48px;
+		line-height: 48px;
+		font-size: 20px;
+	}
+}
+
+/*====================================*/
+
+/*開発目的と特徴*/
+/*====================================*/
+#link01.cpCont > p{
+	padding-top: 2rem;
+	line-height: 2.45rem;
+	font-size: 1.75rem;
+}
+.cpPencil{
+	min-height: 89.9rem;
+	margin-top: 3rem;
+	background: url("https://www.holbein.co.jp/dcms_media/image/cp_pencil.png") no-repeat 1.1rem 0.2rem;
+	background-size: 4rem auto;
+}
+.cpPencil article{
+	padding: 0 0 2.5rem 8.3rem;
+}
+.cpPencil article:last-of-type{
+	padding-bottom: 5rem;
+}
+.cpPencil h4{
+	line-height: 2.8rem;
+	font-size: 2.2rem;
+	font-weight: bold;
+}
+.cpPencil p{
+	line-height: 2.45rem;
+	font-size: 1.75rem;
+}
+@media print, screen and (min-width:691px) {
+	#link01.cpCont > p{
+		padding-top: 28px;
+		line-height: 28px;
+		font-size: 18px;
+	}
+	#link01.cpCont > p:first-of-type{
+		padding-top: 50px;
+	}
+	.cpPencil{
+		min-height: 34rem;
+		margin-top: 90px;
+		background-position: 3rem 0.2rem;
+		background-size: 1.5rem auto;
+	}
+	.cpPencil article{
+		padding: 0 0 40px 9rem;
+	}
+	.cpPencil article:last-of-type{
+		padding-bottom: 50px;
+	}
+	.cpPencil h4{
+		line-height: 31px;
+		font-size: 20px;
+	}
+	.cpPencil p{
+		line-height: 25px;
+		font-size: 15px;
+	}
+	.cpPencil .cpBtn01{
+		width: 580px;
+		margin: 0 0 0 auto;
+	}
+}
+
+/*====================================*/
+
+/*製品ラインアップ*/
+/*====================================*/
+.cpLineupMv{
+	margin: 4rem 0 2.3rem;
+}
+.cpLineupItem{
+	padding-bottom: 2.4rem;
+	border-bottom: solid 1px #000000;
+}
+.cpLineupItem.cpHaveLink{
+	padding-bottom: 1.4rem;
+}
+.cpLineupItem > a > div{
+	position: relative;
+	display: block;
+	padding: 1.65rem 2.45rem 0;
+}
+.cpLineupItem.cpLineup05 > a > div{
+	padding: 0;
+}
+.cpLineupItem a .cpLineupTitle{
+	position: absolute;
+	top: 1.5rem;
+	left: 0;
+}
+.cpLineupItem a:hover .cpLineupTitle{
+	opacity: 0.7;
+}
+.cpLineupItem a .cpLineupTitle h4{
+	line-height: 1.75rem;
+	font-size: 1.5rem;
+}
+.cpLineupItem a .cpLineupTitle p{
+	line-height: 1.5rem;
+	font-size: 1.2rem;
+}
+.cpLineupItem.cpLineup05 a .cpLineup05Text{
+	position: absolute;
+	top: 4.5rem;
+	right: 0;
+	width: 11rem;
+	line-height: 1.85rem;
+	font-size: 1.4rem;
+}
+.cpLineupItem .cpLineupLink{
+	text-align: right;
+}
+.cpLineupItem .cpLineupLink a{
+	position: relative;
+	padding-right: 1.2rem;
+	text-decoration: underline;
+	font-size: 1.4rem;
+}
+.cpLineupItem .cpLineupLink a::before{
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 0.3rem;
+	display: block;
+	width: 0.5rem;
+	height: 0.5rem;
+	margin-top: -0.1rem;
+	border-top: solid 1px #000000;
+	border-right: solid 1px #000000;
+	transform: rotate(45deg);
+}
+.cpLineupItem .cpLineupLink a:hover{
+	opacity: 0.6;
+	text-decoration: none;
+}
+@media print, screen and (min-width:691px) {
+	.cpLineupMv{
+		margin: 80px 0 50px;
+	}
+	.cpFlex{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.cpLineupItem{
+		width: 48%;
+		padding-bottom: 1.4rem;
+	}
+	.cpLineupItem > a > div{
+		padding: 0;
+	}
+	.cpLineupItem.cpHaveLink{
+		padding-bottom: 0.8rem;
+	}
+	.cpLineupItem a .cpLineupTitle h4{
+		top: 1rem;
+		line-height: 1.2rem;
+		font-size: 0.9rem;
+	}
+	.cpLineupItem a .cpLineupTitle p{
+		line-height: 1.1rem;
+		font-size: 0.7rem;
+	}
+	.cpLineupItem.cpLineup05 a .cpLineup05Text{
+		position: static;
+		padding: 0.5rem 0;
+		width: 100%;
+		line-height: 0.9rem;
+		font-size: 0.7rem;
+	}
+	.cpLineupItem .cpLineupLink{
+		text-align: left;
+	}
+	.cpLineupItem .cpLineupLink a{
+		font-size: 0.75rem;
+	}
+	.cpLineupItem .cpLineupLink a::before{
+		width: 0.4rem;
+		height: 0.4rem;
+		margin-top: -0.1rem;
+		border-top: solid 1px #000000;
+		border-right: solid 1px #000000;
+		transform: rotate(45deg);
+	}
+	.cpLineupItem .cpLineupLink a:hover{
+		opacity: 0.6;
+		text-decoration: none;
+	}
+}
+
+/*====================================*/
+
+/*作例*/
+/*====================================*/
+.cpCont#link03{
+	margin-bottom: 5rem;
+}
+.cpEx{
+	margin-top: 5rem;
+}
+.cpEx figcaption{
+	padding-top: 0.3rem;
+	text-align: right;
+	font-size: 1.2rem;
+}
+.cpEx > p{
+	line-height: 2rem;
+	font-size: 1.4rem;
+}
+.cpEx .cpExFlex{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 1rem 0;
+}
+.cpEx .cpExName{
+	display: flex;
+	align-items: center;
+}
+.cpEx .cpExName .cpExIcon{
+	width: 6.2rem;
+	margin-right: 1.5rem;
+}
+.cpEx .cpExName p{
+	font-size: 1.8rem;
+}
+.cpEx .cpExSns{
+	display: flex;
+	align-items: center;
+}
+.cpEx .cpExSns > div{
+	height: 3.9rem;
+	margin-right: 3.5rem;
+}
+.cpEx .cpExSns > div:last-of-type{
+	margin-right: 0;
+}
+.cpEx .cpExSns > div img{
+	height: 100%;
+	width: auto;
+}
+@media print, screen and (min-width:691px) {
+	.cpCont#link03{
+		margin-bottom: 120px;
+	}
+	.cpEx{
+		margin-top: 100px;
+	}
+	.cpEx figure{
+		display: table;
+		margin: 0 auto;
+	}
+	.cpEx figure.otomi{
+		max-width: 528px;
+		margin: 0 auto;
+	}
+	.cpEx figure img{
+		max-width: 100%;
+		width: auto;
+	}
+	.cpEx figcaption{
+		display: table-caption;
+		caption-side: bottom;
+		padding-top: 7px;
+		font-size: 15px;
+	}
+	.cpEx > p{
+		line-height: 26px;
+		font-size: 18px;
+	}
+	.cpEx .cpExFlex{
+		margin: 15px 0;
+	}
+	.cpEx .cpExName .cpExIcon{
+		width: 90px;
+	}
+	.cpEx .cpExName p{
+		font-size: 26px;
+	}
+	.cpEx .cpExSns > div{
+		height: 52px;
+		margin-right: 50px;
+	}
+}
+
+/*====================================*/
+
+/*当選者*/
+/*====================================*/
+.cpWinners h3{
+	padding: 1rem 0;
+	text-align: center;
+	line-height: 2.5rem;
+	font-size: 1.9rem;
+	font-weight: bold;
+	background-color: #b6e1f4;
+}
+.cpWinners .cpWinnersLead{
+	margin: 1.5rem auto 1rem;
+	text-align: center;
+	line-height: 2.2rem;
+	font-size: 1.5rem;
+}
+.cpWinners .cpWinnersList li{
+	display: flex;
+	padding: 3rem 0;
+	border-bottom: solid 1px #000000;
+}
+.cpWinners .cpWinnersList .cpWinner{
+	width: 50%;
+	padding: 0 0.5rem;
+}
+.cpWinners .cpWinnersList .cpWinner figure{
+	display: table;
+	margin: 0 auto;
+}
+.cpWinners .cpWinnersList .cpWinner figure figcaption{
+	margin-bottom: 0.5rem;
+	font-size: 1.3rem;
+}
+.cpWinners .cpWinnersList .cpWinner figure figcaption a:hover{
+	text-decoration: underline;
+}
+.cpWinners .cpWinnersList .cpWinner figure img{
+	max-width: 100%;
+	width: auto;
+}
+.cpWinners .cpWinnersList .cpWinner.hL figure img{
+	height: 100%;
+	max-height: 21rem;
+}
+@media print, screen and (min-width:691px) {
+	.cpWinners h3{
+		padding: 32px 0;
+		line-height: 1.5;
+		font-size: 24px;
+	}
+	.cpWinners .cpWinnersLead{
+		margin: 42px auto 0;
+		line-height: 28px;
+		font-size: 21px;
+	}
+	.cpWinners .cpWinnersList li{
+		padding: 60px 0;
+	}
+	.cpWinners .cpWinnersList .cpWinner figure figcaption{
+		margin-bottom: 10px;
+		font-size: 24px;
+	}
+	.cpWinners .cpWinnersList .cpWinner.hL figure img{
+		max-height: 500px;
+	}
+}
+@media print, screen and (min-width:691px) and (max-width:820px) {
+	.cpWinners h3{
+		padding: 1.6rem 0;
+		font-size: 1.2rem;
+	}
+}

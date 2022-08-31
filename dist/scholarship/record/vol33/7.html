@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+<title>第33回奨学生のレポート⑦　若林 菜穂|ホルベイン オフィシャルウェブサイト</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="keywords" content="第33回奨学生のレポート⑦　若林 菜穂,holbein,color,ホルベイン,画材,絵具,画筆,水彩紙,イーゼル" />
+<meta name="description" content="第33回奨学生のレポート⑦　若林 菜穂│ホルベインのオフィシャルサイトです。絵具、画材の新製品、イベント、キャンペーン情報など、アートライフを豊かにする各種情報を提供します。" />
+
+<link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+		<link href="//fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
+		<link rel="stylesheet" href="/dcms_media/css/utility.css">
+		<link rel="stylesheet" href="/dcms_media/css/jquery.flexslider.css" />
+		<link rel="stylesheet" href="/dcms_media/css/jquery.bxslider.min.css" />
+		<link rel="stylesheet" href="/dcms_media/css/jquery.jscrollpane.css" />
+		<link rel="stylesheet" href="/dcms_media/css/common.css">
+		<link rel="stylesheet" href="/dcms_media/css/common_tablet.css">
+		<link rel="stylesheet" href="/dcms_media/css/common_smartphone.css">
+		<link rel="stylesheet" href="/dcms_media/css/sub.css">
+		<link rel="stylesheet" href="/dcms_media/css/sub_tablet.css">
+		<link rel="stylesheet" href="/dcms_media/css/sub_smartphone.css">
+                <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><!--アイコンフォント-->
+
+		<script src="/dcms_media/js/jquery-1.11.1.min.js"></script>
+		<script src="/dcms_media/js/current.js"></script>
+		<script src="/dcms_media/js/slidemenu.js"></script>
+		<script src="/dcms_media/js/scrolltopcontrol.js"></script>
+		<script src="/dcms_media/js/jquery.matchHeight-min.js"></script>
+		<script src="/dcms_media/js/jquery.flexslider-min.js"></script>
+		<script src="/dcms_media/js/jquery.bxslider.min.js"></script>
+		<script src="/dcms_media/js/jquery.mousewheel.js"></script>
+		<script src="/dcms_media/js/jquery.jscrollpane.min.js"></script>
+		<script src="/dcms_media/js/jQuery.BiggerLink.js"></script>
+
+		<script>
+			var lh = "";
+			lh = location.href;
+			if (lh.match(/dcmsadm/)) {
+                        document.write('<link rel="stylesheet" href="/dcms_media/css/management_screen.css" />');
+			} else {
+
+				document.write('<script src="/dcms_media/js/header_menu.js"></scri' + 'pt>');
+
+				(function($) {
+					$(document).ready(function() {
+
+
+
+						//モーダル+スライダー(jquery.bxslider使用)
+						if ($('.scholarship_modal').length > 0) {
+							$('body').append('<div class="scholarship_modal_close"></div><div class="scholarship_modal_overlay"></div>');
+						}
+						var sliders = new Array();
+						$('.scholarship_slider').each(function(i, slider) {
+							sliders[i] = $(slider).bxSlider();
+						});
+						$('.scholarship_modal_open a').on('click', function() {
+							var modalTarget = '.' + $(this).attr('data-modalClass');
+							var $modalTarget = $(modalTarget);
+							$modalTarget.addClass('scholarship_modal_active').stop().show(0, function() {
+								$(this).animate({
+									'opacity' : 1
+								}, 600);
+								$('.scholarship_modal_overlay, .scholarship_modal_close').stop().fadeIn(600);
+								//モーダル内スライダー リロード
+								$.each(sliders, function(i, slider) {
+									slider.reloadSlider();
+								});
+								$modalTarget.css({
+									'top' : (window.innerHeight - $modalTarget.innerHeight()) / 2 + 'px',
+									'left' : (window.innerWidth - $modalTarget.innerWidth()) / 2 + 'px'
+								});
+								$('.scholarship_modal_close').css({
+									'top' : (window.innerHeight - $modalTarget.innerHeight()) / 2 + 'px',
+									'left' : (window.innerWidth - $modalTarget.innerWidth()) / 2 + $modalTarget.innerWidth() - 40 + 'px'
+								});
+							});
+							return false;
+						});
+						$('.scholarship_modal_overlay, .scholarship_modal_close').on('click', function() {
+							$('.scholarship_modal,.scholarship_modal_overlay, .scholarship_modal_close').stop().fadeOut(200, function() {
+								$(this).removeAttr('style').removeClass('scholarship_modal_active');
+							});
+						});
+
+						//リサイズ時処理
+						var resizeTimer = null;
+						$(window).on('resize', function() {
+							clearTimeout(resizeTimer);
+							resizeTimer = setTimeout(function() {
+								//jscrollpane調整
+								$('.scholarship_newsrelease .scholarship_newsrelease_inner').jScrollPane();
+
+								//モーダル位置調整
+								$('.scholarship_modal_active').css({
+									'top' : (window.innerHeight - $('.scholarship_modal_active').innerHeight()) / 2 + 'px',
+									'left' : (window.innerWidth - $('.scholarship_modal_active').innerWidth()) / 2 + 'px'
+								});
+								$('.scholarship_modal_close').css({
+									'top' : (window.innerHeight - $('.scholarship_modal_active').innerHeight()) / 2 + 'px',
+									'left' : (window.innerWidth - $('.scholarship_modal_active').innerWidth()) / 2 + $('.scholarship_modal_active').innerWidth() - 40 + 'px'
+								});
+							}, 200);
+						});
+
+					});
+				})(jQuery);
+			}
+		</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KZZBVVW');</script>
+<!-- End Google Tag Manager -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZZBVVW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<meta name="google-site-verification" content="6-rKPFoMiGrCzNF6AwLw2ukrY8Ax9_hV6SloMX7GWNQ" />
+</head>
+
+
+<body id="common" class="page_brand page_7">
+
+<header>
+<div id="headnav">
+<div class="headnav_in">
+<ul class="headnav_link01">
+<li class="icon_mail"><a href="/mailmagazine">メルマガ</a></li>
+<li class="icon_contest"><a href="/contest">コンテスト</a></li>
+<li class="icon_faq"><a href="https://technical-info.holbein.co.jp/">技術情報Ｑ＆Ａ</a></li>
+<li class="icon_dealer"><a href="/dealer">ディーラー様向けご案内</a></li>
+</ul>
+<div class="headnav_link02">
+<p class="headnav_link02_ttl"><a href="#">Languages - Art</a></p>
+<ul class="headnav_link02_dropdown">
+<li><a href="/">Japanese</a></li>
+<li><a href="/en.html">English</a></li>
+<li><a href="/es.html">Spanish</a></li>
+<li><a href="/fr.html">French</a></li>
+<li><a href="/ch.html">Chinese</a></li>
+<li><a href="/kr.html">Korean</a></li>
+</ul>
+</div>
+<div class="headnav_link03">
+<p class="headnav_link03_ttl"><a href="#">Languages - works</a></p>
+<ul class="headnav_link03_dropdown">
+<li><a href="/">Japanese</a></li>
+<li><a href="/english/index.html">English</a></li>
+<li><a href="/worldwide/espanol/index.html">Spanish</a></li>
+<li><a href="/worldwide/france/index.html">French</a></li>
+<li><a href="/worldwide/italiano/index.html">Italiano</a></li>
+<li><a href="/worldwide/deutsch/index.html">Deutsch</a></li>
+<li><a href="/worldwide/korean/index.html">Korean</a></li>
+</ul>
+</div>
+<div class="headnav_link04"><form action="/dcms-search/"><input class="search_txt" name="schKeyword" type="text" placeholder="サイト内検索" /> <input name="schBlog" type="hidden" value="1" /><input class="submit_btn" type="submit" value="サイト内検索" /></form></div>
+</div>
+</div>
+<h1 id="logo"><a href="/"><img src="/dcms_media/image/logo01.png" alt="絵具、絵画材料のホルベイン" /></a></h1>
+<div id="globalnav">
+<div id="gnav_btn01"><a href="#">MENU</a></div>
+<nav id="globalnav_in">
+<div id="gnav_btn02"><a href="#">閉じる</a></div>
+<div id="logo02"><a href="/"><img src="/dcms_media/image/logo02.png" alt="holbein" /></a></div>
+<ul class="cf">
+<li class="globalnav_menu"><a href="/product">製品情報</a>
+<ul class="globalnav_subnav01">
+<li><a href="/product">製品情報</a></li>
+<li><a href="/product/catalog">WEBカタログ</a></li>
+</ul>
+</li>
+<li class="globalnav_menu"><a href="/business">事業案内</a>
+<ul class="globalnav_subnav02">
+<li><a href="/business/oem">生産受託</a></li>
+<li><a href="/business/restoration.html">絵画修復</a></li>
+<li><a href="/business/abulabo.html">あぶLABO</a></li>
+</ul>
+</li>
+<li class="globalnav_menu"><a href="/company">会社情報</a>
+<ul class="globalnav_subnav03">
+<li><a href="/company/history">ブランドストーリー</a></li>
+<li><a href="/company/about">会社概要</a></li>
+<li><a href="/company/about.html#a01">アクセス</a></li>
+<li><a href="/company/holbein_gallery">ホルベインギャラリー</a></li>
+<li><a href="/company/holbein_gallery#showroom">ショールーム</a></li>
+<li><a href="/company/recruit.html">採用情報</a></li>
+</ul>
+</li>
+<li class="globalnav_menu"><a href="/resources">資料室</a>
+<ul class="globalnav_subnav04">
+<li><a href="/resources/publishing">出版活動</a></li>
+<li><a href="/resources/publishement">広告・メディア</a></li>
+<li><a href="/resources/histoir">画家たちの美術史</a></li>
+<li><a href="/resources/anatomy">色材の解剖学</a></li>
+<li><a href="/resources/acrylart_separate.html">ACRYLART別冊</a></li>
+<li><a href="/resources/acrylart.html">ACRYLART</a></li>
+</ul>
+</li>
+<li class="globalnav_menu"><a href="/shop">販売店一覧</a>
+<ul class="globalnav_subnav05">
+<li><a href="/shop/list_1">北海道・東北</a></li>
+<li><a href="/shop/list_2">関東</a></li>
+<li><a href="/shop/list_3">信州・北陸・東海</a></li>
+<li><a href="/shop/list_4">近畿</a></li>
+<li><a href="/shop/list_5">中国・四国</a></li>
+<li><a href="/shop/list_6">九州・沖縄</a></li>
+</ul>
+</li>
+<li class="globalnav_contact"><a href="/contact.html">お問い合わせ</a></li>
+<li class="globalnav_onlineshop"><a href="https://holbein-shop.com/" target="_blank" rel="noopener">オンラインショップ</a></li>
+</ul>
+<ul class="sp_head_link01">
+<li><a href="/mailmagazine">メルマガ</a></li>
+<li><a href="/contest">コンテスト</a></li>
+<li><a href="https://technical-info.holbein.co.jp/" target="_blank" rel="noopener">技術情報Ｑ＆Ａ</a></li>
+<li><a href="/dealer">ディーラー様向けご案内</a></li>
+</ul>
+<div class="sp_head_link02"><form action="/dcms-search/"><input class="search_txt" name="schKeyword" type="text" placeholder="サイト内検索" /> <input class="submit_btn" type="submit" value="サイト内検索" /></form></div>
+<div class="sp_head_link03"><a href="https://www.facebook.com/HobeinArt/" target="_blank" rel="noopener"><img src="/dcms_media/image/icon_fb01.png" alt="facebook" /></a> <a href="https://twitter.com/HolbeinArt" target="_blank" rel="noopener"><img src="/dcms_media/image/icon_tw01.png" alt="twitter" /></a> <a href="https://www.youtube.com/channel/UCGeANPugv7Q_c2LlZ4w9MHw" target="_blank" rel="noopener"><img src="/dcms_media/image/icon_youtbe01.png" alt="youtube" /></a> <a href="https://www.instagram.com/holbein_gazai/" target="_blank" rel="noopener"><img src="/dcms_media/image/icon_insta01.png" alt="instagram" /></a></div>
+</nav></div>
+</header>
+
+
+<div id="wrapper">
+				<!--↓↓↓パンくず↓↓↓-->
+				<div id="locator" class="loca">
+					<div class="inner">
+						<a href="https://www.holbein.co.jp/scholarship.html">スカラシップ</a>&nbsp;&gt;&nbsp;<a href="https://www.holbein.co.jp/scholarship/record.html">スカラシップ・レコード</a>&nbsp;&gt;&nbsp;<a href="https://www.holbein.co.jp/scholarship/record/vol33.html">第33回奨学生レポート</a>&nbsp;&gt;&nbsp;第33回奨学生のレポート⑦　若林 菜穂
+					</div>
+				</div>
+				<!--↑↑↑パンくず↑↑↑-->
+
+
+
+<main id="contents" class="clearfix">				
+<div class="contents_inner cf">
+
+<!-- ブロック貼り付けエリア -->
+<div id="dcms_layoutPageBlockPasteArea">
+<!-- ブロック -->
+<div id="dcms_layoutPageBlock">
+<!--###_DCMS_BLOCK_START_###-->
+<h2 class="txt_c" style="font-size: 2em; font-weight: bold; line-height: 1.5;"><img src="/dcms_media/image/scholaship_v33_07.png" alt="scholaship_v33_07.png" width="200" height="200" /><br />若林 菜穂<span class="sp_non">　</span><br class="br_sp" />WAKABAYASHI Naho</h2>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<div class="mt30 m15 txt_c contract_img03">
+<figure class="img100"><img src="/dcms_media/image/scholaship_v33_07a.png" alt="scholaship_v33_07a.png" width="500" height="500" /></figure>
+<p><span class="fs120b">湧水</span><br />油絵具、キャンバス<br />130.0x162.0cm<br />2020年</p>
+</div>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<h3 class="sub_title01">制作について</h3>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<div class="section_bottom" style="text-indent: 1em;">
+<p>静かに心を展開する窓口として、絵画を考え、制作しています。<br /> 風景や命のないものは、それ自体が意思を持って、私に何かを訴えかけてくることはありません。しかし、そういった、意思のないもの、あるいは曖昧なものから、私は符号を読み取ります。それは私の側がそう捉えたにすぎませんが、目の前に見る対象がなければ、そもそもそのように考え、閃くこともなかっただろうと言えます。また、対象それ自体だけでは、この埒外の符号は生じません。自分と対象とが触れるその時に生じ、受け取ることができるものが沢山あります。そして埒外の部分は、ほぼ私の想像に委ねられている領域で、ある意味際限なく広く自由です。私の内と、内の外にあるものは、矛盾せずに供にあります。目の前の対象と自分の間になんらかの反応が起きること、その特定の時間について、平面作品により表現しようと試みています。</p>
+<p style="margin-top: 1em;">私が反応するきっかけの一つに、目に見える対象が挙げられます。何かを見たとき、「これは、私の心をあらわしているようだな」と思う事があります。<br /> 絵画における喩えは以前からあり、正確に読み解くことは共通の認識や知識によって可能です。生活している中で具体的に目に見えることから想像が展開することと、絵画あるいは作品においての喩えを正確に読んでいくこと。この二つは似て非なることのように思います。私が絵画の中に持ち込む具体的なモチーフには、私による選択の意思はあるものの、必ずしも正確な意味合いを読むことを求めるものではありません。私の主題は心身が世界に触れたとき、何かが生じ得ることそれ自体です。大体は、心とぴたりと重なるような、そういったものを見たとき、出会ったとき、それが制作の動機になります。</p>
+<p style="margin-top: 1em;">目にする物から、それぞれがいかように符号を受けとってもよいのです。共有し得ること、し得ないことがあり、そのことは私にとって興味深く、面白いことです。それぞれが、個を以てして、展開していくその時間に価値があると考えています。その動きを発生させる媒体として、絵画のある空間を目指しています。</p>
+</div>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<div class="mt20 m20 txt_c contract_img03">
+<figure class="img100"><img src="/dcms_media/image/scholaship_v33_07b.png" alt="scholaship_v33_07b.png" width="500" height="500" /></figure>
+<p><span class="fs120b">スコール</span><br />油絵具、キャンバス<br />116.0x91.0cm<br />2020年</p>
+</div>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<h3 class="sub_title01">奨学期間中の取り組みと今後の活動方針について</h3>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<div class="section_bottom" style="text-indent: 1em;">
+<p>奨学期間中の一年に関しては、材料に関して常に不足なく制作することができたので、ストレスがありませんでした。今までも必要に応じて資金繰りをし、画材を購入していたわけですが、単純にそのことについて割いていた労力が奨学生期間中ほぼなくなるわけです。ありがたいことです。</p>
+<p style="margin-top: 1em;">わたしの制作に欠かせないのは、油絵具、キャンバス、筆などです。私にとってはすっかり馴染みの道具でありながら、この時代において、油絵具と筆を使ってキャンバスに描く行為は、一般的ではないのだと思います。今回のスカラシップ期間を通して、その素材を私が自ら望んで選択していることを再度認めました。絵具は頭の中にあるイメージと現実の仲介をする素材だと思っています。特に油絵具は長い間湿った状態を維持することができるので、頭の中にある不確定なイメージをゆっくりと立ち上げることを、手助けしてくれます。また、油絵具は光をうまく反射します。透明度や質感、層の厚みによって光の反射は変化し、その多彩な色の輝きが、絵を描くときの手助けになります。目の前の対象から影響を受け、イメージは変わっていきます。またそこに生じる頭の中のイメージを、私は時に油絵具をつかって、外に表そうとします。そのように表現することを通して、絶えず外側と内側と、有形と無形を、実にシームレスに往来しているように思います。</p>
+<p style="margin-top: 1em;">ホルベイン・スカラシップは表現すること、表現について考えることを、一年間後押しして下さいました。今後もこの油絵具という素材の扱いと表現の方法について、探求を続けていきます。</p>
+</div>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<div class="mt20 m20 txt_c contract_img03">
+<figure class="img100"><img src="/dcms_media/image/scholaship_v33_07c.png" alt="scholaship_v33_07c.png" width="500" height="500" /></figure>
+<p><span class="fs120b">空の中程</span><br />油絵具、キャンバス<br />116.0x91.0cm<br />2020年</p>
+</div>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<h4 class="sub_title01" style="font-size: 1.8em;">プロフィール</h4>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<div class="scholarship_works_detail mt15 ">
+<h5 style="font-size: 1.5em;">若林 菜穂　WAKABAYASHI Naho</h5>
+</div>
+<div class="scholarship_history">
+<p>1991年　東京生まれ<br /> 2017年　武蔵野美術大学 造形学部油絵学科油絵専攻 卒業<br /><br /> 個展<br /> 2018年　うつせる窓　　小杉画廊／東京<br /> 　　　　 行く先々　　数寄和／東京<br /> 2016年　予定にない日　　sanka／東京<br /> 2015年　fix the images　　TANNE／東京<br /> 2014年　メビウスの切れ目　　lamp／東京<br /><br /> グループ展<br /> 2020年　心覚えをたどる　　hatoba cafe/gallery／京都<br /> 2018年　Slide,Flip, and Turn ／スライドフリップ アンドターン<br /> 　　　　 　　－7人のアーティストブック展－　　武蔵野美術大学美術館図書館／東京<br /> 　　　　 木曽ペインティングス　　木曽路美術館、本陣／長野（'17）<br /> 　　　　 清須市第9回はるひ絵画トリエンナーレ　　清須市はるひ美術館／愛知<br /> 2017年　アタミアートウィーク　　ツイキレンタルスペース、青い屋根の平屋／静岡('16)<br /> 　　　　 第40回 東京五美術大学連合卒業・修了制作展　　国立新美術館／東京<br /> 　　　　 武蔵野美術大学卒業・修了制作展　　武蔵野美術大学／東京<br /> 2016年　sound of silence　　武蔵野美術大学構内／東京<br /> 　　　　 第9回GAW展 路地から路地へ 2016in日坂　　藤文・かえでや2階／静岡<br /> 2015年　golde nage　　武蔵野美術大学／東京<br /> 2014年　table cross　　TURNER GALLERY／東京<br /> 　　　　 □□□　　鑓水美術館／神奈川<br /> 2013年　トリアグラム　　武蔵野美術大学／東京<br /><br /> 受賞歴他<br /> 2019年　第33回ホルベイン・スカラシップ奨学生<br /> 2018年　清須市第9回はるひ絵画トリエンナーレ　　入選<br /> 2016年　2016年度武蔵野美術大学卒業制作展　　研究室賞</p>
+<p style="margin-top: 1em;"><a href="https://nahowakabayashi.tumblr.com/" target="_blank" rel="noopener">https://nahowakabayashi.tumblr.com</a></p>
+</div>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<div class="section_bottom clear"> </div>
+<div class="cf ">
+<div class="scholarship_button_left">
+<div class="link_btn02"><a href="/scholarship/record/vol33.html">第33回スカラシップ・レコードへ</a></div>
+</div>
+<div class="scholarship_button_left">
+<div class="link_btn02"><a href="/scholarship.html">スカラシップTOPへ</a></div>
+</div>
+</div>
+<!--###_DCMS_BLOCK_END_###-->
+
+</div>
+<!-- // ブロック -->
+</div>
+<!-- // ブロック貼り付けエリア -->
+
+</div>
+</main>
+
+
+
+
+</div>
+<!-- // wrapper_end -->
+
+<footer>
+<div id="footer_top" class="cf">
+<div id="footer_logo"><a href="/"><img src="/dcms_media/image/logo01.png" alt="holbein" /></a></div>
+</div>
+<div id="footer_middle">
+<div class="foorter_middle_in cf">
+<div class="footnav_table01">
+<div class="footnav_table01_row">
+<ul class="footnav01">
+<li><a href="/product">製品情報</a>
+<ul>
+<li><a href="/product">製品情報</a></li>
+<li><a href="/product/catalog">WEBカタログ</a></li>
+</ul>
+</li>
+</ul>
+<ul class="footnav01">
+<li><a href="/business">事業案内</a>
+<ul>
+<li><a href="/business/oem.html">生産受託</a></li>
+<li><a href="/business/restoration.html">絵画修復</a></li>
+<li><a href="/business/abulabo.html">あぶLABO</a></li>
+</ul>
+</li>
+</ul>
+<ul class="footnav01">
+<li><a href="/company">会社情報</a>
+<ul>
+<li><a href="/company/history">ブランドストーリー</a></li>
+<li><a href="/company/about">会社概要</a></li>
+<li><a href="/company/holbein_gallery">ホルベインギャラリー</a></li>
+<li><a href="/company/holbein_gallery#showroom">ショールーム</a></li>
+<li><a href="/company/recruit.html">採用情報</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="footnav_table01_row">
+<ul class="footnav01"><!--<li><a href="/paints">どんな絵が描きたい？ で絵具マッチング！</a></li>-->
+<li><a href="/blog/archives/category/art">アートをはじめよう</a></li>
+<li><a href="/contest">コンテスト</a>
+<ul>
+<li><a href="/contest/pcl.html">大きなポストカードコンテスト</a></li>
+<li><a href="/contest/duo">デュオはじめての油絵コンテスト</a></li>
+<li><a href="/contest/highschool">高校生の油絵コンテスト</a></li>
+</ul>
+</li>
+<li><a href="/scholarship">スカラシップ</a></li>
+</ul>
+<ul class="footnav01">
+<li><a href="/resources">資料室</a>
+<ul>
+<li><a href="/resources/publishing">出版活動</a></li>
+<li><a href="/resources/publishement">広告・メディア</a></li>
+<li><a href="/resources/histoir">画家の美術史</a></li>
+<li><a href="/resources/anatomy">色材の解剖学</a></li>
+<li><a href="/resources/acrylart_separate">ACRYLART別冊</a></li>
+<li><a href="/resources/acrylart">ACRYLART</a></li>
+</ul>
+</li>
+</ul>
+<ul class="footnav01">
+<li><a href="/shop">販売店一覧</a>
+<ul>
+<li><a href="/shop/list_1">北海道・東北</a></li>
+<li><a href="/shop/list_2">関東</a></li>
+<li><a href="/shop/list_3">信州・北陸・東海</a></li>
+<li><a href="/shop/list_4">近畿</a></li>
+<li><a href="/shop/list_5">中国・四国</a></li>
+<li><a href="/shop/list_6">九州・沖縄</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="footnav_table02">
+<ul class="footnav02">
+<li><a href="https://technical-info.holbein.co.jp/index.html" target="_blank" rel="noopener">技術情報Ｑ＆Ａ</a></li>
+<li><a href="/mailmagazine">メルマガ</a></li>
+<li><a href="/notices">重要なお知らせ</a></li>
+<li><a href="/news">お知らせ</a></li>
+<li><a href="/contact.html">お問い合わせ</a></li>
+</ul>
+<div class="footnav03"><a href="https://www.facebook.com/HobeinArt/" target="_blank" rel="noopener"><img src="/dcms_media/image/facebook_mono.png" alt="facebook" width="50" height="30" /></a> <a href="https://twitter.com/HolbeinArt" target="_blank" rel="noopener"><img src="/dcms_media/image/twitter_mono.png" alt="twitter" width="50" height="30" /></a> <a href="https://www.youtube.com/channel/UCGeANPugv7Q_c2LlZ4w9MHw" target="_blank" rel="noopener"><img src="/dcms_media/image/youtube_mono.png" alt="youtube" width="50" height="30" /></a> <a href="https://www.instagram.com/holbein_art/" target="_blank" rel="noopener"><img src="/dcms_media/image/instagram_mono.png" alt="instagram" width="50" height="30" /></a></div>
+</div>
+</div>
+</div>
+<div id="footer_bottom" class="cf">
+<ul class="footnav_b cf">
+<li><a href="/privacy.html">プライバシーポリシー</a></li>
+<li><a href="/sitemap.html">サイトマップ</a></li>
+</ul>
+<small id="copyright">HOLBEIN. ALL Rights Reserved.</small></div>
+</footer>
+
+
+</body>
+</html>

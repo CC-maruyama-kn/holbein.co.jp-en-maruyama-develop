@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+<title>第34回奨学生のレポート⑥　深田 桃子|ホルベイン オフィシャルウェブサイト</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="keywords" content="第34回奨学生のレポート⑥　深田 桃子,holbein,color,ホルベイン,画材,絵具,画筆,水彩紙,イーゼル" />
+<meta name="description" content="第34回奨学生のレポート⑥　深田 桃子│ホルベインのオフィシャルサイトです。絵具、画材の新製品、イベント、キャンペーン情報など、アートライフを豊かにする各種情報を提供します。" />
+
+<link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+		<link href="//fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
+		<link rel="stylesheet" href="/dcms_media/css/utility.css">
+		<link rel="stylesheet" href="/dcms_media/css/jquery.flexslider.css" />
+		<link rel="stylesheet" href="/dcms_media/css/jquery.bxslider.min.css" />
+		<link rel="stylesheet" href="/dcms_media/css/jquery.jscrollpane.css" />
+		<link rel="stylesheet" href="/dcms_media/css/common.css">
+		<link rel="stylesheet" href="/dcms_media/css/common_tablet.css">
+		<link rel="stylesheet" href="/dcms_media/css/common_smartphone.css">
+		<link rel="stylesheet" href="/dcms_media/css/sub.css">
+		<link rel="stylesheet" href="/dcms_media/css/sub_tablet.css">
+		<link rel="stylesheet" href="/dcms_media/css/sub_smartphone.css">
+                <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><!--アイコンフォント-->
+
+		<script src="/dcms_media/js/jquery-1.11.1.min.js"></script>
+		<script src="/dcms_media/js/current.js"></script>
+		<script src="/dcms_media/js/slidemenu.js"></script>
+		<script src="/dcms_media/js/scrolltopcontrol.js"></script>
+		<script src="/dcms_media/js/jquery.matchHeight-min.js"></script>
+		<script src="/dcms_media/js/jquery.flexslider-min.js"></script>
+		<script src="/dcms_media/js/jquery.bxslider.min.js"></script>
+		<script src="/dcms_media/js/jquery.mousewheel.js"></script>
+		<script src="/dcms_media/js/jquery.jscrollpane.min.js"></script>
+		<script src="/dcms_media/js/jQuery.BiggerLink.js"></script>
+
+		<script>
+			var lh = "";
+			lh = location.href;
+			if (lh.match(/dcmsadm/)) {
+                        document.write('<link rel="stylesheet" href="/dcms_media/css/management_screen.css" />');
+			} else {
+
+				document.write('<script src="/dcms_media/js/header_menu.js"></scri' + 'pt>');
+
+				(function($) {
+					$(document).ready(function() {
+
+
+
+						//モーダル+スライダー(jquery.bxslider使用)
+						if ($('.scholarship_modal').length > 0) {
+							$('body').append('<div class="scholarship_modal_close"></div><div class="scholarship_modal_overlay"></div>');
+						}
+						var sliders = new Array();
+						$('.scholarship_slider').each(function(i, slider) {
+							sliders[i] = $(slider).bxSlider();
+						});
+						$('.scholarship_modal_open a').on('click', function() {
+							var modalTarget = '.' + $(this).attr('data-modalClass');
+							var $modalTarget = $(modalTarget);
+							$modalTarget.addClass('scholarship_modal_active').stop().show(0, function() {
+								$(this).animate({
+									'opacity' : 1
+								}, 600);
+								$('.scholarship_modal_overlay, .scholarship_modal_close').stop().fadeIn(600);
+								//モーダル内スライダー リロード
+								$.each(sliders, function(i, slider) {
+									slider.reloadSlider();
+								});
+								$modalTarget.css({
+									'top' : (window.innerHeight - $modalTarget.innerHeight()) / 2 + 'px',
+									'left' : (window.innerWidth - $modalTarget.innerWidth()) / 2 + 'px'
+								});
+								$('.scholarship_modal_close').css({
+									'top' : (window.innerHeight - $modalTarget.innerHeight()) / 2 + 'px',
+									'left' : (window.innerWidth - $modalTarget.innerWidth()) / 2 + $modalTarget.innerWidth() - 40 + 'px'
+								});
+							});
+							return false;
+						});
+						$('.scholarship_modal_overlay, .scholarship_modal_close').on('click', function() {
+							$('.scholarship_modal,.scholarship_modal_overlay, .scholarship_modal_close').stop().fadeOut(200, function() {
+								$(this).removeAttr('style').removeClass('scholarship_modal_active');
+							});
+						});
+
+						//リサイズ時処理
+						var resizeTimer = null;
+						$(window).on('resize', function() {
+							clearTimeout(resizeTimer);
+							resizeTimer = setTimeout(function() {
+								//jscrollpane調整
+								$('.scholarship_newsrelease .scholarship_newsrelease_inner').jScrollPane();
+
+								//モーダル位置調整
+								$('.scholarship_modal_active').css({
+									'top' : (window.innerHeight - $('.scholarship_modal_active').innerHeight()) / 2 + 'px',
+									'left' : (window.innerWidth - $('.scholarship_modal_active').innerWidth()) / 2 + 'px'
+								});
+								$('.scholarship_modal_close').css({
+									'top' : (window.innerHeight - $('.scholarship_modal_active').innerHeight()) / 2 + 'px',
+									'left' : (window.innerWidth - $('.scholarship_modal_active').innerWidth()) / 2 + $('.scholarship_modal_active').innerWidth() - 40 + 'px'
+								});
+							}, 200);
+						});
+
+					});
+				})(jQuery);
+			}
+		</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KZZBVVW');</script>
+<!-- End Google Tag Manager -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZZBVVW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<meta name="google-site-verification" content="6-rKPFoMiGrCzNF6AwLw2ukrY8Ax9_hV6SloMX7GWNQ" />
+</head>
+
+
+<body id="common" class="page_brand page_6">
+
+<header>
+<div id="headnav">
+<div class="headnav_in">
+<ul class="headnav_link01">
+<li class="icon_mail"><a href="/mailmagazine">メルマガ</a></li>
+<li class="icon_contest"><a href="/contest">コンテスト</a></li>
+<li class="icon_faq"><a href="https://technical-info.holbein.co.jp/">技術情報Ｑ＆Ａ</a></li>
+<li class="icon_dealer"><a href="/dealer">ディーラー様向けご案内</a></li>
+</ul>
+<div class="headnav_link02">
+<p class="headnav_link02_ttl"><a href="#">Languages - Art</a></p>
+<ul class="headnav_link02_dropdown">
+<li><a href="/">Japanese</a></li>
+<li><a href="/en.html">English</a></li>
+<li><a href="/es.html">Spanish</a></li>
+<li><a href="/fr.html">French</a></li>
+<li><a href="/ch.html">Chinese</a></li>
+<li><a href="/kr.html">Korean</a></li>
+</ul>
+</div>
+<div class="headnav_link03">
+<p class="headnav_link03_ttl"><a href="#">Languages - works</a></p>
+<ul class="headnav_link03_dropdown">
+<li><a href="/">Japanese</a></li>
+<li><a href="/english/index.html">English</a></li>
+<li><a href="/worldwide/espanol/index.html">Spanish</a></li>
+<li><a href="/worldwide/france/index.html">French</a></li>
+<li><a href="/worldwide/italiano/index.html">Italiano</a></li>
+<li><a href="/worldwide/deutsch/index.html">Deutsch</a></li>
+<li><a href="/worldwide/korean/index.html">Korean</a></li>
+</ul>
+</div>
+<div class="headnav_link04"><form action="/dcms-search/"><input class="search_txt" name="schKeyword" type="text" placeholder="サイト内検索" /> <input name="schBlog" type="hidden" value="1" /><input class="submit_btn" type="submit" value="サイト内検索" /></form></div>
+</div>
+</div>
+<h1 id="logo"><a href="/"><img src="/dcms_media/image/logo01.png" alt="絵具、絵画材料のホルベイン" /></a></h1>
+<div id="globalnav">
+<div id="gnav_btn01"><a href="#">MENU</a></div>
+<nav id="globalnav_in">
+<div id="gnav_btn02"><a href="#">閉じる</a></div>
+<div id="logo02"><a href="/"><img src="/dcms_media/image/logo02.png" alt="holbein" /></a></div>
+<ul class="cf">
+<li class="globalnav_menu"><a href="/product">製品情報</a>
+<ul class="globalnav_subnav01">
+<li><a href="/product">製品情報</a></li>
+<li><a href="/product/catalog">WEBカタログ</a></li>
+</ul>
+</li>
+<li class="globalnav_menu"><a href="/business">事業案内</a>
+<ul class="globalnav_subnav02">
+<li><a href="/business/oem">生産受託</a></li>
+<li><a href="/business/restoration.html">絵画修復</a></li>
+<li><a href="/business/abulabo.html">あぶLABO</a></li>
+</ul>
+</li>
+<li class="globalnav_menu"><a href="/company">会社情報</a>
+<ul class="globalnav_subnav03">
+<li><a href="/company/history">ブランドストーリー</a></li>
+<li><a href="/company/about">会社概要</a></li>
+<li><a href="/company/about.html#a01">アクセス</a></li>
+<li><a href="/company/holbein_gallery">ホルベインギャラリー</a></li>
+<li><a href="/company/holbein_gallery#showroom">ショールーム</a></li>
+<li><a href="/company/recruit.html">採用情報</a></li>
+</ul>
+</li>
+<li class="globalnav_menu"><a href="/resources">資料室</a>
+<ul class="globalnav_subnav04">
+<li><a href="/resources/publishing">出版活動</a></li>
+<li><a href="/resources/publishement">広告・メディア</a></li>
+<li><a href="/resources/histoir">画家たちの美術史</a></li>
+<li><a href="/resources/anatomy">色材の解剖学</a></li>
+<li><a href="/resources/acrylart_separate.html">ACRYLART別冊</a></li>
+<li><a href="/resources/acrylart.html">ACRYLART</a></li>
+</ul>
+</li>
+<li class="globalnav_menu"><a href="/shop">販売店一覧</a>
+<ul class="globalnav_subnav05">
+<li><a href="/shop/list_1">北海道・東北</a></li>
+<li><a href="/shop/list_2">関東</a></li>
+<li><a href="/shop/list_3">信州・北陸・東海</a></li>
+<li><a href="/shop/list_4">近畿</a></li>
+<li><a href="/shop/list_5">中国・四国</a></li>
+<li><a href="/shop/list_6">九州・沖縄</a></li>
+</ul>
+</li>
+<li class="globalnav_contact"><a href="/contact.html">お問い合わせ</a></li>
+<li class="globalnav_onlineshop"><a href="https://holbein-shop.com/" target="_blank" rel="noopener">オンラインショップ</a></li>
+</ul>
+<ul class="sp_head_link01">
+<li><a href="/mailmagazine">メルマガ</a></li>
+<li><a href="/contest">コンテスト</a></li>
+<li><a href="https://technical-info.holbein.co.jp/" target="_blank" rel="noopener">技術情報Ｑ＆Ａ</a></li>
+<li><a href="/dealer">ディーラー様向けご案内</a></li>
+</ul>
+<div class="sp_head_link02"><form action="/dcms-search/"><input class="search_txt" name="schKeyword" type="text" placeholder="サイト内検索" /> <input class="submit_btn" type="submit" value="サイト内検索" /></form></div>
+<div class="sp_head_link03"><a href="https://www.facebook.com/HobeinArt/" target="_blank" rel="noopener"><img src="/dcms_media/image/icon_fb01.png" alt="facebook" /></a> <a href="https://twitter.com/HolbeinArt" target="_blank" rel="noopener"><img src="/dcms_media/image/icon_tw01.png" alt="twitter" /></a> <a href="https://www.youtube.com/channel/UCGeANPugv7Q_c2LlZ4w9MHw" target="_blank" rel="noopener"><img src="/dcms_media/image/icon_youtbe01.png" alt="youtube" /></a> <a href="https://www.instagram.com/holbein_gazai/" target="_blank" rel="noopener"><img src="/dcms_media/image/icon_insta01.png" alt="instagram" /></a></div>
+</nav></div>
+</header>
+
+
+<div id="wrapper">
+				<!--↓↓↓パンくず↓↓↓-->
+				<div id="locator" class="loca">
+					<div class="inner">
+						<a href="https://www.holbein.co.jp/scholarship.html">スカラシップ</a>&nbsp;&gt;&nbsp;<a href="https://www.holbein.co.jp/scholarship/record.html">スカラシップ・レコード</a>&nbsp;&gt;&nbsp;<a href="https://www.holbein.co.jp/scholarship/record/vol34.html">第34回奨学生レポート</a>&nbsp;&gt;&nbsp;第34回奨学生のレポート⑥　深田 桃子
+					</div>
+				</div>
+				<!--↑↑↑パンくず↑↑↑-->
+
+
+
+<main id="contents" class="clearfix">				
+<div class="contents_inner cf">
+
+<!-- ブロック貼り付けエリア -->
+<div id="dcms_layoutPageBlockPasteArea">
+<!-- ブロック -->
+<div id="dcms_layoutPageBlock">
+<!--###_DCMS_BLOCK_START_###-->
+<h2 class="txt_c" style="font-size: 2em; font-weight: bold; line-height: 1.5;"><img src="/dcms_media/image/scholaship_v34_06.png" alt="scholaship_v34_06.png" width="200" height="200" /><br />深田 桃子<span class="sp_non">　</span><br class="br_sp" />FUKADA Momoko</h2>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<div class="mt30 m15 txt_c contract_img03">
+<figure class="img100"><img src="/dcms_media/image/scholaship_v34_06a.png" alt="scholaship_v34_06a.png" width="500" height="500" /></figure>
+<p><span class="fs120b">寒さの記憶</span><br />パネル、アクリル絵具<br />1120×162.0×3.5cm<br />2022年</p>
+</div>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<h3 class="sub_title01">ステイトメント</h3>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<div class="section_bottom" style="text-indent: 1em;">
+<p>私の制作はとても小さい規模のものから始まる。</p>
+<p>2021年に私は『快適な下着』という作品を制作した。その作品を制作したきっかけは実用的で、肌触りのいい、身体に添う形をした下着が欲しいと感じたこと からだった。</p>
+<p>不意に思い立ち、男性用の下着を購入して、着用した時に下着とはこんなに実用的で快適なものだったの かと驚いた。特に高級品という訳でもなく、コンビニでも売っているような普通の男性用ボクサーパンツだ。</p>
+<p>今や女性用の下着でも様々な形のものが販売されているし、それこそ値段を考えなければ素晴らしい肌触 りの下着は手に入るのかもしれない。しかし形やデザインが理想的であれば肌触りや縫い目の位置に身体 の形に沿わないような違和感を感じて、肌触りが理想的であれば華美なレースや花柄にうんざりさせられ たりする。自分にとって心地のいい下着が男性用であるというだけで、簡単に見つけられて、安価で手に入れること ができるのに女性用下着売り場ではそれがいまいち難しくなってしまうのだ。</p>
+<p>このようなとても規模の小さい、ただの願望が絵になり、それ以上の意味は私の制作の上では生じない。しかし鑑賞者の目の前にこの作品がある時、作品が伝えるメッセージはもう少し幅広いものに変化する。</p>
+<p>今のところその人にとっての快適な下着と出会えていて、不便を感じていない人（これは男性・女性は問わない）であればわざわざ絵にするようなことでもないと感じるのかもしれない。しかし私と同じもしくはもっと深刻に、このことに悩まされている人たちの前にある時、「ああ、快適な下 着欲しいよね。」という共感とそれ以上にこの作品はもっと切実なものになっていくのだ。</p>
+<p>例えばそれは女性の在り方という問題につながっていき、女性の下着はこのようであるべき、女性はこの ようなものを身につけるべきというような偏見などとの戦いにつながる。もしくは身体などそれに留まらない身につける人の状態それぞれではなく、大多数の形や思想に偏りがち で、一定のデザインの下着しか用意されないことについての批判へとなる。</p>
+<p>規模の小さい願望や、小さい範囲での関係性、そして自己についてからこそ切実な問題が強く発露されることがある。<br />切実なことを「切実である。」と言ってもそれがどのくらい切実であるのか、言葉としては理解することは できても自分の実感を持って想像をすることは実際には難しい。しかしそれが自分と地続きの共感可能な日常という規模の小さいフィルターを通すことによって、むしろ その切実さを写実的に・深刻に描くときよりもリアリティを持って鑑賞者に伝えることができるのである。</p>
+<p>今私自身が想像もできないような、もしくは想像しただけでうんざりしてしまうような大きな問題に立ち 向かう時、まず自分の足元や周辺を観察する。<br />そして本当にささやかな日常から見える景色をこそ描くのである。</p>
+</div>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<div class="mt20 m20 txt_c contract_img03">
+<figure class="img100"><img src="/dcms_media/image/scholaship_v34_06b.png" alt="scholaship_v34_06b.png" width="500" height="500" /></figure>
+<p><span class="fs120b">外の香り</span><br />パネル、アクリル絵具<br />162.0×1303×3.0cm<br />2022年</p>
+</div>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<h3 class="sub_title01">奨学期間中の取り組みについて</h3>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<div class="section_bottom" style="text-indent: 1em;">
+<p>ホルベイン・スカラシップ奨学生の期間は私にとってあらためて自身の制作について向き合う期間だった。</p>
+<p>それまでの制作は油絵で行なっており、また使う色もほとんど白黒のみだった。そしてそのスタイルでの制作をまるっきり変えてしまおうと考えていた時に決まったのがホルベイン・ス カラシップだった。</p>
+<p>制作のスタイルを変えようと考えたのは、自身の作品が自身の描きたいものとは少し異なるものになり始 めているということに気がついたからだった。もともととてもささやかな関係性や違和感などをテーマに制作を行なってきたのだが、その反面作品の弱さをコンプレックスに感じていた。その作品の弱さというコンプレックスを払拭するために絵画自体に物質的な強さを与えようと考え、油絵 具を使い、物質的な存在感と画面の堅牢さを手に入れた。そして油絵具の強さに負けないように描く人物もより構造的になっていった。</p>
+<p>しかし作品が変化していくにつれて、もともと自分の関心があったはずのささやかな関係性や違和感など のセンシティブな面がどんどんと削ぎ落ちていき、絵を見る人からも作品の内容ではなく絵画表面についてばかり言及されるようになった。そこまできて、目的と手段が全く入れ変わってしまっていたことに気がついた。</p>
+<p>油絵具の物質的な強さは自身の作品のテーマにはもしかしたらそぐわないのかもしれないと考え、描画材をアクリル絵具に変更した。 支持体もそれまでとは違い、堅牢な質感になってしまうことを避け、物質的な強度を持たせすぎないように作り直した。 このように素材選びをやり直していく中でふと「頑なに白黒で制作をしてきたけれど今なら色を使うことができるかもしれない。」と考えることができた。</p>
+<p>白黒以外の色を使うのは大学受験以来といっても良いほどだったため、本当に初歩中の初歩からのやり直しだった。<br />奨学品のアクリル絵具のアクリリック カラー［ヘビーボディ］・［フルイド］・［インク］・アクリリック ガッシュ・ アクリル絵具マットなど様々なアクリル絵具を試しながら混色の基本的なこともわからず、細々調べたり、 色見本を作ったりしながら制作を行った。色を混色してできる色と、色を重ねてできる色は違うということに今更実感を持って気がつき、そのことに周囲の人から呆れられたりしながら奨学生期間を通して学び直した。</p>
+<p>今素材を変え、色のついた自身の作品を見つめて、以前コンプレックスにしていた作品の弱さが弱点では なく、自身が描きたいささやかな関係性や違和感のセンシティブさを自然に支えてくれている長所へと変わっ たことに気づいた。 そして少し遠くに行ってしまっていた私の作品がこの奨学生期間を通して自分の元に戻ってきたと感じ ている。</p>
+</div>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<div class="mt20 m20 txt_c contract_img03">
+<figure class="img100"><img src="/dcms_media/image/scholaship_v34_06c.png" alt="scholaship_v34_06c.png" width="500" height="500" /></figure>
+<p><span class="fs120b">快適な下着</span><br />パネル、アクリル絵具<br />652.0×530.0×1.5cm<br />2022年</p>
+</div>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<h3 class="sub_title01">奨学期間中に最も使用したホルベイン製品について</h3>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<div class="section_bottom" style="text-indent: 1em;">
+<p>主に奨学品として、アクリル絵具の各種アクリリック カラー［ヘビーボディ］・アクリリック カラー［フルイド］・アクリリック［インク］・アクリリック ガッシュ・アクリル絵具マットなどを使い、制作を行なってきた。</p>
+<p>その中でも特にアクリリック カラー［ヘビーボディ］とアクリリック カラー［フルイド］は、制作の中で最も 使用した製品だ。</p>
+<p>私自身が長くアクリル絵具での制作を行なっていなかったため、アクリル絵具というとなんとなくアクリリック ガッシュのようなマットな質感と扱いづらさを想像していた。しかしこの2種は自分が想像していた絵具の質感とは異なり光沢感と透明感、そしてこの絵具にしかない独 特な質感があり、素材研究をしていく中で純粋に楽しみながら扱うことができた。</p>
+<p>アクリリック カラー［ヘビーボディ］は全色紙の上に塗り、サンプルをまず作った。絵具を乾かした際、自分が想像していたようなマットな質感では無く、樹脂感のある光沢の強く残った質感と発色が鮮やかだった。<br />その光沢感は自身がそれまで扱っていた油絵具のように湿度が高い質感ではなく、乾いた質感を持っており、その質感は自身の絵画表現との相性がとても良いと感じることができた。また油絵具のような強い物質感とは性質が異なるが、堅牢性のある絵具の性質のおかげで今まで油絵具を 使ってきたところから移行して、触れるアクリル絵具としてとても扱いやすかった。</p>
+<p>アクリリック カラー［フルイド］はそれまで全く使用してこなかったタイプの絵具で、特にその質感と発色が使用している間とても新鮮だった。<br />鮮やかな発色は、それまで私が長い期間ほとんど白黒のみで絵画制作を行なっており、久しく色を使用していなかったため、最初幼稚な色使いに陥ってしまいがちで扱いにくさを感じていた。しかし他のアクリル絵具と併用することや、塗り重ねていくことで色の発色のコントロールも可能になり、この絵具独特の透明感のあるパキッとした発色の美しさを感じることができた。そして何より絵具が乾燥した時の被膜したビニールのような光沢と独特な質感が今まで扱ってきた絵具の質感と全く異なっており、その質感が自身のグラフィカルな表現と思いのほか相性が良く、今までとは違う表現の可能性を見つけることができた。</p>
+<p>この2種の絵具は私の作品制作の上でそれまでなかった可能性をさらに広げ、そして私がこれまで出会うことができていなかった自作の新しい姿を見せてくれたのである。</p>
+</div>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<h4 class="sub_title01" style="font-size: 1.8em;">プロフィール</h4>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<div class="scholarship_works_detail mt15 ">
+<h5 style="font-size: 1.5em;">深田 桃子　FUKADA Momoko</h5>
+</div>
+<div class="scholarship_history">
+<dl style="overflow: hidden; margin-bottom: 2ex;">
+<dt style="width: 5em; float: left; clear: both; text-align: center;">1996年</dt>
+<dd style="margin-left: 5em;">神奈川県出身</dd>
+<dt style="width: 5em; float: left; clear: both; text-align: center;">2015年</dt>
+<dd style="margin-left: 5em;">武蔵野美術大学 造形学部油絵学科 油絵専攻　卒業</dd>
+<dt style="width: 5em; float: left; clear: both; text-align: center;">2021年</dt>
+<dd style="margin-left: 5em;">武蔵野美術大学 大学院 修士課程造形研究科 美術専攻油絵コース　卒業</dd>
+</dl>
+<p><strong>個展</strong></p>
+<dl style="overflow: hidden; margin-bottom: 2ex;">
+<dt style="width: 5em; float: left; clear: both; text-align: center;">2022年</dt>
+<dd style="margin-left: 5em;">遠くに見えた　　Gallery b.Tokyo／東京</dd>
+<dt style="width: 5em; float: left; clear: both; text-align: center;">2020年</dt>
+<dd style="margin-left: 5em;">OUTLINE　　ultra super new gallery／東京</dd>
+<dt style="width: 5em; float: left; clear: both; text-align: center;">2019年</dt>
+<dd style="margin-left: 5em;">夢を見ながら目を開け　　Gallery b. Tokyo／東京</dd>
+</dl>
+<p><strong>グループ展</strong></p>
+<dl style="overflow: hidden; margin-bottom: 2ex;">
+<dt style="width: 5em; float: left; clear: both; text-align: center;">2022年</dt>
+<dd style="margin-left: 5em;">遠くに見えた　　Gallery b. Tokyo／東京</dd>
+<dt style="width: 5em; float: left; clear: both; text-align: center;">2021年</dt>
+<dd style="margin-left: 5em;">HOLBEIN ART FAIR 2021　　渋谷スクランブルスクエア +Art Gallery／東京</dd>
+<dt style="width: 5em; float: left; clear: both; text-align: center;">2019年</dt>
+<dd style="margin-left: 5em;">Irrational memographies　　カルフォルニア大学サンタバーバラ校／カルフォルニア州［アメリカ］<br />Points of depercheres　　日米文化会館／カルフォルニア州［アメリカ］<br />夢を見ながら目を開け　　Gallery b. Tokyo／東京<br />積層-8人のアーティストブック　　武蔵野美術大学図書館／東京</dd>
+<dt style="width: 5em; float: left; clear: both; text-align: center;">2018年</dt>
+<dd style="margin-left: 5em;">アタミアートウィーク2018 深田桃子＋鹿島理佳子 -羽衣-　　スターレーン／静岡</dd>
+<dt style="width: 5em; float: left; clear: both; text-align: center;">2017年</dt>
+<dd style="margin-left: 5em;">深田桃子＋鹿島理佳子 -ライナスの毛布-　　カミカワハウス／東京</dd>
+</dl>
+<p><strong>受賞歴他</strong></p>
+<dl style="overflow: hidden; margin-bottom: 2ex;">
+<dt style="width: 5em; float: left; clear: both; text-align: center;">2021年</dt>
+<dd style="margin-left: 5em;">第6回宮本三郎デッサン大賞 明日の表現を拓く　　入選<br />第34回ホルベイン・スカラシップ奨学生</dd>
+<dt style="width: 5em; float: left; clear: both; text-align: center;">2018年</dt>
+<dd style="margin-left: 5em;">第41回三菱アートゲート チャリティーオークション　　入選</dd>
+<dt style="width: 5em; float: left; clear: both; text-align: center;">2017年</dt>
+<dd style="margin-left: 5em;">トーキョーワンダーシード2017　　入選</dd>
+<dt style="width: 5em; float: left; clear: both; text-align: center;">2016年</dt>
+<dd style="margin-left: 5em;">トーキョーワンダーシード2016　　入選</dd>
+</dl>
+</div>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<div class="section_bottom clear"> </div>
+<div class="cf ">
+<div class="scholarship_button_left">
+<div class="link_btn02"><a href="/scholarship/record/vol34.html">第34回スカラシップ・レコードへ</a></div>
+</div>
+<div class="scholarship_button_left">
+<div class="link_btn02"><a href="/scholarship.html">スカラシップTOPへ</a></div>
+</div>
+</div>
+<!--###_DCMS_BLOCK_END_###-->
+
+</div>
+<!-- // ブロック -->
+</div>
+<!-- // ブロック貼り付けエリア -->
+
+</div>
+</main>
+
+
+
+
+</div>
+<!-- // wrapper_end -->
+
+<footer>
+<div id="footer_top" class="cf">
+<div id="footer_logo"><a href="/"><img src="/dcms_media/image/logo01.png" alt="holbein" /></a></div>
+</div>
+<div id="footer_middle">
+<div class="foorter_middle_in cf">
+<div class="footnav_table01">
+<div class="footnav_table01_row">
+<ul class="footnav01">
+<li><a href="/product">製品情報</a>
+<ul>
+<li><a href="/product">製品情報</a></li>
+<li><a href="/product/catalog">WEBカタログ</a></li>
+</ul>
+</li>
+</ul>
+<ul class="footnav01">
+<li><a href="/business">事業案内</a>
+<ul>
+<li><a href="/business/oem.html">生産受託</a></li>
+<li><a href="/business/restoration.html">絵画修復</a></li>
+<li><a href="/business/abulabo.html">あぶLABO</a></li>
+</ul>
+</li>
+</ul>
+<ul class="footnav01">
+<li><a href="/company">会社情報</a>
+<ul>
+<li><a href="/company/history">ブランドストーリー</a></li>
+<li><a href="/company/about">会社概要</a></li>
+<li><a href="/company/holbein_gallery">ホルベインギャラリー</a></li>
+<li><a href="/company/holbein_gallery#showroom">ショールーム</a></li>
+<li><a href="/company/recruit.html">採用情報</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="footnav_table01_row">
+<ul class="footnav01"><!--<li><a href="/paints">どんな絵が描きたい？ で絵具マッチング！</a></li>-->
+<li><a href="/blog/archives/category/art">アートをはじめよう</a></li>
+<li><a href="/contest">コンテスト</a>
+<ul>
+<li><a href="/contest/pcl.html">大きなポストカードコンテスト</a></li>
+<li><a href="/contest/duo">デュオはじめての油絵コンテスト</a></li>
+<li><a href="/contest/highschool">高校生の油絵コンテスト</a></li>
+</ul>
+</li>
+<li><a href="/scholarship">スカラシップ</a></li>
+</ul>
+<ul class="footnav01">
+<li><a href="/resources">資料室</a>
+<ul>
+<li><a href="/resources/publishing">出版活動</a></li>
+<li><a href="/resources/publishement">広告・メディア</a></li>
+<li><a href="/resources/histoir">画家の美術史</a></li>
+<li><a href="/resources/anatomy">色材の解剖学</a></li>
+<li><a href="/resources/acrylart_separate">ACRYLART別冊</a></li>
+<li><a href="/resources/acrylart">ACRYLART</a></li>
+</ul>
+</li>
+</ul>
+<ul class="footnav01">
+<li><a href="/shop">販売店一覧</a>
+<ul>
+<li><a href="/shop/list_1">北海道・東北</a></li>
+<li><a href="/shop/list_2">関東</a></li>
+<li><a href="/shop/list_3">信州・北陸・東海</a></li>
+<li><a href="/shop/list_4">近畿</a></li>
+<li><a href="/shop/list_5">中国・四国</a></li>
+<li><a href="/shop/list_6">九州・沖縄</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="footnav_table02">
+<ul class="footnav02">
+<li><a href="https://technical-info.holbein.co.jp/index.html" target="_blank" rel="noopener">技術情報Ｑ＆Ａ</a></li>
+<li><a href="/mailmagazine">メルマガ</a></li>
+<li><a href="/notices">重要なお知らせ</a></li>
+<li><a href="/news">お知らせ</a></li>
+<li><a href="/contact.html">お問い合わせ</a></li>
+</ul>
+<div class="footnav03"><a href="https://www.facebook.com/HobeinArt/" target="_blank" rel="noopener"><img src="/dcms_media/image/facebook_mono.png" alt="facebook" width="50" height="30" /></a> <a href="https://twitter.com/HolbeinArt" target="_blank" rel="noopener"><img src="/dcms_media/image/twitter_mono.png" alt="twitter" width="50" height="30" /></a> <a href="https://www.youtube.com/channel/UCGeANPugv7Q_c2LlZ4w9MHw" target="_blank" rel="noopener"><img src="/dcms_media/image/youtube_mono.png" alt="youtube" width="50" height="30" /></a> <a href="https://www.instagram.com/holbein_art/" target="_blank" rel="noopener"><img src="/dcms_media/image/instagram_mono.png" alt="instagram" width="50" height="30" /></a></div>
+</div>
+</div>
+</div>
+<div id="footer_bottom" class="cf">
+<ul class="footnav_b cf">
+<li><a href="/privacy.html">プライバシーポリシー</a></li>
+<li><a href="/sitemap.html">サイトマップ</a></li>
+</ul>
+<small id="copyright">HOLBEIN. ALL Rights Reserved.</small></div>
+</footer>
+
+
+</body>
+</html>

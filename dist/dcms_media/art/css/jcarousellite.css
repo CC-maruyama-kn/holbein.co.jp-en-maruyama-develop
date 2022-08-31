@@ -1,0 +1,92 @@
+/*top contents left*/
+/*------------------------------------------------------------------------------*/
+
+#jCarouselLite{
+	width:960px;
+	height:auto;
+	position:relative;
+}
+
+#jCarouselLite .carousel{
+	top:18px;
+	width:880px;
+	height:auto;
+	margin-left:38px;
+	position:relative;
+	overflow:hidden;
+}
+
+#jCarouselLite .carousel button{
+	/*Don't remove this. we still use this for individual demos. only the front pages use images as of now*/
+	float:left;
+}
+
+#jCarouselLite a.carousel_prev,
+#jCarouselLite a.carousel_next{
+	display:block;
+	width:18px;
+	height:65px;
+	text-decoration:none;
+	position:absolute;
+	z-index:10;
+	cursor:pointer;
+}
+
+#jCarouselLite a.carousel_next{
+	background:url(../../image/common/slide_next.jpg) no-repeat;
+	top:18px;
+	right:7px;
+	text-indent:-9999px;
+}
+
+/*
+* html #jCarouselLite a.carousel_next{
+	behavior: expression(
+	this.style.behavior || (
+	this.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src='"+this.currentStyle.getAttribute("backgroundImage").slice(5,-2)+"')",
+	this.style.backgroundImage = "none",
+	this.style.behavior = "none")
+	);
+}
+*/
+
+#jCarouselLite a.carousel_prev{
+	background:url(../../image/common/slide_prev.jpg) no-repeat;
+	top:18px;
+	left:7px;
+	text-indent:-9999px;
+}
+
+/*
+* html #jCarouselLite a.carousel_prev{
+	behavior: expression(
+	this.style.behavior || (
+	this.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src='"+this.currentStyle.getAttribute("backgroundImage").slice(5,-2)+"')",
+	this.style.backgroundImage = "none",
+	this.style.behavior = "none")
+	);
+}
+*/
+
+#jCarouselLite .carousel a:hover
+#jCarouselLite .carousel a:active{
+	border:none;
+	outline:none;
+}
+
+#jCarouselLite .carousel ul{
+	overflow:hidden;
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+#jCarouselLite .carousel li{
+	list-style:none;
+	width:178px;
+	height:auto;
+	margin:0;
+	overflow:hidden;
+}
+
+

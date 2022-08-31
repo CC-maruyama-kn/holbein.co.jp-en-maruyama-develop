@@ -1,0 +1,301 @@
+// contents
+.l-contents {
+	max-width: $content-width;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+
+	@include mq(max, sm) {
+		width: 100%;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	&-md {
+		max-width: $content-width-md;
+		margin-left: auto;
+		margin-right: auto;
+		width: 90%;
+
+		@include mq(max, sm) {
+			width: 100%;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+
+	// full
+	&-full {
+		max-width: $content-width-full;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+
+		@include mq(max, sm) {
+			width: 100%;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+
+	&-left {
+		width: 74%;
+
+		@include mq(max, md) {
+			width: 100%;
+		}
+	}
+
+	&-right {
+		width: 26%;
+
+		@include mq(max, md) {
+			width: 100%;
+		}
+	}
+
+	&-2col {
+		margin-top: 140px;
+		@include mq(max, md) {
+			margin-top: 40px;
+		}
+	}
+
+	&__beyond-width-gray {
+		position: relative;
+
+		&:before {
+			content: "";
+			display: block;
+			height: 100%;
+			width: 50vw;
+			background-color: $color-semi-light-gray;
+			position: absolute;
+			top: 0px;
+			right: 0px;
+		}
+
+	}
+	& ul{
+		list-style: none;
+	}
+}
+
+.s-flex {
+	display: flex;
+	flex-wrap: wrap;
+
+	._col1 {
+		width: 100%;
+	}
+
+	._col2 {
+		width: 100%;
+
+		@include mq(min, sm) {
+			width: calc(50% - 20px);
+		}
+	}
+
+	._col3 {
+		width: 100%;
+
+		@include mq(min, sm) {
+			width: calc(33.333% - 20px);
+		}
+
+		@include mq(min, md) {
+			width: calc(33.333% - 20px);
+		}
+	}
+
+	&.-wrap {
+		._col3:not(:nth-child(3n)) {
+			@include mq(min, sm) {
+				margin-right: 30px;
+			}
+		}
+	}
+
+	._col4 {
+		@include mq(min, sm) {
+			width: calc(50% - 20px);
+		}
+
+		@include mq(min, md) {
+			width: calc(25% - 9px);
+		}
+	}
+
+	&._between {
+		justify-content: space-between;
+	}
+
+	&._itemcenter {
+		align-items: center;
+	}
+
+	&._justifyend {
+		justify-content: flex-end;
+	}
+
+	&._justifycenter {
+		justify-content: center;
+	}
+}
+
+.s-flex-m0 {
+	display: flex;
+	flex-wrap: wrap;
+
+	&._row {
+		@include mq(min, sm) {
+			margin-left: -10px;
+			margin-right: -10px;
+		}
+	}
+
+	._col2 {
+		width: 100%;
+
+		@include mq(min, sm) {
+			width: 50%;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+
+	._col3 {
+		width: 100%;
+
+		@include mq(min, sm) {
+			width: 33.333%;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+
+		@include mq(min, md) {
+			width: 33.333%;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+
+	._col4 {
+		@include mq(min, sm) {
+			width: 50%;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+
+		@include mq(min, md) {
+			width: 25%;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+
+	._col8 {
+		@include mq(min, sm) {
+			width: 50%;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+
+		@include mq(min, md) {
+			width: 66.66666667%;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+
+	&._between {
+		justify-content: space-between;
+	}
+
+	&._itemcenter {
+		align-items: center;
+	}
+
+	&._justifycenter {
+		justify-content: center;
+	}
+}
+
+.s-flex-free {
+	display: flex;
+	flex-wrap: wrap;
+
+	._col2 {
+		width: 100%;
+
+		@include mq(min, sm) {
+			width: 50%;
+		}
+	}
+
+	._col3 {
+		width: 100%;
+
+		@include mq(min, sm) {
+			width: 33.333%;
+		}
+
+		@include mq(min, md) {
+			width: 33.333%;
+
+		}
+	}
+
+	._col4 {
+		@include mq(min, sm) {
+			width: 50%;
+
+		}
+
+		@include mq(min, md) {
+			width: 25%;
+		}
+	}
+
+	._col8 {
+		@include mq(min, sm) {
+			width: 50%;
+
+		}
+
+		@include mq(min, md) {
+			width: 66.66666667%;
+		}
+	}
+
+	&._between {
+		justify-content: space-between;
+	}
+
+	&._itemcenter {
+		align-items: center;
+	}
+
+	&._justifycenter {
+		justify-content: center;
+	}
+
+}
+
+.l-relative {
+	position: relative;
+}
+
+.l-float-middle-right {
+	@include mq(min, sm) {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+
+}
+.l-display-block{
+	display: block;
+}

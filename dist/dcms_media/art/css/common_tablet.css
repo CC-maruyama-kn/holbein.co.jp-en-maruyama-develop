@@ -1,0 +1,96 @@
+@media only screen and (min-width:691px) and (max-width:959px) {
+
+
+/******************************************************/
+/* layout */
+/******************************************************/
+#header {
+	width: 95%;
+	height: 120px;
+}
+
+
+/******************************************************/
+/* globalnav */
+/******************************************************/
+#globalnav ul,
+#en_globalnav ul {width: 100%;}
+
+#globalnav ul li a,
+#en_globalnav ul li a {	font-size: 13px;}
+
+
+
+/******************************************************/
+/* footer */
+/******************************************************/
+
+
+#footer_wrapper {
+	width:100%;
+	background:none;
+	height: 370px;
+}
+
+
+#footnavSub {
+	width:100%;
+	margin:0 auto;
+	background: url(../../image/common/bg_ft.jpg) no-repeat center bottom;
+	position:relative;
+	height:180px;
+	border-bottom:1px solid #D0D0CE;
+}
+
+#footnavSub .ftMenuArea {
+	display:none;
+}
+
+#footnavSub .ftLogo {
+	left:0;
+	right:0;
+	text-align:center;
+}
+ul#footnav {
+	width:100%;
+	text-align:center;
+	height:auto;
+	background:#fff;
+	border-top:1px solid #1E1E1E;
+	border-bottom:4px solid #1E1E1E;
+}
+ul#footnav li {
+	width:33%;
+	margin:6px 0;
+}
+
+ul#footnav li:nth-child(3n) {
+	border-right:none;
+}
+
+ul#footnav li a {
+	font-size:14px;
+}
+
+#footnavSub .ftLogo {
+	top: 20px;
+}
+
+#footnavSub ul.ftBottom {
+	top: 190px;
+}
+#copyright {
+	top: 225px;
+	text-align: center;
+	left: 0;
+	right:0;
+	margin:0 auto;
+}
+
+.pagetop {
+	top: -150px;
+}
+
+
+
+}

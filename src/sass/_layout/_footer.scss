@@ -1,0 +1,203 @@
+.l-footer {
+  &__inner {
+    @include mq(min, md) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+  }
+
+  & a {
+    &:hover {
+      @include mq(min, md) {
+        color: $color-red;
+      }
+    }
+  }
+
+  &__col {
+    &._col1 {
+      @include mq(min, md) {
+        width: 34%;
+      }
+
+      @include mq(max, md) {
+        text-align: center;
+      }
+      & a{
+        &:hover{
+          opacity: 0.8;
+        }
+      }
+    }
+
+    &._col2 {
+      @include mq(min, md) {
+        width: 22%;
+      }
+    }
+
+    &._col3 {
+      @include mq(min, md) {
+        width: 22%;
+      }
+    }
+
+    &._col4 {
+      @include mq(min, md) {
+        width: 22%;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+
+    @include mq(max, md) {
+      justify-content: center;
+
+    }
+
+    & li {
+      margin-right: 10px;
+
+      & a {
+        &:hover {
+          @include mq(min, md) {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+
+  &__item {
+    &__list01 {
+      display: flex;
+
+      @include mq(max, md) {
+        justify-content: center;
+
+      }
+
+      & li {
+        margin: 0px 15px 0 0;
+
+        @include mq(max, md) {
+          margin: 20px 15px 0 0;
+        }
+
+        &+li:before {
+          content: "";
+          display: inline-block;
+          height: 13px;
+          width: 1px;
+          background: #333;
+          margin: 0 15px 0 0px;
+        }
+      }
+
+    }
+
+  }
+
+  &__listmain {
+    &>li {
+      &>a {
+        font-size: 1.125rem;
+        font-weight: bold;
+        position: relative;
+
+        &.has-sub-menu {
+          @include mq(max, md) {
+            background-image: url(/dcms_media/image/common/new_en_ico_06.png);
+            background-position: right center;
+            background-repeat: no-repeat;
+            background-size: 25px;
+          }
+
+          &.is-subon {
+            @include mq(max, md) {
+              background-image: url(/dcms_media/image/common/new_en_ico_05.png);
+            }
+          }
+
+        }
+
+        @include mq(max, md) {
+          padding-top: 15px;
+          padding-bottom: 15px !important;
+          padding-left: 20px;
+          border-bottom: 1px solid;
+        }
+
+        &::before {
+          @include mq(max, md) {
+            content: "";
+            border-style: solid;
+            border-width: 0 2px 2px 0;
+            border-color: inherit;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            position: absolute;
+            left: 0px;
+            top: 23px;
+          }
+        }
+      }
+    }
+
+    & li {
+      & a {
+        padding-bottom: 20px;
+        display: block;
+
+        @include mq(max, md) {
+          padding-bottom: 20px;
+        }
+      }
+
+    }
+
+  }
+
+  &__listsub {
+    @include mq(max, md) {
+      border-bottom: 1px solid;
+      opacity: 0;
+      visibility: hidden;
+      height: 0;
+
+    }
+
+    &.is-subon {
+      @include mq(max, md) {
+        opacity: 1;
+        visibility: visible;
+        height: auto;
+        padding-top: 20px;
+      }
+    }
+
+    & a {
+      color: $color-light-gray;
+      margin-left: 10px;
+      font-weight: bold;
+
+      &:before {
+        content: " ";
+        width: 5px;
+        height: 2px;
+        background-size: cover;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 6px;
+        background-color: $color-light-gray;
+      }
+    }
+
+  }
+
+}

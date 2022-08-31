@@ -1,0 +1,117 @@
+.p-new-en-index-hero {
+    background: linear-gradient(180deg, $color-white 50%, $color-red 50%);
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 0 0 50px;
+        position: relative;
+
+        @include mq(max, md) {
+            margin: 0 0 0 25px;
+        }
+
+        @include mq(max, sm) {
+            margin: 0 0 0 0px;
+        }
+    }
+
+    &__content {
+        width: 87.5%;
+
+        @include mq(max, sm) {
+            width: 85%;
+        }
+    }
+
+    &__space {
+        width: 12.5%;
+
+        @include mq(max, sm) {
+            width: 15%;
+        }
+    }
+
+    &__inside {
+        position: unset;
+
+        & .swiper-button-next {
+            right: auto;
+            width: 50px;
+            height: 50px;
+            background-color: $color-white;
+            border-radius: 50px;
+            top: auto;
+            bottom: 95px;
+            left: calc(12.5% - 95px);
+            z-index: 0;
+
+            &:hover {
+                background-color: $color-semi-light-gray;
+            }
+
+            @include mq(max, sm) {
+                left: calc(15% - 35px);
+                width: 25px;
+                height: 25px;
+                bottom: 50px;
+            }
+
+            &::after {
+                content: ' ';
+            }
+        }
+
+        & .swiper-button-prev {
+            width: 50px;
+            height: 50px;
+            background-color: $color-white;
+            border-radius: 50px;
+            top: auto;
+            bottom: 35px;
+            left: calc(12.5% - 95px);
+            z-index: 0;
+
+            &:hover {
+                background-color: $color-semi-light-gray;
+            }
+
+            @include mq(max, sm) {
+                left: calc(15% - 35px);
+                width: 25px;
+                height: 25px;
+                bottom: 20px;
+            }
+
+            &::after {
+                content: ' ';
+            }
+
+            & .u-ico__arr-round {
+                transform: rotate(180deg);
+                left: auto;
+            }
+
+        }
+
+        & .swiper-pagination {
+            width: auto;
+            text-align: left;
+            left: calc(12.5% - 95px);
+            font-weight: 500;
+            color: $color-white;
+            bottom: 0;
+            z-index: 0;
+
+            @include mq(max, sm) {
+                left: calc(15% - 45px);
+                font-size: 0.75rem;
+
+            }
+
+            & span {
+                color: $color-white;
+            }
+        }
+    }
+}

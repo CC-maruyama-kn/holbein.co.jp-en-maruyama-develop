@@ -1,0 +1,301 @@
+@charset "utf-8";
+
+#form_wrap{
+    width:100%;
+    position:relative;
+}
+
+/*form pageContact,Enquete common*/
+/*-----------------------------------------------------------------------*/
+
+
+#form_container{
+width:900px;
+margin:0px auto;
+}
+
+#form_header{
+width:900px;
+height:80px;
+}
+
+#form_header h1{
+font-size:85%;
+width:900px;
+line-height:20px;
+text-align:right;
+color:#666;
+}
+
+#form_main{
+width:750px;
+float:left;
+margin:0px auto 50px auto;
+overflow:auto;
+}
+
+/*#form_title{
+border-bottom:solid 2px #000000;
+margin-bottom:20px;
+line-height:150%;
+font-size:120%;
+font-weight:bold;
+}
+*/
+#form_intro{
+line-height:150%;
+}
+
+#form_required_text{
+margin:20px 0 20px 0;
+color:#CC0000;
+}
+
+#submit_button{
+clear:both;
+padding-top:30px;
+text-align:center;
+}
+
+#submit_button input{
+width:180px;
+}
+
+#form_footer{
+width:900px;
+height:50px;
+}
+
+address {
+font-size: 85%;
+font-style: normal;
+float:right;
+line-height:50px;
+}
+
+#form_footer a{
+color:#000;
+}
+
+
+/*form pageContact*/
+/*-----------------------------------------------------------------------*/
+
+#form_contact_main{
+overflow:auto;
+}
+
+#form_wrap{
+width:100%;
+}
+
+#form_contact_main dl{
+width:100%;
+border-top:1px solid #CCCCCC;
+padding:10px 0;
+line-height:220%;
+float:left;
+}
+
+#form_contact_main dl.privacy{
+margin-top:30px;
+border-bottom:none;
+}
+
+#form_contact_main dt{
+width:210px;
+float:left;
+}
+
+#form_contact_main dt span{
+font-weight:bold;
+color:#CC0000;
+}
+
+#form_contact_main dd{
+width:480px;
+float:left;
+}
+
+#form_contact_main a{
+color:#3898CC;
+text-decoration:none;
+}
+
+#form_contact_main a:hover{
+color:#3898CC;
+text-decoration:underline;
+}
+
+
+/*form pageEnquete*/
+/*-----------------------------------------------------------------------*/
+
+#basic_information{
+border-left:solid 5px #999;
+background-color:#EFEFEF;
+padding:5px;
+margin:40px 0 10px 0;
+font-weight:bold;
+color:#333;
+}
+
+#form_enquetet_main{
+overflow:auto;
+}
+
+#enquete_intro{
+border-left:solid 5px #999;
+background-color:#EFEFEF;
+padding:5px;
+margin:50px 0 20px 0;
+font-weight:bold;
+color:#333;
+}
+
+#form_enquetet_main dl{
+width:700px;
+border-bottom:1px dotted #CCCCCC;
+padding:10px 0;
+line-height:220%;
+}
+
+#form_enquetet_main dl.privacy{
+margin-top:30px;
+border-bottom:none;
+}
+
+#form_enquetet_main dt span{
+font-weight:bold;
+color:#CC0000;
+}
+
+#form_enquetet_main dd{
+width:650px;
+padding-left:20px;
+}
+
+#free_text{
+margin:20px 0 10px 0;
+}
+
+
+/*form utility*/
+/*-----------------------------------------------------------------------*/
+
+#contact-form p{
+margin:0;
+padding:0;
+line-height:130%;
+}
+
+.example_text{
+margin-top:5px;
+line-height:100%;
+font-size:90%;
+color:#999999;
+}
+
+#family_name,#first_name,#family_name_yomi,#first_name_yomi{
+width:120px;
+margin-right:20px;
+}
+
+#zip01,#zip02{
+width:40px;
+}
+
+#female{
+margin-left:20px;
+}
+
+#table_address td{
+padding:3px 0 3px 0;
+}
+
+.width_cs{width:150px;}
+.width_cm{width:300px;}
+.width_cl{width:450px;}
+.width_es{width:200px;}
+.width_em{width:400px;}
+.width_el{width:630px;}
+.height_s{height:50px;}
+.height_m{height:100px;}
+.height_l{height:150px;}
+
+
+/*setting*/
+/*-----------------------------------------------------------------------*/
+
+.keywords_box{
+margin-bottom:5px;
+margin-right:6px;
+float:left;
+}
+
+
+/*----エラー項目部分のハイライト----*/
+    .dcms_error_area{
+        background:#FFD7D7;
+        position: relative;
+    }
+    p.error_text{
+        display:none;
+    }
+    .dcms_error_area p.error_text{
+        display: block;
+        width: auto;
+        /*float: left;*/
+    }
+
+    .dcms_error_area p.error_text span{
+        background: #ff6666;display: inline-block;padding: 7px;
+    }
+
+/*----エラーテキストの吹き出し装飾用----*/
+    #contact-form .dcms_error_area p.error_text{
+        margin-top: 5px;
+        color: #FFF;
+        position: relative;
+        /*アニメーションをつける場合*/
+        -webkit-animation: dcms_fadein_up 0.8s 1;
+        -moz-animation: dcms_fadein_up 0.8s 1;
+        -ms-animation: dcms_fadein_up 0.8s 1;
+         -o-animation: dcms_fadein_up 0.8s 1;
+            animation: dcms_fadein_up 0.8s 1;
+    }
+    #contact-form .dcms_error_area p.error_text:before{
+        content:"";
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        text-align: left;
+        top:-10px;
+        left:10px;
+        border: 5px solid transparent;
+        border-bottom: 5px solid #FF6666;
+        /*アニメーションをつける場合*/
+        -webkit-animation: dcms_fadein_up 0.8s 1;
+        -moz-animation: dcms_fadein_up 0.8s 1;
+        -ms-animation: dcms_fadein_up 0.8s 1;
+         -o-animation: dcms_fadein_up 0.8s 1;
+            animation: dcms_fadein_up 0.8s 1;
+    }
+
+    /*アニメーションを設定する*/
+    @-webkit-keyframes dcms_fadein_up {
+        0% {  opacity:0; }
+        100% { opacity:1;}
+    }
+    @-o-keyframes dcms_fadein_up {
+        0% {  opacity:0; }
+        100% { opacity:1;}
+    }
+    @-moz-keyframes dcms_fadein_up {
+        0% {  opacity:0; }
+        100% { opacity:1;}
+    }
+    @keyframes dcms_fadein_up {
+        0% {  opacity:0; }
+        100% { opacity:1;}
+    }

@@ -1,0 +1,779 @@
+@charset "utf-8";
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;600;700&display=swap');
+
+html{
+	font-size: 2vw;
+}
+#dcms_layoutPageBlock *, #dcms_layoutPageBlock *::before, #dcms_layoutPageBlock *::after{
+	box-sizing: border-box;
+}
+#dcms_layoutPageBlock img{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+body #dcms_layoutPageBlock{
+	background-color: #f7f5f4;
+	font-family: "Noto Sans Japanese", sans-serif;
+}
+@media print, screen and (min-width:691px) {
+	html{
+		font-size: 20px;
+	}
+	#dcms_layoutPageBlock .oSP{
+		display: none;
+	}
+}
+@media print, screen and (max-width: 1175px) and (min-width: 691px){
+	html{
+		font-size:1.73913vw;
+	}
+}
+@media only screen and (max-width: 690px) {
+	#dcms_layoutPageBlock .oPC{
+		display: none;
+	}
+}
+/*====================================*/
+
+/*HEADER*/
+/*====================================*/
+header {
+	position: absolute;
+}
+.header_navi .menu-btn {
+  position: fixed;
+  z-index: 10;
+	top: 1.5rem;
+	right: 1.5rem;
+	width: 6rem;
+	height: 6rem;
+	cursor: pointer;
+	background-color: #000000;
+	border: 1.2rem solid #000000;
+	transition: all .4s;
+	opacity: 0.9;
+}
+.header_navi .menu-btn span {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 0.4rem;
+	background-color: #ffffff;
+	border-radius: 0.2rem;
+	transition: all .4s;
+}
+.header_navi .menu-btn span:nth-of-type(1) {
+	top: 0;
+}
+.header_navi .menu-btn span:nth-of-type(2) {
+	top: 1.6rem;
+}
+.header_navi .menu-btn span:nth-of-type(3) {
+	bottom: 0;
+}
+.side-open .header_navi .menu-btn {
+	opacity: 1;
+}
+.side-open .header_navi .menu-btn span:nth-of-type(1) {
+	transform: translateY(1.5rem) rotate(-45deg);
+}
+.side-open .header_navi .menu-btn span:nth-of-type(2) {
+	opacity: 0;
+}
+.side-open .header_navi .menu-btn span:nth-of-type(3) {
+	transform: translateY(-1.8rem) rotate(45deg);
+}
+.header_navi .menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .9);
+	transition: all .5s;
+	visibility: hidden;
+	z-index: 9;
+	opacity: 0;
+}
+.side-open .header_navi .menu {
+	transition: all .5s;
+	visibility: visible;
+	opacity: 1;
+}
+.header_navi .menu .hnav {
+  display: flex;
+	margin: auto;
+	flex-direction: column;
+}
+.header_navi .menu .hnav li {
+	margin: 16px auto;
+}
+.header_navi .menu .hnav li a {
+	font-size: 18px;
+	color: #ffffff;
+}
+@media print, screen and (min-width:691px) {
+	header{
+		width: 100%;
+		padding-bottom: 5.625%;
+	}
+	.header_navi{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.header_navi .menu-btn {
+		display: none;
+	}
+	.header_navi .menu{
+		position: static;
+		background: none;
+		visibility: visible;
+		opacity: 1;
+	}
+	.header_navi .menu .hnav{
+		-webkit-flex-direction:row; flex-direction:row;
+		align-items: center;
+		-webkit-justify-content:flex-start; justify-content:flex-start;
+		width: 56.25%;
+		margin: 0 auto;
+	}
+	.header_navi .menu .hnav li{
+		margin: 0 60px 0 0;
+	}
+	.header_navi .menu .hnav li a{
+		position: relative;
+		display: block;
+		line-height: 2;
+		font-size: 17px;
+		font-weight: bold;
+		color: #000000;
+		transition: .6s;
+	}
+	.header_navi .menu .hnav li a::before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		display: block;
+		width: 0;
+		height: 2px;
+		background-color: RGBA(0, 0, 0, 0.5);
+		transform: translateX(-50%);
+		transition: .6s;
+	}
+	.header_navi .menu .hnav li a:hover::before {
+		width: 100%;
+	}
+}
+@media print, screen and (min-width:691px) and (max-width:1070px){
+	.header_navi .menu .hnav li{
+		margin: 0 3rem 0 0;
+	}
+	.header_navi .menu .hnav li a{
+		font-size: 1rem;
+	}
+}
+/*====================================*/
+
+/*FOOTER*/
+/*====================================*/
+footer {
+  background-color: #000;
+  text-align: center;
+}
+
+footer .inner {
+  padding: 80px 0;
+}
+
+.snsList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.snsList li {
+  max-width: 50px;
+  margin-right: 35px;
+}
+
+.snsList li:last-child {
+  margin-right: 0;
+}
+
+.footer_logo {
+  margin: 40px auto 20px;
+}
+.footer_logo a{
+	display: block;
+	width: 200px;
+	margin: 0 auto;
+}
+.footer_logo img {
+  max-width: 200px;
+}
+
+@media only screen and (max-width: 690px) {
+  footer .inner {
+    padding: 40px 0;
+  }
+
+  .footer_logo {
+    width: 240px;
+    margin: 20px auto;
+  }
+
+  .snsList li {
+    width: 12%;
+    margin-right: 20px;
+  }
+}
+/* pagetop */
+/*------------------------------------------------------------------------------*/
+#topcontrol{
+  z-index: 99999;
+}
+a.pagetop{
+  width: 63px;
+  height: 63px;
+  background: url("/dcms_media/image/common/page_top01.png") no-repeat 0 0;
+  overflow: hidden;
+  display: block;
+}
+ 
+
+/*====================================*/
+
+/*共通アイテム*/
+/*====================================*/
+.title01{
+	margin-bottom: 1.3rem;
+	text-align: center;
+	font-family: 'Noto Serif JP', serif;
+	font-weight: 700;
+	font-size: 2.3rem;
+	color: #bf951a;
+}
+.title01 span{
+	font-size: 2rem;
+	font-weight: 600;
+}
+.title02{
+	margin-bottom: 1.5rem;
+	padding: 3.75rem 0 0.8rem;
+	border-bottom: solid 1px #5a5c5d;
+	text-align: center;
+	font-size: 1.7rem;
+	font-weight: bold;
+	color: #5a5c5d;
+}
+.lead01{
+	text-align: center;
+	line-height: 2;
+	letter-spacing: -0.05em;
+	font-size: 1.8rem;
+}
+.w1120{
+	margin: 0 1rem;
+}
+.btn a{
+	display: block;
+	width: 100%;
+	background-color: #bf951a;
+	text-align: center;
+	line-height: 5rem;
+	font-size: 1.8rem;
+	font-weight: 500;
+}
+@media print, screen and (min-width:691px) {
+	.title01{
+		margin-bottom: 20px;
+		font-size: 28px;
+	}
+	.title01 span{
+		font-size: 30px;
+	}
+	.title02{
+		margin-bottom: 1.5rem;
+		padding: 84px 0 20px;
+		font-size: 24px;
+	}
+	.lead01{
+		max-width: 900px;
+		margin: 0 auto;
+		line-height: 40px;
+		letter-spacing: 0;
+		font-size: 18px;
+	}
+	.w1120{
+		max-width: 1160px;
+		margin: 0 auto;
+		padding: 0 20px;
+	}
+	.btn{
+		display:-webkit-flex; display:flex;
+		-webkit-justify-content:flex-end; justify-content:flex-end;
+	}
+	.btn a{
+		width: 220px;
+		line-height: 50px;
+		font-size: 16px;
+	}
+	.btn a:hover{
+		opacity: 0.6;
+	}
+}
+/*====================================*/
+
+/*MV*/
+/*====================================*/
+.mv{
+	background: #ede9e6 url("/dcms_media/image/irodori_mv_sp.jpg") no-repeat 50% 0;
+	background-size: 100% auto;
+	padding-bottom: 5rem;
+}
+.mv h1{
+	width: 48.9%;
+	margin: 0 auto;
+	padding: 43.3% 0 3.3%;
+}
+.mv .mvItem{
+	width: 15.1%;
+	margin: 0 auto;
+	padding: 0 0 44.4%;
+}
+.mv .movie{
+	position: relative;
+	margin-top: 2.9rem;
+	padding-bottom: 54%;
+}
+.mv .movie iframe{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.mv .scroll{
+	display: none;
+}
+@media print, screen and (min-width:691px) {
+	.mv{
+		background-image: url("/dcms_media/image/irodori_mv.jpg");
+		padding-bottom: 100px;
+	}
+	.mv h1{
+		width: 34.1927%;
+		padding: 9.89583% 0 2.91666%;
+	}
+	.mv .mvItem{
+		width: 9.40104%;
+		margin: 0 auto;
+		padding: 0 0 6%;
+	}
+	.mv .scroll{
+		display: block;
+		width: 120px;
+		margin: 0 auto 24px;
+	}
+	.mv .scroll a{
+		position: relative;
+		display: block;
+		height: 130px;
+		text-align: center;
+		font-family: 'Roboto', sans-serif;
+		font-size: 22px;
+		font-weight: bold;
+		color: #bf951a;
+	}
+	.mv .scroll a::before{
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		display: block;
+		width: 4px;
+		height: 80px;
+		transform: translateX(-50%);
+		background-color: #bf951a;
+	}
+	.mv .scroll a:hover{
+		opacity: 0.6;
+	}
+	.mv .movie{
+		width: 48rem;
+		margin: 34px auto 0;
+		padding-bottom: 48.21428%;
+	}
+}
+
+/*====================================*/
+
+/*製品とカラーチャート*/
+/*====================================*/
+#link01{
+	padding-bottom: 5rem;
+}
+.season .titleSeason .flex{
+	display:-webkit-flex; display:flex;
+	-webkit-align-items:flex-end; align-items:flex-end;
+	padding: 0 0.4rem 0.8rem;
+}
+.single .titleSingle .flex{
+	display:-webkit-flex; display:flex;
+	padding: 0 0.4rem 0.8rem;
+}
+.season .titleSeason .flex h4{
+	padding-right: 2rem;
+	line-height: 1.25;
+	font-family: 'Noto Serif JP', serif;
+	font-size: 6rem;
+	font-weight: 500;
+}
+.season.spring .titleSeason .flex h4{
+	color: #ebb8a5;
+}
+.season.summer .titleSeason .flex h4{
+	color: #a5baeb;
+}
+.season.fall .titleSeason .flex h4{
+	color: #e38874;
+}
+.season.winter .titleSeason .flex h4{
+	color: #014552;
+}
+.single .titleSingle .flex h4{
+	padding-right: 3.2rem;
+	line-height: 1.5;
+	font-family: 'Noto Serif JP', serif;
+	font-size: 2.4rem;
+	font-weight: 700;
+	color: #bf951a;
+}
+.season .titleSeason .flex h5, 
+.single .titleSingle .flex h5{
+	line-height: 1.5;
+	font-size: 1.6rem;
+}
+.season .chartBox{
+	display:-webkit-flex; display:flex;
+	-webkit-flex-wrap:wrap; flex-wrap:wrap;
+	padding: 1.6rem 0.3rem 4.1rem;
+}
+.season .chartBox .chip{
+	width: 50%;
+	padding: 0.9rem 2.3rem;
+}
+.season .chartBox .chip .spec{
+	line-height: 1.5;
+	font-size: 1.6rem;
+}
+.single .sign{
+	display:-webkit-flex; display:flex;
+	padding: 1.5rem 1rem;
+	background-color: #ffffff;
+	border: solid 0.1rem #a7a7a7;
+	font-size: 1.4rem;
+	line-height: 1.5;
+}
+.single .sign article:first-of-type{
+	width: 55%;
+}
+.single .sign h4{
+	margin-bottom: 0.5rem;
+	font-weight: 500;
+}
+.single .sign .img{
+	width: 6.5rem;
+	margin: 0 0 0.8rem 1rem;
+}
+.onlineshop a{
+	margin-top: 2.4rem;
+	display: block;
+	background-color: #bf951a;
+	text-align: center;
+	line-height: 5rem;
+	font-size: 1.85rem;
+	font-weight: 500;
+}
+@media print, screen and (min-width:691px) {
+	#link01{
+		padding-bottom: 100px;
+	}
+	#link01 .title01{
+		margin-bottom: 30px;
+	}
+	.season .titleSeason, 
+	.single .titleSingle{
+		display:-webkit-flex; display:flex;
+	}
+	.season .titleSeason .flex{
+		-webkit-flex-direction:column; flex-direction:column;
+		-webkit-justify-content:space-between; justify-content:space-between;
+		-webkit-align-items:flex-start; align-items:flex-start;
+		padding: 0;
+	}
+	.single .titleSingle .flex{
+		-webkit-flex-direction:column; flex-direction:column;
+		-webkit-align-items:flex-start; align-items:flex-start;
+		padding: 0;
+	}
+	.season .titleSeason .flex h4{
+		width: 8.85rem;
+		padding-right: 0;
+		line-height: 0.85;
+	}
+	.single .titleSingle .flex h4{
+		width: 8.85rem;
+		padding: 1.5rem 0 1rem;
+		line-height: 1.5;
+		font-size: 1.4rem;
+	}
+	.season .titleSeason .flex h5, 
+	.single .titleSingle .flex h5{
+		font-size: 0.8rem;
+	}
+	.season .chartBoxWrap{
+		margin: 0 -10px;
+	}
+	.season .chartBox{
+		display:-webkit-flex; display:flex;
+		-webkit-flex-wrap:wrap; flex-wrap:wrap;
+		margin: 0 auto;
+		padding: 30px 0 4.1rem;
+	}
+	.season .chartBox .chip{
+		width: 190px;
+		padding: 19px 10px;
+	}
+	.season .chartBox .chip .spec{
+		font-size: 14px;
+	}
+	.single .sign{
+		max-width: 680px;
+		margin: 40px auto 0;
+		padding: 25px;
+		border-width: 2px;
+		font-size: 16px;
+		line-height: 1.75;
+	}
+	.single .sign article:first-of-type{
+		width: 45%;
+	}
+	.single .sign h4{
+		margin-bottom: 12px;
+	}
+	.single .sign .flex{
+		display:-webkit-flex; display:flex;
+	}
+	.single .sign .img{
+		width: 70px;
+		margin: 0 20px;
+	}
+	.onlineshop a{
+		margin-top: 40px;
+		line-height: 100px;
+		font-size: 24px;
+		transition: 0.5s;
+	}
+	.onlineshop a:hover{
+		opacity: 0.6;
+	}
+}
+@media print, screen and (min-width:691px) and (max-width: 1175px) {
+	.season .chartBox{
+		width: 950px;
+	}
+}
+@media print, screen and (min-width:691px) and (max-width: 985px) {
+	.season .chartBox{
+		width: 760px;
+	}
+}
+@media print, screen and (min-width:691px) and (max-width: 795px) {
+	.season .chartBox{
+		width: 570px;
+	}
+}
+
+/*====================================*/
+
+/*製品特徴*/
+/*====================================*/
+#link02{
+	padding-bottom: 5rem;
+	background-color: #ffffff;
+}
+#link02 .lead01{
+	margin-bottom: 1.1rem;
+}
+.ancient .img figcaption{
+	font-size: 1.6rem;
+}
+.engraving{
+	padding-top: 2rem;
+}
+.engraving .step{
+	width: 32rem;
+	margin: 0 auto 2.15rem;
+}
+.engraving .step h4{
+	margin: 0.6rem 0 0.2rem;
+	font-family: 'Noto Serif JP', serif;
+	font-size: 1.8rem;
+	font-weight: bold;
+	color: #bf951a;
+}
+.engraving .step p{
+	font-size: 1.7rem;
+	line-height: 3rem;
+}
+#link02 .about{
+	padding: 1.2rem 2.5rem 3rem;
+	background-color: #f7f5f4;
+}
+#link02 .about h3{
+	margin-bottom: 1rem;
+	font-family: 'Noto Serif JP', serif;
+	font-size: 2.3rem;
+	font-weight: bold;
+	color: #bf951a;
+}
+#link02 .about p{
+	margin-bottom: 2rem;
+	font-size: 1.8rem;
+	line-height: 3.5rem;
+}
+@media print, screen and (min-width:691px) {
+	#link02{
+		padding-bottom: 100px;
+	}
+	#link02 .lead01{
+		margin-bottom: 30px;
+	}
+	.ancient .img{
+		max-width: 960px;
+		margin: 0 auto;
+	}
+	.ancient .img figcaption{
+		font-size: 14px;
+	}
+	.engraving{
+		padding-top: 52px;
+	}
+	.engraving .step{
+		display:-webkit-flex; display:flex;
+		width: 100%;
+		margin: 0 auto 40px;
+	}
+	.engraving .step .img{
+		-webkit-flex-shrink:0; flex-shrink:0;
+		width: 480px;
+		max-width: 65%;
+	}
+	.engraving .step article{
+		padding-left: 40px;
+	}
+	.engraving .step h4{
+		margin: 0 0 16px;
+		font-size: 28px;
+	}
+	.engraving .step p{
+		font-size: 18px;
+		line-height: 30px;
+	}
+	#link02 .about{
+		margin-top: 20px;
+		padding: 32px 50px 50px;
+	}
+	#link02 .about h3{
+		margin-bottom: 10px;
+		font-size: 18px;
+	}
+	#link02 .about p{
+		margin-bottom: 20px;
+		font-size: 16px;
+		line-height: 1.8;
+	}
+}
+
+
+/*====================================*/
+
+/*作例紹介*/
+/*====================================*/
+#link03{
+	padding-bottom: 5rem;
+}
+#link03 .art{
+	margin-bottom: 5rem;
+}
+#link03 .art > p{
+	padding: 0.3rem 0 1rem;
+	line-height: 3rem;
+	font-family: 'Noto Serif JP', serif;
+	font-size: 1.7rem;
+	font-weight: bold;
+}
+#link03 .art .profile{
+	width: 43rem;
+	margin: 0 auto;
+}
+#link03 .art .profile .profileImg{
+	width: 15rem;
+	margin: 0 auto 1rem;
+}
+#link03 .art .profile h3{
+	text-align: center;
+	font-family: 'Noto Serif JP', serif;
+	font-size: 1.7rem;
+	font-weight: bold;
+	color: #bf951a;
+}
+#link03 .art .profile p{
+	margin: 0.5rem 0 1.2rem;
+	line-height: 3rem;
+	font-size: 1.7rem;
+}
+@media print, screen and (min-width:691px) {
+	#link03{
+		padding-bottom: 100px;
+	}
+	#link03 .art{
+		margin-bottom: 100px;
+	}
+	#link03 .art > p{
+		padding: 12px 0 36px;
+		line-height: 34px;
+		font-size: 20px;
+	}
+	#link03 .art .profile{
+		display:-webkit-flex; display:flex;
+		width: 100%;
+	}
+	#link03 .art .profile .profileImg{
+		-webkit-flex-shrink:0; flex-shrink:0;
+		width: 300px;
+		margin: 0;
+	}
+	#link03 .art .profile article{
+		padding-left: 40px;
+	}
+	#link03 .art .profile h3{
+		margin-top: 32px;
+		text-align: left;
+		font-size: 18px;
+	}
+	#link03 .art .profile p{
+		margin: 16px 0 24px;
+		line-height: 2;
+		font-size: 16px;
+	}
+}
+
+

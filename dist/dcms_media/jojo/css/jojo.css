@@ -1,0 +1,963 @@
+body{
+    font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+    background-color: #E7E5E4;
+    font-size: 15px;
+    line-height: 1.6;
+/*  font-weight: bold;*/
+}
+
+
+.inner{
+    max-width: 1120px;
+    margin: auto;
+}
+
+
+/*=====================================================================================
+
+ ヘッダー
+
+=======================================================================================*/
+@media only screen and (min-width: 1120px) {
+    .menu-btn{
+        display: none;
+    }
+    .menu{
+        display: flex;
+        align-items: center;
+        height: 54px;
+    }
+    /* header navilist --------*/
+    .hnav{
+        display: flex;
+        align-items: center;
+    }
+    .hnav li{
+        width: 180px;
+        text-align: center;
+    }
+    .hnav li a:hover{
+        color: #927A72;
+    }
+    /* header sns st --------*/
+    .header_sns{
+        margin-left: auto;
+    }
+    .header_sns img{
+        max-width: 36px;
+        display: inline-block;
+        margin-left: 15px;
+    }
+    .menu .pc_none{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1119px) {
+    /* menu-btn st --------*/
+    .menu-btn {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 56px;
+        height: 48px;
+        cursor: pointer;
+        z-index: 10;
+        background-color: #ffffff;
+        border: 8px solid #ffffff;
+    }
+    .side-open .menu-btn {
+    background-color: #0f0f0f;
+    border: 8px solid #0f0f0f;
+    }
+    .menu-btn,.menu-btn span {
+        display: inline-block;
+        transition: all .4s;
+        box-sizing: border-box;
+    }
+    .menu-btn span {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: #000000;
+        border-radius: 4px;
+    }
+    .menu-btn span:nth-of-type(1) {top: 0;}
+    .menu-btn span:nth-of-type(2) {top: 14px;}
+    .menu-btn span:nth-of-type(3) {bottom: 0;}
+    .side-open .menu-btn span:nth-of-type(1) {transform: translateY(15px) rotate(-45deg);}
+    .side-open .menu-btn span:nth-of-type(2) {opacity: 0;}
+    .side-open .menu-btn span:nth-of-type(3) {transform: translateY(-13px) rotate(45deg);}
+
+    .side-open .menu-btn .dmy {
+    background-color: #FFF;
+    }
+    /* menu st --------*/
+    .menu {
+        position: fixed;
+        z-index: 9;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .9);
+        transition: all .5s;
+        visibility: hidden;
+        opacity: 0;
+    }
+    .side-open .menu {
+        transition: all .5s;
+        visibility: visible;
+        opacity: 1;
+    }
+    .header_navi .menu ul {
+        margin: 65px 0 0;
+        border-top: 1px solid rgba(255,255,255,.5);
+        height: auto;
+        padding: 0 30px;
+        background-color: transparent;
+    }
+    .header_navi .menu li {
+        margin: 24px auto;
+        text-align: center;
+        opacity: 0;
+    }
+    .header_navi li {margin: 5% auto;}
+    .header_navi .menu li a {
+        color: #ffffff;
+        display: block;
+        text-align: left
+    }
+    .header_navi li.header_mail a {border-color: #ffffff;}
+    .side-open .menu li {opacity: 1;}
+
+    /* header sns st --------*/
+    .header_sns{
+        padding: 30px 30px 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgba(255,255,255,.5);
+    }
+    .header_sns img{
+        max-width: 35px;
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    /* header logo st --------*/
+    .hlogo{
+        margin: 0 auto;
+        width: 120px;
+    }
+    .hlogo img{
+        max-width: 120px;
+        height: auto;
+    }
+}
+@media only screen and (max-width: 690px) {
+    .menu-btn {
+        width: 44px;
+        height: 40px;
+    }
+    .menu-btn span:nth-of-type(2) {top: 10px;}
+    .side-open .menu-btn span:nth-of-type(1) {transform: translateY(10px) rotate(-45deg);}
+    .side-open .menu-btn span:nth-of-type(3) {transform: translateY(-10px) rotate(45deg);}
+}
+
+
+
+/*=====================================================================================
+
+ メイン
+
+=======================================================================================*/
+.main{
+    background: url("../../image/jojo_main.png") no-repeat center / cover;
+    height: 1000px;
+    position: relative;
+}
+.main::before{
+    content: "";
+    background-color: rgba(170,170,170,.85);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.main_in{
+    position: relative;
+    z-index: 2;
+    max-width: 1120px;
+    margin: auto;
+    padding: 140px 5% 50px;
+}
+.collabo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+.collabo img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.collabo_jox{
+    margin: 0 30px;
+}
+.collabo_sp{
+    display: flex;
+    align-items: center;
+}
+.collabo_sp img{
+    margin: 15px;
+}
+.collabo_title{
+    text-align: center;
+}
+
+@media only screen and (max-width: 979px) {
+    .main{height: 800px;}
+    .main_in{padding: 160px 8% 50px;}
+    .collabo_sp{display: block;}
+    .collabo{margin-bottom: 70px;}
+    .collabo_jologo{width: 242px;}
+    .collabo_jox{width: 82px;}
+    .collabo_clogo{width: 168px;}
+    .collabo_cbp{width: 166px;}
+    .collabo_title img{width: 460px;}
+}
+@media only screen and (max-width: 690px) {
+    .main{height: 480px;}
+    .main_in{padding: 100px 2% 0;}
+    .collabo{margin-bottom: 40px;}
+    .collabo_jologo{width: 173px;}
+    .collabo_jox{width: 59px;margin: 0 30px;}
+    .collabo_clogo{width: 121px;}
+    .collabo_cbp{width: 119px;}
+    .collabo_title img{width: 328px;}
+}
+@media only screen and (max-width: 480px) {
+    .main{height: 560px;}
+    .main_in{padding: 100px 2% 0;}
+    .collabo_jologo{width: 125px;}
+    .collabo_jox{width: 43px;margin: 0 10px;}
+    .collabo_clogo{width: 87px;}
+    .collabo_cbp{width: 86px;}
+    .collabo_title img{width: 236px;}
+}
+
+
+/*=====================================================================================
+
+ JOJO PAINT とは
+
+=======================================================================================*/
+#about{
+    margin: -200px auto 60px;
+    position: relative;
+    z-index: 2;
+}
+#about::before{
+    content: "";
+    width: 1120px;
+    height: 200px;
+    position: absolute;
+    left: calc(50% - 560px);
+    top: 0;
+    background-color: #E7E5E4;
+}
+.about_block{
+    max-width: 1120px;
+    position: relative;
+    z-index: 3;
+    margin: auto;
+    display: flex;
+    padding-top: 50px;
+    align-items: center;
+}
+.about_txt_area{
+    width: 50%;
+    padding: 50px 30px;
+}
+.about_img_area{
+    width: 50%;
+}
+.about_img_area img{
+    max-width: 100%;
+    height: auto;
+    padding: 0 50px;
+}
+.about_bg{
+    position: absolute;
+    left: 0;
+    top: 50px;
+    z-index: 2;
+    background-color: #ffffff;
+    width: 50%;
+}
+.about_title{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.about_title_s{
+    font-size: 24px;
+    padding-left: 10px;
+}
+.about_item{
+    margin-top: 24px;
+    text-align: right;
+}
+@media only screen and (max-width: 1119px) {
+    #about::before{
+        width: 900px;
+        left: calc(50% - 450px);
+    }
+    .about_block{
+        max-width: 900px;
+    }
+    .about_bg{
+        min-height: 462px; 
+    }
+}
+@media only screen and (max-width: 979px) {
+    #about{margin-top: -100px;}
+    #about::before,.about_bg{
+        display: none;
+    }
+    .about_block{
+        width: 90%;
+        padding: 5% 5%;
+        flex-direction: column;
+        background-color: #ffffff;
+    }
+    .about_txt_area{
+        order: 2;
+        width: 100%;
+        padding: 0;
+    }
+    .about_img_area{
+        order: 1;
+        margin: 0 auto 30px;
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 690px) {
+    #about{margin-top: -50px;}
+    .about_img_area{
+        margin: 0 auto 20px;
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .about_block{
+        padding: 10% 5%;
+    }
+    .about_img_area{
+        margin: 0 auto 35px;
+    }
+    .about_img_area img{
+        padding: 0;
+    }
+    .about_title{
+        font-size: 32px;
+    }
+    .about_title_s{
+        font-size: 16px;
+    }
+    .about_item{
+        margin-top: 16px;
+    }
+}
+
+
+
+
+/*=====================================================================================
+
+ 絵具について
+
+=======================================================================================*/
+#paint{
+    position: relative;
+}
+.paint_block{
+    max-width: 1120px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+.paint_txt_area{
+    order: 2;
+    width: calc(100% - 380px);
+    padding-left: 80px;
+}
+.paint_title{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.paint_title_s {
+    font-size: 24px;
+    padding-left: 10px;
+}
+.paint_txt + .paint_txt{
+    margin-top: 20px;
+}
+.paint_img_area{
+    display: flex;
+    align-items: baseline;
+    order: 1;
+    width: 380px;
+    padding: 50px 0 50px 50px;
+}
+.paint_img_area img{
+    display: block;
+    margin: 0 16px;
+}
+.pitem1{
+    width: 82px;
+    height: auto;
+}
+.pitem2{
+    width: 79px;
+    height: auto;
+}
+.pitem3{
+    width: 78px;
+    height: auto;
+}
+.paint_bg{
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    background-color: #ffffff;
+    width: calc(50% + 560px);
+    height: 392px;
+}
+
+@media only screen and (max-width: 1119px) {
+    .paint_block{
+        padding-right: 3%;
+    }
+    .paint_txt_area{
+        padding-left: 70px;
+    }
+    .paint_img_area{
+        padding: 50px 0 50px 60px;
+    }
+    .paint_bg{
+        width: 97%;
+    }
+    .paint_img_area img{
+        margin: 0 10px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .paint_txt_area{
+        padding-left: 20px;
+    }
+    .paint_img_area{
+        padding: 50px 30px 50px 60px;
+    }
+}
+@media only screen and (max-width: 979px) {
+    .paint_block{
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+        padding: 5%;
+        background-color: #ffffff;
+    }
+    .paint_img_area{
+        width: 50%;
+        order: 1;
+        padding: 0;
+        margin-bottom: 30px;
+    }
+    .paint_txt_area{
+        width: 100%;
+        order: 2;
+        padding-left: 0;
+    }
+    .paint_bg{
+        display: none;
+    }
+}
+@media only screen and (max-width: 690px) {
+    .paint_block{
+        padding: 10% 5%;
+    }
+    .paint_img_area{
+        width: 80%;
+    }
+    .paint_title{
+        font-size: 32px;
+    }
+    .paint_title_s {
+        font-size: 16px;
+    }
+    .pitem1{
+        width: 65px;
+    }
+    .pitem2{
+        width: 64px;
+    }
+    .pitem3{
+        width: 63px;
+    }
+}
+
+
+/*=====================================================================================
+
+ 星
+
+=======================================================================================*/
+.star{
+    height: 26px;
+    background: url(../../image/jojo_star.png) no-repeat center / 100% auto;
+    max-width: 1120px;
+    margin: 100px auto;
+}
+.star.last{
+    margin-bottom: 60px;
+}
+@media only screen and (max-width: 1119px) {
+    .star{
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 690px) {
+    .star{
+        margin: 50px auto;
+    }
+    .star.last{
+        margin-bottom: 20px;
+    }
+}
+
+
+/*=====================================================================================
+
+ 購入方法
+
+=======================================================================================*/
+#howbuy{
+    background-color: #ffffff;
+    padding: 60px 0;
+}
+.howbuy_block{
+    max-width: 1120px;
+    margin: auto;
+}
+.howbuy_box{
+    clear: both;
+    display: flex;
+    width: 100%;
+}
+.howbuy_title{
+    float: right;
+    width: calc(100% - 460px);
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.howbuy_img{
+    width: 360px;
+}
+.howbuy_img img{
+    max-width: 100%;
+    height: auto;
+    padding-left: 20px;
+}
+.howbuy_txt{
+    width: calc(100% - 360px);
+    padding-left: 100px;
+}
+.howbuy_tab{
+    margin: 20px 0 25px;
+}
+.howbuy_tab td:first-child{
+    width: 100px;
+}
+.howbuy_tab td{
+    padding: 5px 0;
+}
+.howbuy_btn a{
+    display: inline-block;
+    padding: 8px 32px 8px 24px;
+    background-color: #968076;
+    color: #ffffff;
+    line-height: 1.4;
+    position: relative;
+}
+.howbuy_btn a::after{
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-width: 1px 1px 0 0;
+    border-style: solid;
+    transform: rotate(45deg);
+    position: absolute;
+    top: calc(50% - 5px);
+    right: 15px;
+    transition: all .2s ease-in 0s;
+}
+.howbuy_btn a:hover::after{
+    right: 12px;
+}
+@media only screen and (max-width: 1119px) {
+    .howbuy_block{
+        width: 94%;
+    }
+    .howbuy_title{
+        width: 65%;
+        padding-left: 50px;
+    }
+    .howbuy_img{
+        width: 35%;
+    }
+    .howbuy_img img{
+        padding-left: 0;
+    }
+    .howbuy_txt{
+        width: 65%;
+        padding-left: 50px;
+    }
+}
+@media only screen and (max-width: 979px) {
+    #howbuy{
+        padding: 60px 0;
+    }
+    .howbuy_block{
+        width: 90%;
+    }
+    .howbuy_title{
+        width: 100%;
+        float: none;
+        padding-left: 0;
+    }
+    .howbuy_box{
+        display: block;
+    }
+    .howbuy_img{
+        width: 100%;
+        margin: 40px auto 50px;
+    }
+    .howbuy_img img{
+        padding-left: 0;
+        display: block;
+        margin: auto;
+    }
+    .howbuy_txt{
+        width: 100%;
+        padding-left: 0;
+    }
+}
+@media only screen and (max-width: 690px) {
+    #howbuy{
+        padding: 30px 0;
+    }
+    .howbuy_title{
+        font-size: 32px;
+    }
+    .howbuy_img{
+        width: 65%;
+        max-width: 300px;
+        margin: 30px auto 40px;
+    }
+}
+
+
+
+/*=====================================================================================
+
+ 色一覧
+
+=======================================================================================*/
+#color{
+    max-width: 1120px;
+    margin: 120px auto 160px;
+}
+.color_title{
+    font-size: 40px;
+}
+.color_list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+    transition: all .2s ease 0s;
+    margin-top: 20px;
+}
+.color_list > div{
+    margin-top: 5px;
+    position: relative;
+    transition: all .2s ease 0s;
+    cursor: pointer;
+    width: 16%;
+    margin-right: .6%;
+}
+.color_list > div:nth-child(6n){margin-right: 0;}
+.color_list > div img{
+    width: 100%;
+    height: 100%;
+}
+.color_list > div:hover{
+    box-shadow: 5px 5px 5px 0 rgba(0,0,0,.5);
+}
+.color_list:hover > div:not(.ison)::before{
+    content: "";
+    background-color: rgba(0,0,0,.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all .2s ease 0s;
+}
+.color_open{
+    display: flex;
+    align-items: center;
+    padding: 30px;
+}
+.iziModal_group {
+    max-width: 80vw !important;
+}
+.iziModal-navigate-caption{
+    display: none !important;
+}
+.color_img{
+    width: 400px;
+}
+.color_img img{
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+}
+.color_txt{
+    width: calc(100% - 400px);
+    padding-left: 40px;
+}
+.color_num{
+    line-height: 1;
+    font-weight: bold;
+}
+.color_name{
+    font-size: 36px;
+    line-height: 1.2;
+    margin: 5px 0;
+}
+.color_catch{
+    font-weight: bold;
+    font-size: 16px;
+}
+.color_tab{
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+.color_tab td:first-child{
+    width: 100px;
+}
+.color_tab td{
+    padding: 3px 0;
+}
+.color_com{
+    margin-top: 30px;
+}
+.color_com_t{
+    font-weight: bold;
+}
+.color_link a{
+    color: #968076;
+    position: relative;
+    padding-right: 12px;
+    font-weight: bold;
+}
+.color_link a::after{
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-width: 1px 1px 0 0;
+    border-style: solid;
+    transform: rotate(45deg);
+    position: absolute;
+    top: calc(50% - 3px);
+    right: 0;
+    transition: all .2s ease-in 0s;
+}
+.iziModal-navigate > button.iziModal-navigate-prev,
+.iziModal-navigate > button.iziModal-navigate-next{
+    background-color: #B49E94 !important;
+    height: 60px !important;
+    top: 50% !important;
+    border-radius: 100% !important;
+    width: 60px !important;
+    background-size: 60% !important;
+    opacity: 1 !important;
+}
+@media only screen and (max-width: 1119px) {
+    #color{
+        width: 94%;
+        margin: 120px auto 160px;
+    }
+}
+@media only screen and (max-width: 800px) {
+    #color{
+        margin: 60px auto 60px;
+    }
+    .color_list > div{
+        width: 23.5%;
+        margin-right: 2%;
+        margin-top: 10px;
+    }
+    .color_list > div:nth-child(6n){margin-right: 2%;}
+    .color_list > div:nth-child(4n){margin-right: 0;}
+    .color_open{
+        flex-direction: column;
+        padding: 20px;
+    }
+    .color_img{
+        width: 80%;
+        margin: 0 auto 20px;
+    }
+    .color_txt{
+        width: 100%;
+        padding-left: 0;
+    }
+    .color_name{
+        font-size: 28px;
+    }
+    .color_catch{
+        font-size: 14px;
+    }
+    .color_com{
+        margin-top: 20px;
+    }
+    .color_tab{
+        font-size: 12px;
+        margin-top: 15px;
+    }
+    .iziModal_group {
+        max-width: 90vw !important;
+    }
+    .color_list:hover > div:not(.ison)::before{
+        display: none !important;
+    }
+}
+@media only screen and (max-width: 690px) {
+    #color{
+        margin: -20px auto 30px;
+    }
+    .color_title{
+        font-size: 32px;
+    }
+    .color_list{
+        margin-top: 10px;
+    }
+
+}
+
+
+/*=====================================================================================
+
+ フッター
+
+=======================================================================================*/
+
+.footer_sns{
+    text-align: center;
+    margin-bottom: 100px;
+}
+.footer_sns a{
+    display: inline-block;
+    margin: 0 16px;
+}
+.footer_sns a img{
+    max-width: 50px;
+    height: auto;
+}
+
+footer{
+    text-align: center;
+    padding: 16px;
+    background-color: #000000;
+}
+@media only screen and (max-width: 690px) {
+    .footer_sns{
+        margin-bottom: 40px;
+    }
+    .footer_sns a img{
+        max-width: 40px;
+    }
+    footer img{
+        width: 100px;
+        height: auto;
+    }
+}
+
+
+
+    #topcontrol {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 63px;
+        height: 63px;
+        overflow: hidden;
+        display: block;
+        background-color: rgba(0, 0, 0, .7);
+        text-indent: -500%;
+        z-index: 1000;
+        border: 1px solid rgba(255,255,255,.3);
+    }
+    #topcontrol:after {
+        position: fixed;
+        display: block;
+        content: "";
+        width: 18px;
+        height: 18px;
+        border-top: 2px solid #fff;
+        border-left: 2px solid #fff;
+        transform: rotate(45deg);
+        bottom: 36px;
+        right: 32px;
+    }
+    #topcontrol:hover{opacity: .7;}
+@media only screen and (max-width: 979px) {
+    #topcontrol {display: none;}
+}
+
+
+
+
+
+
+#link01{
+    margin-top: -200px;
+    padding-top: 200px;
+}
+/*-----------menu_area----------*/
+#js__btn.menu-btn{
+    position: fixed;
+    z-index: 10
+}
+
+@media only screen and (min-width: 1020px) {
+.jojo_header{
+        background: #E7E5E4;
+        z-index: 10;
+        position: fixed;
+        width: 100%;
+            margin: auto;}
+.main.jojomain{
+    height: 1054px;
+    padding-top: 54px;
+}
+}

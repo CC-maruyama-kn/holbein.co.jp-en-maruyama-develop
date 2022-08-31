@@ -1,0 +1,44 @@
+.u-txt {
+  &-center {
+    text-align: center;
+
+    &-sp {
+      @include mq(max, sm) {
+        text-align: center !important;
+      }
+    }
+  }
+
+  &-right {
+    text-align: right;
+
+    &-sp {
+      @include mq(max, sm) {
+        text-align: right !important;
+      }
+    }
+  }
+
+  &-left {
+    text-align: left;
+
+    &-sp {
+      @include mq(max, sm) {
+        text-align: left !important;
+      }
+    }
+  }
+
+  &-align-center {
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    &-sp {
+      @include mq(max, sm) {
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+    }
+
+  }
+}

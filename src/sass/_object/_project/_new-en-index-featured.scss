@@ -1,0 +1,15 @@
+.p-new-en-index-featured {
+  & .js-biggerlink {
+    height: 100%;
+
+    &:hover {
+      background-color: $color-red;
+      color: $color-white;
+
+      & img {
+        transform: scale(1.1);
+      }
+    }
+
+  }
+}

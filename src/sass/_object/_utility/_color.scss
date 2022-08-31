@@ -1,0 +1,62 @@
+@mixin bg {
+	&_red {
+		background-color: $color-red;
+	}
+
+	&_light-gray {
+		background-color: $color-light-gray;
+	}
+
+	&_white {
+		background-color: $color-white;
+	}
+
+	&_semi-light-gray {
+		background-color: $color-semi-light-gray;
+	}
+
+	&_dark-gray {
+		background-color: $color-dark-gray;
+	}
+
+	&-mix-gray_color {
+		background: linear-gradient(180deg, $color-white 180px, $color-semi-light-gray 180px);
+
+		@include mq(max, sm) {
+			background: linear-gradient(180deg, $color-white 120px, $color-semi-light-gray 120px);
+		}
+	}
+
+}
+.bg_accent {
+	@include bg;
+	&-pc{
+		@include mq(min,md) {
+			@include  bg;
+		}
+	}
+	&-tab{
+		@include mq(bw,sm,md) {
+			@include  bg;
+		}
+	}
+	&-sp{
+		@include mq(max,sm) {
+			@include  bg;
+		}
+	}
+}
+
+.text_accent {
+	&_red {
+		color: $color-red;
+	}
+
+	&_light-gray {
+		color: $color-light-gray;
+	}
+
+	&_white {
+		color: $color-white;
+	}
+}

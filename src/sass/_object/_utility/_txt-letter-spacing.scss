@@ -1,0 +1,12 @@
+.u-txt-letter-spacing {
+  &-lt300 {
+   letter-spacing:0.3em ;
+  }
+  &-lt200 {
+    letter-spacing:0.2em ;
+   }
+   &-lt150 {
+    letter-spacing:0.15em ;
+   }
+}
+

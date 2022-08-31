@@ -1,0 +1,291 @@
+.c-g-mega {
+  @include mq(min, md) {
+    position: absolute;
+    right: 270px;
+  }
+
+  & a {
+    &:hover {
+      @include mq(min, md) {
+        color: $color-red;
+      }
+    }
+  }
+
+  @include mq(max, md) {
+    position: fixed;
+    z-index: 1000;
+    top: 64px;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  &.is-active {
+    @include mq(max, md) {
+      visibility: visible;
+      pointer-events: auto;
+    }
+  }
+
+  &_scroll {
+    @include mq(max, md) {
+      max-height: 100vh;
+      overflow: auto;
+      position: relative;
+      z-index: 1;
+      transition: all .4s cubic-bezier(.025, .025, 0, 1.000) .6s;
+      opacity: 0;
+      padding: 0 0 64px 0;
+    }
+
+    .is-active & {
+      opacity: 1;
+      transition-delay: 0s;
+    }
+  }
+
+  &_inner {
+    margin-left: auto;
+    position: relative;
+    z-index: 1;
+
+    @include mq(max, md) {
+      height: 100%;
+    }
+
+  }
+
+  &_item {
+    position: relative;
+
+    &>a {
+
+      &.js-sub-menubtn {
+        @include mq(max, md) {
+          background-image: url(/dcms_media/image/common/new_en_ico_06.png);
+          background-position: right center;
+          background-repeat: no-repeat;
+          background-size: 25px;
+
+          &.is-subon {
+            background-image: url(/dcms_media/image/common/new_en_ico_05.png);
+          }
+        }
+      }
+
+      &:before {
+        @include mq(max, md) {
+          content: "";
+          border-style: solid;
+          border-width: 0 2px 2px 0;
+          border-color: inherit;
+          display: inline-block;
+          padding: 3px;
+          transform: rotate(-45deg);
+          -webkit-transform: rotate(-45deg);
+          position: absolute;
+          left: 30px;
+          top: 22px;
+        }
+
+      }
+    }
+
+    & a {
+      @include mq(max, md) {
+        padding: 15px;
+        display: block;
+        border-bottom: 1px solid;
+      }
+    }
+  }
+
+  &_bg {
+    @include mq(max, md) {
+      transition: all .4s cubic-bezier(.025, .025, 0, 1.000) .6s;
+      transform: scaleY(0);
+      transform-origin: 0 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: $color-semi-light-gray;
+    }
+
+    .is-active & {
+      transform: scaleY(1);
+      transition-delay: 0s;
+    }
+  }
+
+  &_child {
+
+    @include mq(min, md) {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 1000;
+      display: none;
+      float: left;
+      min-width: 383px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      text-align: left;
+
+    }
+
+    @include mq(max, md) {
+      visibility: hidden;
+      opacity: 0;
+      height: 0;
+    }
+
+    &.is-subon {
+      @include mq(max, md) {
+        visibility: visible;
+        opacity: 1;
+        height: auto;
+      }
+    }
+
+    li.c-g-mega_item>& {
+      @include mq(min, md) {
+        display: none !important;
+      }
+
+    }
+
+    li.c-g-mega_item:hover>& {
+      @include mq(min, md) {
+        display: block !important;
+      }
+      .is-search-active &{
+        @include mq(min, md) {
+          display: none !important;
+        }     
+      }
+    }
+
+    .has-sub:hover & {
+      opacity: 1;
+      visibility: visible;
+    }
+
+
+    & li {
+      &:hover {
+        &>a {
+
+          @include mq(min, md) {
+            color: $color-red;
+            background-color: $color-white;
+          }
+        }
+
+      }
+
+      & a {
+
+        @include mq(min, md) {
+          font-size: 1.125rem;
+          display: block;
+          padding: 15px 30px 15px 15px;
+          text-align: left;
+          position: relative;
+          background-color: $color-semi-light-gray;
+        }
+
+        @include mq(max, md) {
+          padding-left: 50px;
+        }
+
+        &.has-sub {
+          @include mq(max, md) {
+            padding-left: 45px;
+          }
+
+          &:before {
+            @include mq(min, md) {
+              content: "";
+              border-style: solid;
+              border-width: 0 2px 2px 0;
+              border-color: $color-red;
+              display: inline-block;
+              padding: 3px;
+              transform: rotate(-45deg);
+              -webkit-transform: rotate(-45deg);
+              position: absolute;
+              right: 30px;
+              top: 23px;
+            }
+          }
+        }
+
+      }
+
+    }
+
+    &.level2 {
+      a:before {
+        @include mq(max, md) {
+          content: " ";
+          width: 5px;
+          height: 2px;
+          background-size: cover;
+          display: inline-block;
+          vertical-align: middle;
+          margin-right: 7px;
+          background-color: $color-dark-gray;
+        }
+      }
+    }
+
+  }
+
+  &_right {
+    left: 100%;
+    top: 0;
+  }
+
+  &_list {
+
+    &>ul {
+      display: flex;
+      font-weight: 500;
+
+      .is-search-active & {
+        @include mq(max, md) {
+          padding-top: 67px;
+        }
+      }
+
+      @include mq(max, md) {
+        display: block;
+        padding: 0 0 30px 0;
+      }
+
+      &>li {
+        padding: 35px 20px 35px 20px;
+        position: relative;
+
+        @include mq(max, md) {
+          padding: 0px 30px 0px 30px;
+        }
+
+        &>a {
+          @include mq(min, md) {
+            font-size: 1.25rem;
+          }
+        }
+      }
+    }
+
+  }
+
+}

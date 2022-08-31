@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+<title>スカラシップ|ホルベイン オフィシャルウェブサイト</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="keywords" content="スカラシップ,holbein,color,ホルベイン,画材,絵具,画筆,水彩紙,イーゼル" />
+<meta name="description" content="スカラシップ│ホルベインのオフィシャルサイトです。絵具、画材の新製品、イベント、キャンペーン情報など、アートライフを豊かにする各種情報を提供します。" />
+
+<link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+		<link href="//fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
+		<link rel="stylesheet" href="/dcms_media/css/utility.css">
+		<link rel="stylesheet" href="/dcms_media/css/jquery.flexslider.css" />
+		<link rel="stylesheet" href="/dcms_media/css/jquery.bxslider.min.css" />
+		<link rel="stylesheet" href="/dcms_media/css/jquery.jscrollpane.css" />
+		<link rel="stylesheet" href="/dcms_media/css/common.css">
+		<link rel="stylesheet" href="/dcms_media/css/common_tablet.css">
+		<link rel="stylesheet" href="/dcms_media/css/common_smartphone.css">
+		<link rel="stylesheet" href="/dcms_media/css/sub.css">
+		<link rel="stylesheet" href="/dcms_media/css/sub_tablet.css">
+		<link rel="stylesheet" href="/dcms_media/css/sub_smartphone.css">
+                <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><!--アイコンフォント-->
+
+		<script src="/dcms_media/js/jquery-1.11.1.min.js"></script>
+		<script src="/dcms_media/js/current.js"></script>
+		<script src="/dcms_media/js/slidemenu.js"></script>
+		<script src="/dcms_media/js/scrolltopcontrol.js"></script>
+		<script src="/dcms_media/js/jquery.matchHeight-min.js"></script>
+		<script src="/dcms_media/js/jquery.flexslider-min.js"></script>
+		<script src="/dcms_media/js/jquery.bxslider.min.js"></script>
+		<script src="/dcms_media/js/jquery.mousewheel.js"></script>
+		<script src="/dcms_media/js/jquery.jscrollpane.min.js"></script>
+		<script src="/dcms_media/js/jQuery.BiggerLink.js"></script>
+
+		<script>
+			var lh = "";
+			lh = location.href;
+			if (lh.match(/dcmsadm/)) {
+                        document.write('<link rel="stylesheet" href="/dcms_media/css/management_screen.css" />');
+			} else {
+
+				document.write('<script src="/dcms_media/js/header_menu.js"></scri' + 'pt>');
+
+				(function($) {
+					$(document).ready(function() {
+
+
+
+						//モーダル+スライダー(jquery.bxslider使用)
+						if ($('.scholarship_modal').length > 0) {
+							$('body').append('<div class="scholarship_modal_close"></div><div class="scholarship_modal_overlay"></div>');
+						}
+						var sliders = new Array();
+						$('.scholarship_slider').each(function(i, slider) {
+							sliders[i] = $(slider).bxSlider();
+						});
+						$('.scholarship_modal_open a').on('click', function() {
+							var modalTarget = '.' + $(this).attr('data-modalClass');
+							var $modalTarget = $(modalTarget);
+							$modalTarget.addClass('scholarship_modal_active').stop().show(0, function() {
+								$(this).animate({
+									'opacity' : 1
+								}, 600);
+								$('.scholarship_modal_overlay, .scholarship_modal_close').stop().fadeIn(600);
+								//モーダル内スライダー リロード
+								$.each(sliders, function(i, slider) {
+									slider.reloadSlider();
+								});
+								$modalTarget.css({
+									'top' : (window.innerHeight - $modalTarget.innerHeight()) / 2 + 'px',
+									'left' : (window.innerWidth - $modalTarget.innerWidth()) / 2 + 'px'
+								});
+								$('.scholarship_modal_close').css({
+									'top' : (window.innerHeight - $modalTarget.innerHeight()) / 2 + 'px',
+									'left' : (window.innerWidth - $modalTarget.innerWidth()) / 2 + $modalTarget.innerWidth() - 40 + 'px'
+								});
+							});
+							return false;
+						});
+						$('.scholarship_modal_overlay, .scholarship_modal_close').on('click', function() {
+							$('.scholarship_modal,.scholarship_modal_overlay, .scholarship_modal_close').stop().fadeOut(200, function() {
+								$(this).removeAttr('style').removeClass('scholarship_modal_active');
+							});
+						});
+
+						//リサイズ時処理
+						var resizeTimer = null;
+						$(window).on('resize', function() {
+							clearTimeout(resizeTimer);
+							resizeTimer = setTimeout(function() {
+								//jscrollpane調整
+								$('.scholarship_newsrelease .scholarship_newsrelease_inner').jScrollPane();
+
+								//モーダル位置調整
+								$('.scholarship_modal_active').css({
+									'top' : (window.innerHeight - $('.scholarship_modal_active').innerHeight()) / 2 + 'px',
+									'left' : (window.innerWidth - $('.scholarship_modal_active').innerWidth()) / 2 + 'px'
+								});
+								$('.scholarship_modal_close').css({
+									'top' : (window.innerHeight - $('.scholarship_modal_active').innerHeight()) / 2 + 'px',
+									'left' : (window.innerWidth - $('.scholarship_modal_active').innerWidth()) / 2 + $('.scholarship_modal_active').innerWidth() - 40 + 'px'
+								});
+							}, 200);
+						});
+
+					});
+				})(jQuery);
+			}
+		</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KZZBVVW');</script>
+<!-- End Google Tag Manager -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZZBVVW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<meta name="google-site-verification" content="6-rKPFoMiGrCzNF6AwLw2ukrY8Ax9_hV6SloMX7GWNQ" />
+</head>
+
+
+<body id="common" class="page_brand page_scholarship">
+
+<header>
+<div id="headnav">
+<div class="headnav_in">
+<ul class="headnav_link01">
+<li class="icon_mail"><a href="/mailmagazine">メルマガ</a></li>
+<li class="icon_contest"><a href="/contest">コンテスト</a></li>
+<li class="icon_faq"><a href="https://technical-info.holbein.co.jp/">技術情報Ｑ＆Ａ</a></li>
+<li class="icon_dealer"><a href="/dealer">ディーラー様向けご案内</a></li>
+</ul>
+<div class="headnav_link02">
+<p class="headnav_link02_ttl"><a href="#">Languages - Art</a></p>
+<ul class="headnav_link02_dropdown">
+<li><a href="/">Japanese</a></li>
+<li><a href="/en.html">English</a></li>
+<li><a href="/es.html">Spanish</a></li>
+<li><a href="/fr.html">French</a></li>
+<li><a href="/ch.html">Chinese</a></li>
+<li><a href="/kr.html">Korean</a></li>
+</ul>
+</div>
+<div class="headnav_link03">
+<p class="headnav_link03_ttl"><a href="#">Languages - works</a></p>
+<ul class="headnav_link03_dropdown">
+<li><a href="/">Japanese</a></li>
+<li><a href="/english/index.html">English</a></li>
+<li><a href="/worldwide/espanol/index.html">Spanish</a></li>
+<li><a href="/worldwide/france/index.html">French</a></li>
+<li><a href="/worldwide/italiano/index.html">Italiano</a></li>
+<li><a href="/worldwide/deutsch/index.html">Deutsch</a></li>
+<li><a href="/worldwide/korean/index.html">Korean</a></li>
+</ul>
+</div>
+<div class="headnav_link04"><form action="/dcms-search/"><input class="search_txt" name="schKeyword" type="text" placeholder="サイト内検索" /> <input name="schBlog" type="hidden" value="1" /><input class="submit_btn" type="submit" value="サイト内検索" /></form></div>
+</div>
+</div>
+<h1 id="logo"><a href="/"><img src="/dcms_media/image/logo01.png" alt="絵具、絵画材料のホルベイン" /></a></h1>
+<div id="globalnav">
+<div id="gnav_btn01"><a href="#">MENU</a></div>
+<nav id="globalnav_in">
+<div id="gnav_btn02"><a href="#">閉じる</a></div>
+<div id="logo02"><a href="/"><img src="/dcms_media/image/logo02.png" alt="holbein" /></a></div>
+<ul class="cf">
+<li class="globalnav_menu"><a href="/product">製品情報</a>
+<ul class="globalnav_subnav01">
+<li><a href="/product">製品情報</a></li>
+<li><a href="/product/catalog">WEBカタログ</a></li>
+</ul>
+</li>
+<li class="globalnav_menu"><a href="/business">事業案内</a>
+<ul class="globalnav_subnav02">
+<li><a href="/business/oem">生産受託</a></li>
+<li><a href="/business/restoration.html">絵画修復</a></li>
+<li><a href="/business/abulabo.html">あぶLABO</a></li>
+</ul>
+</li>
+<li class="globalnav_menu"><a href="/company">会社情報</a>
+<ul class="globalnav_subnav03">
+<li><a href="/company/history">ブランドストーリー</a></li>
+<li><a href="/company/about">会社概要</a></li>
+<li><a href="/company/about.html#a01">アクセス</a></li>
+<li><a href="/company/holbein_gallery">ホルベインギャラリー</a></li>
+<li><a href="/company/holbein_gallery#showroom">ショールーム</a></li>
+<li><a href="/company/recruit.html">採用情報</a></li>
+</ul>
+</li>
+<li class="globalnav_menu"><a href="/resources">資料室</a>
+<ul class="globalnav_subnav04">
+<li><a href="/resources/publishing">出版活動</a></li>
+<li><a href="/resources/publishement">広告・メディア</a></li>
+<li><a href="/resources/histoir">画家たちの美術史</a></li>
+<li><a href="/resources/anatomy">色材の解剖学</a></li>
+<li><a href="/resources/acrylart_separate.html">ACRYLART別冊</a></li>
+<li><a href="/resources/acrylart.html">ACRYLART</a></li>
+</ul>
+</li>
+<li class="globalnav_menu"><a href="/shop">販売店一覧</a>
+<ul class="globalnav_subnav05">
+<li><a href="/shop/list_1">北海道・東北</a></li>
+<li><a href="/shop/list_2">関東</a></li>
+<li><a href="/shop/list_3">信州・北陸・東海</a></li>
+<li><a href="/shop/list_4">近畿</a></li>
+<li><a href="/shop/list_5">中国・四国</a></li>
+<li><a href="/shop/list_6">九州・沖縄</a></li>
+</ul>
+</li>
+<li class="globalnav_contact"><a href="/contact.html">お問い合わせ</a></li>
+<li class="globalnav_onlineshop"><a href="https://holbein-shop.com/" target="_blank" rel="noopener">オンラインショップ</a></li>
+</ul>
+<ul class="sp_head_link01">
+<li><a href="/mailmagazine">メルマガ</a></li>
+<li><a href="/contest">コンテスト</a></li>
+<li><a href="https://technical-info.holbein.co.jp/" target="_blank" rel="noopener">技術情報Ｑ＆Ａ</a></li>
+<li><a href="/dealer">ディーラー様向けご案内</a></li>
+</ul>
+<div class="sp_head_link02"><form action="/dcms-search/"><input class="search_txt" name="schKeyword" type="text" placeholder="サイト内検索" /> <input class="submit_btn" type="submit" value="サイト内検索" /></form></div>
+<div class="sp_head_link03"><a href="https://www.facebook.com/HobeinArt/" target="_blank" rel="noopener"><img src="/dcms_media/image/icon_fb01.png" alt="facebook" /></a> <a href="https://twitter.com/HolbeinArt" target="_blank" rel="noopener"><img src="/dcms_media/image/icon_tw01.png" alt="twitter" /></a> <a href="https://www.youtube.com/channel/UCGeANPugv7Q_c2LlZ4w9MHw" target="_blank" rel="noopener"><img src="/dcms_media/image/icon_youtbe01.png" alt="youtube" /></a> <a href="https://www.instagram.com/holbein_gazai/" target="_blank" rel="noopener"><img src="/dcms_media/image/icon_insta01.png" alt="instagram" /></a></div>
+</nav></div>
+</header>
+
+
+<div id="wrapper">
+				<!--↓↓↓パンくず↓↓↓-->
+				<div id="locator" class="loca">
+					<div class="inner">
+						スカラシップ
+					</div>
+				</div>
+				<!--↑↑↑パンくず↑↑↑-->
+
+
+
+<main id="contents" class="clearfix">				
+<div class="contents_inner cf">
+
+<!-- ブロック貼り付けエリア -->
+<div id="dcms_layoutPageBlockPasteArea">
+<!-- ブロック -->
+<div id="dcms_layoutPageBlock">
+<!--###_DCMS_BLOCK_START_###-->
+<div class="img100 m80_sph"><img title="奨学生発表" src="/dcms_media/image/2019scholaship_image.jpg" alt="スカラシップ" data-popupalt-original-title="null" width="1120" height="385" /></div>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<h2 class="sub_title01"><span class="color_red">ニ</span>ュース</h2>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<div class="section_bottom scholarship_newsrelease">
+<div class="scholarship_newsrelease_inner">###_DCMS_BLOCK_RSS_scholarship_5_###</div>
+</div>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<h2 class="sub_title01"><span class="color_red">ス</span>カラシップとは</h2>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<div class="section_bottom">
+<h3 style="font-size: 1.2em; fonr-weight: bold; margin-bottom: 1.5ex;">「ホルベイン・スカラシップ」は若きアーティストを支援する奨学生制度です。</h3>
+<p>ホルベイン・スカラシップ奨学制度は、優れた芸術作品の創造と美術界の発展を願い、国内で活動する作家を支援するためのCSR活動として発足いたしました。当奨学制度では、作品の形態を問わず色材（油彩・アクリル他）を必要としている作家に対して、ホルベインの取り扱う多様な材料・用具を提供することでその活動を支援いたします。受賞者と当社とのより密接な関係性を構築することをミッションとして掲げ、新製品の開発にご意見やアイディアを取り入れたり、当社のイベントやオンライン企画などで発表の場を設けたり、相互により能動的で、対等な関係でスカラシップに参加していただきます。<br /><br />1986年に第1回ホルベイン・アクリラ奨学制度として運営を開始して以来、のべ1000名以上の奨学生を認定しています。<br />2003年には、芸術文化の振興発展に高く貢献した企業や団体に与えられる「メセナ賞（新世代支援賞）」を受賞しています。 <br />ホルベイングループでは今後も一層の努力を重ね、企業活動を通じて芸術文化の発展振興に寄与する活動を推進して参ります。</p>
+</div>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<h2 class="sub_title01"><span class="color_red">応</span>募について</h2>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<div class="sub_title02 scholarship_subtitle01">
+<h3>第35回募集要項</h3>
+</div>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<div class="section_bottom contest02 active_tab" style="display: block;">
+<table class="contest_table01">
+<tbody>
+<tr>
+<th>実施概要</th>
+<td>最大7名の作家に対して、総額30万円相当の絵具・筆・キャンバスなど、ホルベインブランドの一部色材・画材製品（注1）を無償提供し、創作活動と材料研究を支援します（提供期間）。<br /> 提供期間終了後は約1年間、定価30万円相当を上限にホルベインブランド製品を割引（注2）にて購入可能とし、創作活動を支援します（購入期間）。 <br /> <br />注1：画材製品（筆・キャンバス・水彩紙など）は総額30万円のうち10万円を上限とします。<br /> 注2：奨学期間中の対象商品や課題内容など、詳細は奨学者にのみ別途連絡します。</td>
+</tr>
+<tr>
+<th>奨学期間</th>
+<td>提供期間：2022年10月～2023年9月（約1年間）<br /> 購入期間：2023年10月～2024年9月（約1年間）</td>
+</tr>
+<tr>
+<th>応募資格</th>
+<td>奨学期間中の日本国内在住が決定している18歳以上45歳以下の創作者、またはその志望者。平面・立体、その他のジャンルや表現を問わず、常に色材を使用した制作を行う者。提供期間中に要求する各種レポートの提出に対応できる者。<br />上記規定内であれば第29回以前のホルベイン・スカラシップ奨学生の再応募も可能とする。<br />〈課題の予定〉<br />
+<ol>
+<li>1. 提供期間中の活動についてのレポート数点</li>
+<li>2. ホルベイン製品を全面的に使用した作品の制作</li>
+</ol>
+</td>
+</tr>
+<tr>
+<th>募集人数</th>
+<td>最大7名</td>
+</tr>
+<tr>
+<th>応募方法</th>
+<td>
+<p class="m20">レターパック（レターパックライト、またはレターパックプラス）にて応募に必要なものを送付ください。<br />※応募は一人1冊に限ります。<br /> ※レターパックは全国の郵便局で購入できる書類送付用の封筒です。詳しくは<a title="日本郵便局株式会社" href="http://www.post.japanpost.jp/index.html" target="_blank" rel="noopener"><span style="text-decoration: underline;">郵便局のウェブサイト</span></a>をご覧ください。</p>
+<p class="m20">〈 送付先 〉<br />ホルベイン画材株式会社　スカラシップ実行委員会<br /> 〒170-0013　東京都豊島区東池袋2-18-4　<br /> TEL 03-5927-1631</p>
+<p>〈 応募に必要なもの 〉</p>
+<ul class="type_decimal m20">
+<li>応募用紙（スカラシップ募集チラシまたは下記データを印刷してご使用いただくか、<span style="text-decoration: underline;"><a style="color: #990134;" title="ホルベイン・スカラシップ応募フォーム" href="/scholarship/application_form.html" target="_blank" rel="noopener">専用応募フォーム</a></span>より必要事項をご登録ください。）<br /><span style="margin: 20px; font-size: 1.4em; font-weight: bold; font-color: #990134;"><a style="color: #990134;" title="第35回ホルベイン・スカラシップ奨学生応募用紙" href="/dcms_media/other/2206scholaship.pdf" target="_blank" rel="noopener">応募用紙ダウンロード</a></span></li>
+<li>ポートフォリオ</li>
+<li>ポートフォリオ返却用レターパック<br />※「お届け先」にはご自身のご住所、「ご依頼主」にはスカラシップ実行委員会の送付先をご記入ください。<br />※返却用レターパックの「ご依頼さま保管用シール」ははがし、ポートフォリオ返却まで保管ください。</li>
+</ul>
+<p class="m20">〈 応募用紙をチラシ・印刷したもので提出する場合 〉<br /> 応募用紙に必要事項を記入し、【応募に必要なもの】3点をレターパックで送付ください。</p>
+<p class="m20">〈 応募用紙をオンラインで提出する場合 〉<br /> <span style="font-weight: bold;">専用応募フォームに必要項目を登録した後</span>、ほか【応募に必要なもの】2点をレターパックで送付ください。<br /><span style="margin: 20px; font-size: 1.4em; font-weight: bold;"><a title="ホルベイン・スカラシップ応募フォーム" href="/scholarship/application_form.html" target="_blank" rel="noopener">応募フォームはこちら</a></span></p>
+<p>〈 ポートフォリオの規定 〉<br /> A4 ポケットファイル（10ポケット、20ページ程度）1冊に下記の内容を構成してください。</p>
+<ul class="m20" style="list-style-type: upper-latin; margin-left: 25px;">
+<li>表紙に氏名（本名）を明記</li>
+<li>プロフィール　※応募用紙に記入した連絡先（電話番号、またはメールアドレス）を記載ください。</li>
+<li>作品や制作についての200字以内のレポート</li>
+<li>各作品画像にはキャプション（サイズ・制作年・素材）をつけてください。※CD-R不可</li>
+</ul>
+<p>〈 ポートフォリオの返却について 〉<br />ポートフォリオは応募者全員に返却します。<br /> ポートフォリオ返却用のレターパックが無いものやレターパックに入らないものは、宅急便にて着払い扱いで返送します。但し、スカラシップ認定者は奨学生期間終了後に返却します。<br />取扱いには万全を期しますが、万一の事故に対する責任は負いかねますのでご了承ください。</p>
+</td>
+</tr>
+<tr>
+<th>申込締め切り日</th>
+<td>2022年8月31日（水）※消印有効</td>
+</tr>
+<tr>
+<th>選考方法</th>
+<td>スカラシップ実行委員会で組織する選考委員により、厳正に審査を行います。<br /><br />審査員　今井 俊介（美術作家 ／第 22 回ホルベイン・スカラシップ奨学生）<br />　　　　伊藤 悠（HARUKAITO ディレクター／ギャラリーオーナー）<br />　　　　神山 亮子（府中市美術館学芸員）</td>
+</tr>
+<tr>
+<th>審査結果</th>
+<td>応募者全員にメールまたはポートフォリオ返却にて合否を通知いたします。（9月下旬～10月上旬を予定）</td>
+</tr>
+<tr>
+<th>個人情報の取り扱いについて</th>
+<td>応募用紙に記入された個人情報については、当奨学制度の運営上必要な審査、問い合わせ、結果通知などで使用します。また顧客情報として厳重に管理し、当社マーケティング活動に活用いたします。お預かりする個人情報は応募者に断りなく第三者に提供いたしません。また応募用紙は当奨学制度の審査終了後、責任を持って破棄いたします。</td>
+</tr>
+<tr>
+<th>著作権の扱いについて</th>
+<td>奨学生は、提出した作品画像や応募フォームに記載された事項を主催者側がホームページやSNS、チラシ、その他媒体、資料等に使用・掲載することを許諾するものとする。</td>
+</tr>
+<tr>
+<th>問い合わせ先</th>
+<td>ホルベイン画材（株）スカラシップ実行委員会<br /> 〒170-0013 東京都豊島区東池袋2-18-4　TEL 03-5927-1631<br /> または弊社ホームページ<a title="お問い合わせフォーム" href="/contact.html" target="_blank" rel="noopener">お問い合わせフォーム</a>より</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<h2 class="sub_title01"><span class="color_red">第</span>34回奨学生（2021年認定）の記録</h2>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<div class="sub_title02 scholarship_subtitle01">
+<h3>第34回奨学生一覧</h3>
+</div>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<div class="holbein_gallery_galleryspace">
+<ul class="cf txt_c fs120b">
+<li class="flt"><a href="/scholarship/record/vol34/1.html" target="_self"><img class="pb10" style="max-width: 200px; max-height: 200px; margin: 0 auto;" src="/dcms_media/image/scholaship_v34_01.png" alt="scholaship_v34_01.png" />青山 夢</a></li>
+<li class="flt"><a href="/scholarship/record/vol34/2.html" target="_self"><img class="pb10" style="max-width: 200px; max-height: 200px; margin: 0 auto;" src="/dcms_media/image/scholaship_v34_02.png" alt="scholaship_v34_02.png" />熊倉 涼子</a></li>
+<li class="flt"><a href="/scholarship/record/vol34/3.html" target="_self"><img class="pb10" style="max-width: 200px; max-height: 200px; margin: 0px auto 0px auto;" src="/dcms_media/image/scholaship_v34_03.png" alt="scholaship_v34_03.png" width="198" height="198" />野原 万里絵</a></li>
+<li class="flt"><a href="/scholarship/record/vol34/4.html" target="_self"><img class="pb10" style="max-width: 200px; max-height: 200px; margin: 0 auto;" src="/dcms_media/image/scholaship_v34_04.png" alt="scholaship_v34_04.png" />濱口 綾乃</a></li>
+</ul>
+</div>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<div class="section_bottom clear"> </div>
+<div class="holbein_gallery_galleryspace">
+<ul class="cf txt_c fs120b">
+<li class="flt"><a href="/scholarship/record/vol34/5.html" target="_self"><img class="pb10" style="max-width: 200px; max-height: 200px; margin: 0 auto;" src="/dcms_media/image/scholaship_v34_05.png" alt="scholaship_v34_05.png" />濱元 祐佳</a></li>
+<li class="flt"><a href="/scholarship/record/vol34/6.html" target="_self"><img class="pb10" style="max-width: 200px; max-height: 200px; margin: 0 auto;" src="/dcms_media/image/scholaship_v34_06.png" alt="scholaship_v34_06.png" />深田 桃子</a></li>
+<li class="flt"><a href="/scholarship/record/vol34/7.html" target="_self"><img class="pb10" style="max-width: 200px; max-height: 200px; margin: 0 auto;" src="/dcms_media/image/scholaship_v34_07.png" alt="scholaship_v34_07.png" />山崎 愛彦</a></li>
+</ul>
+</div>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<div class=" clear"> </div>
+<div class="section_bottom">
+<div class="link_btn02" style="margin-left: auto;"><a href="https://holbein.actibookone.com/content/detail?param=eyJjb250ZW50TnVtIjoxODkwMTl9&detailFlg=0&pNo=1" target="_blank" rel="noopener">第34回奨学生の記録<br />「RECORD 2022」<span style="font-size: 10pt;">(電子ブック)</span></a></div>
+</div>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<h2 class="sub_title01"><span class="color_red">ア</span>ーティスト インタビュー</h2>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<ul class="contest_kakosakuhin cf">###_DCMS_BLOCK_BLOG_LIST_TAG_Artist_Interviews_4_###</ul>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<div class="contest_link01">
+<div class="link_btn02"><a href="/blog/tag/Artist_Interviews">記事一覧へ</a></div>
+</div>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<h2 class="sub_title01"><span class="color_red">過</span>去の奨学生情報</h2>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<div class="cf section_bottom">
+<div class="scholarship_button_left">
+<div class="link_btn02"><a href="/scholarship/scholarshiplist.html">奨学者全リスト<span class="link_btn_hosoku">第1回からの奨学生全リストを見る</span></a></div>
+</div>
+<div class="scholarship_button_left">
+<div class="link_btn02"><a href="/scholarship/record.html">スカラシップ活動記録<span class="link_btn_hosoku">過去の奨学生の活動を見る</span></a></div>
+</div>
+</div>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<div class="scholarship_contact_box cf">
+<div class="scholarship_contact_text">
+<p>ホルベインスカラシップ奨学生に <br /> 関するお問い合わせ</p>
+</div>
+<div class="link_btn03"><a href="/contact.html">お問い合わせフォームへ</a></div>
+</div>
+<!--###_DCMS_BLOCK_END_###-->
+
+</div>
+<!-- // ブロック -->
+</div>
+<!-- // ブロック貼り付けエリア -->
+
+</div>
+</main>
+
+
+
+
+</div>
+<!-- // wrapper_end -->
+
+<footer>
+<div id="footer_top" class="cf">
+<div id="footer_logo"><a href="/"><img src="/dcms_media/image/logo01.png" alt="holbein" /></a></div>
+</div>
+<div id="footer_middle">
+<div class="foorter_middle_in cf">
+<div class="footnav_table01">
+<div class="footnav_table01_row">
+<ul class="footnav01">
+<li><a href="/product">製品情報</a>
+<ul>
+<li><a href="/product">製品情報</a></li>
+<li><a href="/product/catalog">WEBカタログ</a></li>
+</ul>
+</li>
+</ul>
+<ul class="footnav01">
+<li><a href="/business">事業案内</a>
+<ul>
+<li><a href="/business/oem.html">生産受託</a></li>
+<li><a href="/business/restoration.html">絵画修復</a></li>
+<li><a href="/business/abulabo.html">あぶLABO</a></li>
+</ul>
+</li>
+</ul>
+<ul class="footnav01">
+<li><a href="/company">会社情報</a>
+<ul>
+<li><a href="/company/history">ブランドストーリー</a></li>
+<li><a href="/company/about">会社概要</a></li>
+<li><a href="/company/holbein_gallery">ホルベインギャラリー</a></li>
+<li><a href="/company/holbein_gallery#showroom">ショールーム</a></li>
+<li><a href="/company/recruit.html">採用情報</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="footnav_table01_row">
+<ul class="footnav01"><!--<li><a href="/paints">どんな絵が描きたい？ で絵具マッチング！</a></li>-->
+<li><a href="/blog/archives/category/art">アートをはじめよう</a></li>
+<li><a href="/contest">コンテスト</a>
+<ul>
+<li><a href="/contest/pcl.html">大きなポストカードコンテスト</a></li>
+<li><a href="/contest/duo">デュオはじめての油絵コンテスト</a></li>
+<li><a href="/contest/highschool">高校生の油絵コンテスト</a></li>
+</ul>
+</li>
+<li><a href="/scholarship">スカラシップ</a></li>
+</ul>
+<ul class="footnav01">
+<li><a href="/resources">資料室</a>
+<ul>
+<li><a href="/resources/publishing">出版活動</a></li>
+<li><a href="/resources/publishement">広告・メディア</a></li>
+<li><a href="/resources/histoir">画家の美術史</a></li>
+<li><a href="/resources/anatomy">色材の解剖学</a></li>
+<li><a href="/resources/acrylart_separate">ACRYLART別冊</a></li>
+<li><a href="/resources/acrylart">ACRYLART</a></li>
+</ul>
+</li>
+</ul>
+<ul class="footnav01">
+<li><a href="/shop">販売店一覧</a>
+<ul>
+<li><a href="/shop/list_1">北海道・東北</a></li>
+<li><a href="/shop/list_2">関東</a></li>
+<li><a href="/shop/list_3">信州・北陸・東海</a></li>
+<li><a href="/shop/list_4">近畿</a></li>
+<li><a href="/shop/list_5">中国・四国</a></li>
+<li><a href="/shop/list_6">九州・沖縄</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="footnav_table02">
+<ul class="footnav02">
+<li><a href="https://technical-info.holbein.co.jp/index.html" target="_blank" rel="noopener">技術情報Ｑ＆Ａ</a></li>
+<li><a href="/mailmagazine">メルマガ</a></li>
+<li><a href="/notices">重要なお知らせ</a></li>
+<li><a href="/news">お知らせ</a></li>
+<li><a href="/contact.html">お問い合わせ</a></li>
+</ul>
+<div class="footnav03"><a href="https://www.facebook.com/HobeinArt/" target="_blank" rel="noopener"><img src="/dcms_media/image/facebook_mono.png" alt="facebook" width="50" height="30" /></a> <a href="https://twitter.com/HolbeinArt" target="_blank" rel="noopener"><img src="/dcms_media/image/twitter_mono.png" alt="twitter" width="50" height="30" /></a> <a href="https://www.youtube.com/channel/UCGeANPugv7Q_c2LlZ4w9MHw" target="_blank" rel="noopener"><img src="/dcms_media/image/youtube_mono.png" alt="youtube" width="50" height="30" /></a> <a href="https://www.instagram.com/holbein_art/" target="_blank" rel="noopener"><img src="/dcms_media/image/instagram_mono.png" alt="instagram" width="50" height="30" /></a></div>
+</div>
+</div>
+</div>
+<div id="footer_bottom" class="cf">
+<ul class="footnav_b cf">
+<li><a href="/privacy.html">プライバシーポリシー</a></li>
+<li><a href="/sitemap.html">サイトマップ</a></li>
+</ul>
+<small id="copyright">HOLBEIN. ALL Rights Reserved.</small></div>
+</footer>
+
+
+</body>
+</html>

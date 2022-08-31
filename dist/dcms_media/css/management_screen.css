@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/* tab switch */
+/*------------------------------------------------------------------------------*/
+.contest01, .contest02, .contest03 {
+	display:block;
+}
+
+.scholarship_modal {
+	display:block !important;
+	opacity:1;
+	position:relative;
+	overflow:inherit;
+	z-index:1;
+}

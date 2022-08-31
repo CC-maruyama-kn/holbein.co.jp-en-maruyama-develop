@@ -1,0 +1,35 @@
+// mixin
+
+// editor / CMS 用
+@mixin editor() {
+body.dcms_editor &,
+body.page_mainimage &,
+[data-id="editor"] &{
+    @content;
+}
+}
+
+@mixin cf {
+  &:after {
+    content:"";
+    display:block;
+    clear:both;
+  }
+}
+
+@mixin ma($ma) {
+  margin-top: $ma;
+  @include scPC {
+  margin-top: ($ma * 2);
+  }
+}
+
+// line-height(rem指定)
+@mixin l_height($size , $height) {
+	line-height: $height / $size;
+}
+
+// letter-spacing
+@mixin l_spacing($spacing) {
+	letter-spacing: ($spacing / 1000 ) + em;
+}

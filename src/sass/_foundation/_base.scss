@@ -1,0 +1,37 @@
+// base
+
+body {
+  color: $color-dark-gray;
+  font-family: 'Roboto', sans-serif;
+  font-weight: $normal;
+  line-break: strict;
+  font-size: $text-size-base;
+  line-height: 1.5;
+}
+
+:where(a) {
+  color: $color-dark-gray;
+}
+
+:where(p) {
+  @include l_height(1.8rem, 3.2rem);
+}
+
+a {
+  text-decoration: none;
+  transition: $transition;
+  cursor: pointer;
+}
+
+.ft_inter {
+  font-family: 'Inter', sans-serif;
+}
+/*
+BM管理画面
+*/
+.editor_block{
+  line-height: 1.5;
+}
+.dcms_editor {
+  line-height: 1.5;
+}

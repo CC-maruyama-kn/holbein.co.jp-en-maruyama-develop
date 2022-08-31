@@ -1,0 +1,36 @@
+.p-cta {
+  &__inner {
+    &__link {
+      padding: 80px 0;
+      font-size: 2.5rem;
+      background-color: $color-white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include mq(max, sm) {
+        padding: 35px 0;
+        font-size: 1.188rem;
+      }
+      &:hover{
+        color: $color-white;
+      }
+    }
+
+  }
+
+  &__ico {
+    border: 2px solid $color-dark-gray;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    position: relative;
+    text-align: center;
+    margin-left: 40px;
+    @include mq(max, sm) {
+      width: 25px;
+      height: 25px;
+      margin-left: 10px;
+    }
+  }
+}

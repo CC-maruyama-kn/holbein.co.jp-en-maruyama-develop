@@ -1,0 +1,335 @@
+/*share-related-article*/
+/*------------------------------------------------------------------------------*/
+.share-related-article:before,
+.share-related-article:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.share-related-article{
+	position:relative;
+	width:100%;
+	min-height:170px;
+	margin:6% 0px 40px;
+	border:1px solid #DCDCDC;
+}
+.sns-item{
+	display:block;
+	float:left;
+	width:55%;
+}
+.article-facebook-like{
+	float:left;
+	width:100%;
+	padding:50px 0 20px;
+	margin:0 2% 0 1%;
+	text-align:center;
+}
+.article-facebook-like p{
+	font-size:20px;
+	font-weight:bold;
+	line-height:1.4;
+	margin:0 0 10px;
+	color:#333333;
+}
+.article-facebook-like p span{
+	color:#074AA0;
+}
+.article-facebook-like p br{
+	display:none;
+}
+.article-twitter-share{
+	position:absolute;
+	float:left;
+	/*width:55%;*/
+	padding:10px 40px;
+	margin:0 5% 0;
+	left:0;
+	bottom:0;
+	border-top:1px solid #CCCCCC;
+}
+@media only screen and (max-width:690px) {
+.article-twitter-share{
+	padding:10px 0;
+}
+}
+
+.article-twitter-share div{
+	width:260px;
+	margin:0 auto;
+}
+.article-twitter-share p{
+	float:right;
+	width:65%;
+	font-size:12px;
+	color:#aaaaaa;
+}
+.article-twitter-share iframe{
+	float:right;
+}
+.share-related-article figure{
+	width:45%;
+	float:right;
+	display:block;
+	/*margin:2%;*/
+}
+.share-related-article .img div{
+
+	width:100%;
+	min-height:240px;
+	background-repeat:no-repeat center center;
+	background-size:cover;
+	overflow:hidden;
+
+}
+
+
+
+/*sns share*/
+/*------------------------------------------------------------------------------*/
+#sns_share:after {
+  content:"";
+  display:table;
+  clear:both;
+}
+##sns_share{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;	
+	margin-top:40px;
+}
+#sns_share li{
+	float: left;
+	width: 24.4%;
+	margin-right: 0.8%;
+}
+#sns_share li br{
+	display:none;
+}
+#sns_share li:last-child{margin-right: 0;}
+#sns_share li{
+	position: relative;
+	border-radius: 4px;
+}
+#sns_share li a{
+	display: block;
+	text-align: center;
+	padding:0 0 0 10%;
+	padding: 18px 0 16px 10%;
+	color:#FFF;
+	color: #FFF;
+	font-size: 13px;
+	line-height: 1;
+}
+#sns_share li:last-child a{
+	padding: 18px 0 16px 18%;
+}
+.icon-facebook:before{
+	content: "";
+	position: absolute;
+	background: url(../../image/icon_facebook02.png) no-repeat 0 0;
+	background-size: 12px 22px;
+	width: 12px;
+	height: 22px;
+	margin-left: -20px;
+	margin-top: -5px;
+}
+.icon-twitter:before{
+	content: "";
+	position: absolute;
+	background: url(../../image/icon_twitter02.png) no-repeat 0 0;
+	background-size: 25px 20px;
+	width: 25px;
+	height: 20px;
+	margin-left: -28px;
+	margin-top: -3px;
+}
+.icon-line:before{
+	content: "";
+	position: absolute;
+	background: url(../../image/icon_line02.png) no-repeat 0 0;
+	background-size: 29px 28px;
+	width: 29px;
+	height: 28px;
+	margin-left: -38px;
+	margin-top: -7px;
+}
+
+.icon-hatebu:before{
+	content: "";
+	position: absolute;
+	background: url(../../image/icon_hatebu02.png) no-repeat 0 0;
+	background-size: 21px 16px;
+	width: 29px;
+	height: 28px;
+	margin-left: -28px;
+	margin-top: -2px;
+}
+
+.icon-googleplus:before{
+	content: "";
+	position: absolute;
+	background: url(../../image/icon_googleplus.png) no-repeat 0 0;
+	background-size: 25px 23px;
+	width: 25px;
+	height: 23px;
+	margin-left: -32px;
+	margin-top: -3px;
+}
+
+#sns_share {
+	margin-top:50px;
+}
+
+#sns_share li:first-child {
+	background-color: #305097;
+}
+#sns_share li:first-child:hover{
+	background-color: #5075c7;
+}
+#sns_share li:nth-child(2){
+	background-color: #00aced;
+}
+#sns_share li:nth-child(2) a{
+	cursor: pointer;
+}
+#sns_share li:nth-child(2):hover{
+	background-color: #4CC5F2;
+}
+#sns_share li:nth-child(3) {
+	background-color: #00C300;
+}
+#sns_share li:nth-child(3):hover{
+	background-color: #4CD54C;
+}
+#sns_share li:nth-child(4) {
+	background-color: #00A4DE;
+}
+#sns_share li:nth-child(4):hover{
+	background-color: #4CBFE8;
+}
+
+/* screens smaller than 690---------------------------------------------------------- */
+@media only screen and (max-width:690px) {
+/*share-related-article*/
+/*------------------------------------------------------------------------------*/
+.share-related-article {
+    min-height:70px;
+	margin:10% 0px 0px;
+}
+.article-facebook-like{
+    padding:7% 0px;
+}
+.article-facebook-like p {
+    font-size:12px;
+}
+.article-facebook-like p br{
+	display:inline;
+}
+.article-twitter-share{
+	width:100%;
+	margin:0;
+	position:static;
+	text-align:center;
+}
+.article-twitter-share div{
+	width:240px;
+	margin:0 auto;
+}
+.article-twitter-share p {
+	width:130px;
+	padding:0 5% 0 0;
+	font-size:10px;
+}
+.article-twitter-share iframe{
+	width:90px;
+}
+.article-twitter-share #twitter-widget-1[style]{
+	width:90px;
+}
+.share-related-article figure{
+	/*width:35%;*/
+}
+.share-related-article .img{
+    /*margin:4% !important;*/
+}
+.share-related-article .img div{
+    min-height: 90px;
+	margin:0;
+}
+/*side sns*/
+/*--------------------------------------------------------------------------------*/
+#sns_share{
+	width: 100%;
+	margin-top:25px;
+}
+
+/*
+#sns_share li{
+	width:32%;
+	margin:0 2% 0 0;
+	min-height:44px;
+}
+*/
+
+#sns_share li a,
+#sns_share li:last-child a{
+padding: 10px 0;
+	font-size:75%;
+}
+#sns_share li br{
+    display:inline;
+}
+.icon-facebook:before{
+	display:block;
+	position:static;
+	width: 12px;
+	height: 22px;
+	margin:-5px auto 10px;
+}
+.icon-facebook{
+	display:block;
+	background: url(../../image/icon_facebook02.png) no-repeat scroll center 0;
+	background-size: 12px 22px;
+	width: 100%;
+	height: 32px;
+}
+.icon-twitter{
+	display:block;
+	background: url(../../image/icon_twitter02.png) no-repeat center 0;
+	background-size: 25px 20px;
+	width: 100%;
+	height: 32px;
+}
+.icon-line{
+	display:block;
+	background: url(../../image/icon_line02.png) no-repeat center 0;
+	background-size: 29px 28px;
+	width: 100%;
+	height: 32px;
+}
+.icon-hatebu{
+	display:block;
+	background: url(../../image/icon_hatebu02.png) no-repeat center 0;
+	background-size: 21px 16px;
+	width: 100%;
+	height: 32px;
+}
+
+.icon-facebook:before{
+	display:none;
+}
+.icon-twitter:before{
+	display:none;
+}
+.icon-line:before{
+	display:none;
+}
+.icon-hatebu:before{
+	display:none;
+}
+
+.sns-sp-hidden{
+	display:none;
+}
+}

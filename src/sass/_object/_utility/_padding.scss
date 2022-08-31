@@ -1,0 +1,41 @@
+@mixin padding {
+	@for $i from -170 through 170 {
+		&-top-#{$i * 5} {
+			padding-top: #{$i * 5}px !important;
+		}
+		&-right-#{$i * 5} {
+			padding-right: #{$i * 5}px !important;
+		}
+		&-bottom-#{$i * 5} {
+			padding-bottom: #{$i * 5}px !important;
+		}
+		&-left-#{$i * 5} {
+			padding-left: #{$i * 5}px !important;
+		}
+		&-xy-#{$i * 5} {
+			padding: #{$i * 5}px !important;
+		}
+		&-x-#{$i * 5} {
+			padding-left: #{$i * 5}px !important;
+			padding-right: #{$i * 5}px !important;
+		}
+		&-y-#{$i * 5} {
+			padding-top: #{$i * 5}px !important;
+			padding-bottom: #{$i * 5}px !important;
+		}
+	}
+}
+
+.u-padding {
+	@include padding;
+	&-tab{
+		@include mq(bw,sm,md) {
+			@include padding;
+		}
+	}
+	&-sp{
+		@include mq(max,sm) {
+			@include padding;
+		}
+	}
+}

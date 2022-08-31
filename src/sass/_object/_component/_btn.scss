@@ -1,0 +1,244 @@
+.c-btn {
+  display: block;
+
+  &-max-272 {
+    max-width: 272px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  &__lefttoright {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transform: translateX(-100%);
+      transition: 0.5s ease-in-out;
+      background-color: $color-red;
+    }
+
+    &:hover {
+
+      & p {
+        position: relative;
+        z-index: 3;
+        color: $color-white;
+        border-color: inherit;
+
+      }
+
+      & span {
+        position: relative;
+        z-index: 3;
+        color: $color-white;
+        border-color: inherit;
+
+      }
+
+      &:before {
+        transform: translateX(0);
+        z-index: 1;
+
+      }
+
+      & .u-ico__arr-round {
+        background: $color-white ;
+
+        &::before {
+          border-color: $color-white ;
+        }
+
+
+      }
+    }
+
+  }
+
+  &__zoom {
+    display: block;
+    overflow: hidden;
+
+    &:hover {
+      & img {
+        transform: scale(1.1);
+      }
+    }
+
+    & img {
+      transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+
+    }
+  }
+
+  &__red-zoom {
+    height: 100%;
+
+    & a {
+      overflow: hidden;
+      display: block;
+    }
+
+    &:hover {
+      & img {
+        transform: scale(1.1);
+      }
+
+      background-color: $color-red;
+      color: $color-white;
+    }
+
+    & img {
+      transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+
+    }
+  }
+
+  &__large-more-zoom {
+    & a {
+      display: block;
+      overflow: hidden;
+    }
+
+    &:hover {
+      & img {
+        transform: scale(1.1);
+      }
+
+      & .circle {
+        width: 100% !important;
+      }
+
+      & .icon.arrow {
+        background: #fff !important;
+        -webkit-transform: translate(1rem, 0) !important;
+        transform: translate(1rem, 0) !important;
+      }
+
+      & .button-text {
+        color: #fff !important;
+      }
+    }
+
+    & img {
+
+      transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+
+    }
+  }
+
+  &__topbtn {
+    background-color: $color-dark-gray;
+    display: block;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 20px;
+    bottom: 100px;
+    border-radius: 50px;
+    z-index: 99999;
+    transition: .3s cubic-bezier(0.5, 1, 0.89, 1);
+
+    @include mq(min, md) {
+
+      right: 50px;
+      bottom: 110px;
+    }
+
+    & .u-ico__arr-round {
+      transform: rotate(270deg);
+      background: $color-white;
+      left: 15px;
+
+      @include mq(max, sm) {
+
+        left: 19px;
+      }
+
+      &::before {
+        border-color: $color-white;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &__arrow-text {
+    align-self: stretch;
+
+    @include mq(max, sm) {
+      width: 100%;
+    }
+
+    & .large-btn {
+      @include mq(min, sm) {
+        min-width: 320px;
+      }
+    }
+
+    & .small-btn {
+      @include mq(min, sm) {
+        min-width: 254px;
+      }
+    }
+
+    & a {
+      display: flex;
+      text-align: center;
+      border: 1px solid $color-light-gray;
+      padding: 17px 50px 17px 10px;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      align-self: stretch;
+      position: relative;
+
+      &:before {
+        position: absolute;
+        content: "";
+        right: 30px;
+        width: 0.625rem;
+        height: 0.625rem;
+        border-top: 0.125rem solid $color-light-gray;
+        border-right: 0.125rem solid $color-light-gray;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        transition: all 0.2s ease-in;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        background: $color-light-gray;
+        width: 1.125rem;
+        height: 0.125rem;
+        position: absolute;
+        margin: auto;
+        right: 30px;
+        transition: all 0.2s ease-in;
+
+      }
+
+      &:hover {
+        &::after {
+          right: 20px;
+        }
+
+        &::before {
+          right: 20px;
+        }
+      }
+    }
+  }
+}

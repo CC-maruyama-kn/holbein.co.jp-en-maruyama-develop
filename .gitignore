@@ -1,0 +1,17 @@
+node_modules/
+dist/article/
+dist/dcmsadm/
+dist/dcms_media/css/maps
+dist/**/*.css.map
+dist/**/*.pdf
+src/icons/
+src/pug/
+src/image/
+src/svg/
+upfile/import_file/dcms_media/js/
+upfile/import_file/dcms_media/image/
+upfile/import_file/dcms_media/other/
+upfile/import_file/**/*.html
+*.sublime-project
+*.sublime-workspace
+.DS_Store

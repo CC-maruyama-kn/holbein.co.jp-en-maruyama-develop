@@ -1,0 +1,335 @@
+/*---------------中ページ共通--------------------------------*/
+.red {
+color:#7F0509;
+font-weight:bold;
+}
+
+.pan {
+font-size:70%;
+}
+
+.sen {
+width:840px;
+height:1px;
+background-color:#D8D8D8;
+margin:0 auto;
+padding:0;
+}
+
+.sec_left {
+float:left;
+width:540px;
+}
+
+.sec_right {
+float:right;
+width:190px;
+font-size:90%;
+}
+
+.sec_left h2{
+background-color:#7F0509;
+width:530px;
+height:35px;
+color:#FFFFFF;
+font-size:100%;
+padding:5px 0 0 10px;
+}
+
+#sec_nab {
+list-style:none;
+padding:10px;
+width:170px;
+height:30px;
+border-bottom:#999999 dotted 1px;
+}
+
+#sec_nab02_c {
+list-style:none;
+padding:10px;
+width:170px;
+height:30px;
+border-bottom:#999999 dotted 1px;
+background-color:#7F0509;
+color:#FFFFFF;
+}
+
+#sec_nab03_c {
+list-style:none;
+padding:10px;
+width:170px;
+height:30px;
+border-bottom:#999999 dotted 1px;
+background-color:#7F0509;
+color:#FFFFFF;
+}
+
+#sec_nab04_c {
+list-style:none;
+padding:10px;
+width:170px;
+height:30px;
+border-bottom:#999999 dotted 1px;
+background-color:#7F0509;
+color:#FFFFFF;
+}
+
+#sec_nab05_c {
+list-style:none;
+padding:10px;
+width:170px;
+height:30px;
+border-bottom:#999999 dotted 1px;
+background-color:#7F0509;
+color:#FFFFFF;
+margin-bottom:40px;
+}
+
+#sec_nab02 {
+list-style:none;
+padding:10px;
+width:170px;
+height:30px;
+border-bottom:#999999 dotted 1px;
+}
+
+#sec_nab03 {
+list-style:none;
+padding:10px;
+width:170px;
+height:30px;
+border-bottom:#999999 dotted 1px;
+}
+
+#sec_nab04 {
+list-style:none;
+padding:10px;
+width:170px;
+height:30px;
+border-bottom:#999999 dotted 1px;
+}
+
+#sec_nab05 {
+list-style:none;
+padding:10px;
+width:170px;
+height:30px;
+border-bottom:#999999 dotted 1px;
+margin-bottom:40px;
+}
+
+.contact {
+width:170px;
+height:144px;
+position:absolute;
+bottom:0;
+right:0;}
+
+.contact02 {
+width:170px;
+height:144px;
+}
+
+#sec_b01 {
+background:transparent url(../../images/contact_b.jpg) no-repeat scroll 0 0;
+height:52px;
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+width:170px;
+margin-bottom:20px;
+}
+
+#sec_b02 {
+background:transparent url(../../images/tel_b.jpg) no-repeat scroll 0 0;
+height:52px;
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+width:170px;
+}
+
+#sec_b01 a {
+display:block;
+height:52px;
+width:170px;
+}
+
+.sec_box h3{
+background: url(../../images/midashi01.gif) no-repeat left;
+padding:0 0 0 25px;
+margin-bottom:10px;
+font-size:90%;
+}
+
+.sec_box {
+width:540px;
+margin:20px 0;
+}
+
+.sec_box02 {
+width:540px;
+margin-top:25px;
+padding-bottom:20px;
+border-bottom:#999999 dotted 1px;
+}
+
+.sec_box03 {
+width:540px;
+margin:20px 0;
+text-align:center;
+}
+
+.pagetop {
+margin-left:430px;
+margin-top:50px;
+width:110px;
+height:11px;
+}
+
+#top a {
+display:block;
+height:11px;
+width:110px;
+}
+
+#top {
+background: url(../../images/pagetop.gif) no-repeat;
+width:110px;
+height:11px;
+list-style:none;
+}
+
+/*---------------取り扱い製品ページ--------------------------------*/
+.sec_box_left {
+float:left;
+width:200px;
+height:120px;
+background: url(../../images/second_p01.jpg) no-repeat left;
+}
+
+.sec_box_left2 {
+float:left;
+width:200px;
+height:120px;
+background: url(../../images/second_p02.jpg) no-repeat left;
+}
+
+.sec_box_left3 {
+float:left;
+width:200px;
+height:120px;
+background: url(../../images/second_p03.jpg) no-repeat left;
+}
+
+.sec_box_left4 {
+float:left;
+width:200px;
+height:120px;
+background: url(../../images/second_p04.jpg) no-repeat left;
+}
+
+.sec_box_right {
+float:right;
+width:340px;
+}
+
+.sec_box_center {
+width:540px;
+margin-top:10px;
+}
+
+.sec_box_center h4{
+background: url(../../images/midashi04.gif) no-repeat left;
+padding:0 0 0 20px;
+font-size:80%;
+}
+
+.sec_box_4{
+background: url(../../images/box_h4.gif) no-repeat left;
+text-indent:-9999px;
+padding:0 0 0 20px;
+margin-bottom:10px;
+width:283px;
+height:14px;
+}
+
+li.pro_b {
+height:93px;
+width:506px;
+text-indent:-9999px;
+}
+
+li.pro_b a {
+background: url(../../images/products_b.jpg) no-repeat left;
+width:506px;
+height:93px;
+display:block;
+}
+
+li.pro_b a {
+background-position:0 0;
+}
+
+li.pro_b a:hover {
+background-position:0 -93px;
+}
+
+/*---------------会社案内ページ--------------------------------*/
+.company {
+margin:20px 0 20px 0;
+}
+
+.company th {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+background:transparent url(../../images/com_bg.gif) repeat-x scroll center bottom;
+color:#000000;
+font-size:80%;
+font-weight:bold;
+padding:15px;
+width:150px;
+}
+
+.company td {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+background:transparent url(../../images/com_tdbg.gif) repeat-x scroll center bottom;
+padding:15px;
+color:#333333;
+font-size:80%;
+}
+
+.com_map {
+width:540px;
+height:400px;
+}
+
+
+
+
+li.site01 {
+background:url(../../images/midashi04.gif) no-repeat left;
+width:300px;
+font-size:90%;
+}
+
+li.site01 a {
+font-weight:bold;
+padding:0 0 0 20px;
+}
+
+li.site02 {
+background:url(../../images/midashi04.gif) no-repeat left;
+margin-left:30px;
+width:300px;
+font-size:80%;
+}
+li.site02 a {
+font-weight:bold;
+padding:0 0 0 20px;
+}
+
+

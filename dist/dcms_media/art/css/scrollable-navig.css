@@ -1,0 +1,114 @@
+/* this makes it possible to add next button beside scrollable */
+div.scrollable {
+    background: none repeat scroll 0 0 #FFFFFF;
+    float: left;
+    width: 290px;
+	display:inline;
+	position:absolute;
+	z-index:10;
+	top:4px;
+	left:4px;
+}
+/* prev, next, prevPage and nextPage buttons */
+a.prev, a.next, a.prevPage, a.nextPage {
+	position:absolute;
+	top:227px;
+	display:block;
+	width:45px; height:16px;
+	background:transparent url(../../image/prev.jpg) no-repeat 0 0;
+	cursor:pointer;
+	z-index:110;
+}
+a.prev{
+	left:18px;
+}
+
+/* mouseover state 
+a.prev:hover, a.next:hover, a.prevPage:hover, a.nextPage:hover {
+	background-position:0px -18px;
+}*/
+/* disabled navigational button */
+a.disabled {
+	visibility:hidden !important;
+}
+/* next button uses another background image */
+a.next, a.nextPage {
+	background:transparent url(../../image/next.jpg) no-repeat 0 0;
+	right:18px;
+}
+/*********** navigator ***********/
+/* position and dimensions of the navigator */
+div.navi {
+    height: 20px;
+    left: 15px;
+    position: absolute;
+    top: 15px;
+    width: 150px;
+    z-index: 110;
+}
+/* items inside navigator */
+div.navi a {
+	float:left;
+	width:7px;
+	height:7px;
+	margin:3px;
+	background-image:url("../../image/pointer.gif");
+	background-position:0px 0px;
+	background-repeat:no-repeat;
+	cursor:pointer;	
+}
+/* mouseover state */
+div.navi a:hover {
+	background-position:0 -7px;
+}
+/* active state (current page state) */
+div.navi a.active {
+	background-position:0 -7px;
+}
+
+/*********** root element ***********/
+/* root element for the whole scrollable setup */
+.scrollable {
+	position:relative;
+	overflow:hidden;
+	width:240px; height:388px; /* 画像の幅×3 */
+}
+/* 
+root element for scrollable items. It is 
+absolutely positioned with large width. 
+*/
+#thumbs {
+position:absolute;
+	width:20000em;
+	clear:both;
+}
+/* custom positioning for navigational links */
+/* single item */
+#thumbs div {
+	position:relative;
+	float:left;
+	width:290px; height:340px;
+	line-height:1.5;
+	text-align:left;
+}
+/* style when mouse is over the item 
+#thumbs div.hover {
+	background-color:#444;
+}*/
+/* style when element is active (clicked) 
+#thumbs div.active {
+	cursor:default;
+}
+*/
+
+#thumbs span.blue {
+	position:absolute;
+	bottom:0; left:0;
+	font-size:10px;
+}
+
+/*for tiny mce*/
+
+#tinymce .scrollable{
+	overflow:visible;
+}

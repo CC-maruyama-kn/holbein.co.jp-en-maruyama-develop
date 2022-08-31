@@ -1,0 +1,123 @@
+/******************************************************/
+/* layout */
+/******************************************************/
+#wrapper {
+	width: 100%;
+	background: url(../../image/bg_wrapper_top_new.jpg) repeat;
+	border-top: solid 3px #000000;
+	color: #E6E6E6;
+}
+/*#common #wrapper {
+	width: 100%;
+	min-width: 1050px;
+	background: url(/dcms_media/image/bg_wrapper_top_new.jpg) repeat;
+	border-top: solid 3px #000000;
+}*/
+
+#header {
+	width: 960px;
+	height: 120px;
+	margin: 0 auto;
+	position: relative;
+}
+#header #logo {
+	position: absolute;
+	top: 37px;
+	left: 0px;
+}
+.header_search {
+	width: 100%;
+	height: 26px;
+	border: solid 1px #333333;
+}
+#header .header_search {
+	width: 200px;
+	position: absolute;
+	top: 58px;
+	right: 130px;
+	height:24px;
+}
+.header_search input.search_textbox {
+	width: 70%;
+	height: 24px;
+	padding: 0;
+	background: #fff;
+	color: #333;
+	font-size: 13px;
+	border: none;
+	line-height: 24px;
+	background: url(../../image/common/icon_search.png) no-repeat #fff 4px center;
+	text-indent: 25px;
+	float: left;
+}
+#header input.search_textbox {
+	width: 148px;
+	/*float: none;*/
+}
+.header_search input.search_submit {
+	width: 30%;
+	height: 24px;
+	display: block;
+	cursor: pointer;
+	float: left;
+}
+#header .header_search input.search_submit {
+	width: 52px;
+	text-indent: -9999px;
+	right: 0;
+	top: 0;
+	position: absolute;
+	float: none;
+	padding:0;
+}
+#drawer_in .header_search input.search_submit{
+	background-color: #953735;
+	color: #ffffff;
+	border: none;
+}
+.hcontact{
+	position: absolute;
+	right: 0;
+	top: 58px;
+}
+#headnav{
+	position: absolute;
+	top: 8px;
+	right: 100px;
+	font-size: 0;
+}
+#headnav li{
+	display: inline-block;
+	padding: 2px 10px;
+	line-height: 1;
+	border-left: 1px solid #dddddd;
+}
+#headnav li:first-child{border-left: none;}
+#headnav li a{font-size: 12px;}
+#langage{
+	position: absolute;
+	top: 0;
+	right: 0;
+	cursor:pointer;
+	z-index:100;
+}
+#langage_in {
+	display:none;
+	background:#fff;
+	border-left:1px solid #555555;
+	border-right:1px solid #555555;
+
+}
+#langage_in li {
+	border-bottom:1px solid #555555;
+}
+#langage_in li a {
+	display:block;
+	padding-left:10px;
+	text-align:left;
+}
+#langage_in li a:hover {
+	background:#111111;
+	color:#fff;
+}
+

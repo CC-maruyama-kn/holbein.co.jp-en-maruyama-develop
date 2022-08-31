@@ -1,0 +1,170 @@
+/* @override http://localhost/bxslider_v3_plugin/css/styles.css */
+
+/*
+ * To change the color scheme of slider change each 
+ * background property for each of the five styles below
+ */
+
+/*next button*/
+body, div, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td, ul {
+	margin: 0;
+	padding: 0;
+}
+
+a.bx-next,a.bx-prev{display:none;}
+
+/*pager wrapper*/
+.bx-pager{
+	width:530px;
+	height:15px;
+	background:url(../../image/common/bg_bx_pager.png);
+	position:absolute;
+	bottom:50px;
+	right:50%;
+	margin-right:-490px;
+	z-index:10;
+}
+
+/*pager links*/
+.bx-pager a {
+	width:15px;
+	height:15px;
+	display:block;
+	text-indent:-9999px;
+	float:left;
+	margin-right:10px;
+}
+
+.bx-pager a.mainimage_thumb01{background:url(../../image/slide_btn.png) no-repeat 0 0;}
+.bx-pager a.mainimage_thumb02{background:url(../../image/slide_btn.png) no-repeat 0 0;}
+.bx-pager a.mainimage_thumb03{background:url(../../image/slide_btn.png) no-repeat 0 0;}
+.bx-pager a.mainimage_thumb04{background:url(../../image/slide_btn.png) no-repeat 0 0;}
+.bx-pager a.mainimage_thumb05{background:url(../../image/slide_btn.png) no-repeat 0 0;}
+
+.bx-pager a:hover.mainimage_thumb02, .bx-pager a.mainimage_thumb01.pager-active{background:url(../../image/slide_btn_on.png) no-repeat 0 0;}
+.bx-pager a:hover.mainimage_thumb02, .bx-pager a.mainimage_thumb02.pager-active{background:url(../../image/slide_btn_on.png) no-repeat 0 0;}
+.bx-pager a:hover.mainimage_thumb03, .bx-pager a.mainimage_thumb03.pager-active{background:url(../../image/slide_btn_on.png) no-repeat 0 0;}
+.bx-pager a:hover.mainimage_thumb02, .bx-pager a.mainimage_thumb04.pager-active{background:url(../../image/slide_btn_on.png) no-repeat 0 0;}
+.bx-pager a:hover.mainimage_thumb02, .bx-pager a.mainimage_thumb05.pager-active{background:url(../../image/slide_btn_on.png) no-repeat 0 0;}
+
+
+
+/*pager links hover and active states*/
+.bx-pager .pager-active,
+.bx-pager a:hover {
+	background-position: 0 0;
+}
+
+
+/*auto start button*/
+.bx-auto .start {
+	background: url(gray_auto.png) no-repeat 0 2px;
+	padding-left: 13px;
+}
+
+/*auto stop button*/
+.bx-auto .stop {
+	background: url(gray_auto.png) no-repeat 0 -14px;
+	padding-left: 13px;
+}
+
+/*
+ * End color scheme styles
+ */
+
+/*captions*/
+.bx-captions {
+	text-align:center;
+	font-size: 12px;
+	padding: 7px 0;
+	color: #666;
+}
+
+/*auto controls*/
+.bx-auto {
+	text-align: center;
+	padding-top: 15px;
+}
+
+.bx-auto a {
+	color: #666;
+	font-size: 12px;
+}
+
+
+#mainimage .bx-wrapper {
+    width: 100% !important;
+	height: 398px;
+	text-align:center!important;
+}
+
+#mainimage .bx-window {
+    width:100% !important;
+    height: 449px !important;
+    margin: 0 auto !important;
+	position:absolute !important;
+	top:0 !important;
+	left:0 !important;
+    overflow: hidden !important;
+    z-index:1;
+}
+#mainimage #slider1 li.pager {
+    width:100% !important;
+}
+#mainimage #slider1 li {
+    width:100% !important;
+	height:379px;
+	text-indent:-9999px;
+}
+
+#mainimage #slider1 li.mainimage01{background:url(../../image/mainimage01.jpg) no-repeat center top;}
+#mainimage #slider1 li.mainimage02{background:url(../../image/mainimage02.jpg) no-repeat center top;}
+#mainimage #slider1 li.mainimage03{background:url(../../image/mainimage03.jpg) no-repeat center top;}
+#mainimage #slider1 li.mainimage04{background:url(../../image/mainimage04.jpg) no-repeat center top;}
+#mainimage #slider1 li.mainimage05{background:url(../../image/mainimage05.jpg) no-repeat center top;}
+
+/*ENGLISH_MAINIMAGE*/
+#mainimage #slider1 li.en_mainimage01{background:url(../../image/en_mainimage01.png) no-repeat center top;}
+#mainimage #slider1 li.en_mainimage02{background:url(../../image/en_mainimage02.png) no-repeat center top;}
+#mainimage #slider1 li.en_mainimage03{background:url(../../image/en_mainimage03.png) no-repeat center top;}
+
+/*CHINEASE_MAINIMAGE*/
+#mainimage #slider1 li.ch_mainimage01{background:url(../../image/ch_mainimage01.png) no-repeat center top;}
+#mainimage #slider1 li.ch_mainimage02{background:url(../../image/ch_mainimage02.png) no-repeat center top;}
+#mainimage #slider1 li.ch_mainimage03{background:url(../../image/ch_mainimage03.png) no-repeat center top;}
+
+/*KOREA_MAINIMAGE*/
+#mainimage #slider1 li.kr_mainimage01{background:url(../../image/kr_mainimage01.png) no-repeat center top;}
+#mainimage #slider1 li.kr_mainimage02{background:url(../../image/kr_mainimage02.png) no-repeat center top;}
+#mainimage #slider1 li.kr_mainimage03{background:url(../../image/kr_mainimage03.png) no-repeat center top;}
+
+/*FRANCE_MAINIMAGE*/
+#mainimage #slider1 li.fr_mainimage01{background:url(../../image/fr_mainimage01.png) no-repeat center top;}
+#mainimage #slider1 li.fr_mainimage02{background:url(../../image/fr_mainimage02.png) no-repeat center top;}
+#mainimage #slider1 li.fr_mainimage03{background:url(../../image/fr_mainimage03.png) no-repeat center top;}
+
+/*FRANCE_MAINIMAGE*/
+#mainimage #slider1 li.es_mainimage01{background:url(../../image/es_mainimage01.png) no-repeat center top;}
+#mainimage #slider1 li.es_mainimage02{background:url(../../image/es_mainimage02.png) no-repeat center top;}
+#mainimage #slider1 li.es_mainimage03{background:url(../../image/es_mainimage03.png) no-repeat center top;}
+
+
+
+#mainimage #slider1 li a {
+    display: block;
+    height: 379px;
+    left: 50%;
+    margin-left: -645px;
+    position: absolute;
+    width: 1300px;
+}
+
+.bx-wrapper { z-index:10;}
+
+.bx-pager { clear:both;}
+
+.bx-window {
+	/*overflow:hidden;*/
+	position:absolute !important;
+}
+

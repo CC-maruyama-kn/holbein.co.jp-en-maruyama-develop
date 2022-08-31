@@ -1,0 +1,51 @@
+.l-aside {
+	&__sb_col1 {
+		text-align: center;
+		font-size: 1.25rem;
+		background-color: $color-red;
+
+		font-weight: bold;
+
+		& a {
+			color: $color-white;
+			display: block;
+			padding: 14px 0;
+		}
+	}
+
+	&__sb_col2 {
+		& a {
+			padding: 14px 20px;
+			display: block;
+			line-height: 1.5;
+			;
+
+			&:hover {
+				color: $color-red;
+			}
+		}
+
+		&>li {
+			&>a {
+				background-color: $color-semi-light-gray;
+			}
+		}
+
+		& .current {
+			color: $color-red;
+		}
+	}
+
+	&__sb_col3 {
+		& a {
+			padding-left: 35px;
+			padding-right: 35px;
+		}
+	}
+
+	&__subnavlist {
+		@include mq(min, md) {
+			padding-left: 60px;
+		}
+	}
+}

@@ -1,0 +1,239 @@
+.l-header {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  top: 0;
+  background: #fff;
+  height: 64px;
+
+  .isFixed & {
+    background-color: $color-white;
+  }
+
+  @include mq(min, md) {
+    height: 100px;
+  }
+
+
+  &_inner {
+    width: 100%;
+    position: relative;
+
+    @include mq(min, md) {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 50px;
+    }
+
+    @include mq(max, md) {
+      padding: 0 15px;
+    }
+  }
+
+  &_cols {
+    display: flex;
+
+    &-no1 {
+      @include mq(min, md) {
+        margin: 20px 0 0 0;
+      }
+      @include screen(980px,1100px){
+       margin-top: 38px;
+      }
+      @include mq(max, md) {
+        display: block;
+        padding: 20px 0 0 0;
+      }
+      & a{
+        &:hover{
+          opacity: 0.8;
+        }
+      }
+
+    }
+
+    &-no2 {
+      position: absolute;
+      right: 50px;
+      top: 31px;
+      max-width: 260px;
+
+      @include mq(max, md) {
+        top: 18px;
+      }
+
+      &:before {
+        @include mq(min, md) {
+          content: "";
+          display: block;
+          width: 1px;
+          background-color: $color-dark-gray;
+          height: 20px;
+          background-size: cover;
+          position: absolute;
+          top: 10px;
+        }
+      }
+
+      & ul {
+        display: flex;
+        align-items: center;
+
+        & li {
+          margin: 0 0 0 20px;
+          font-weight: 500;
+          @include mq(max, md) {
+            margin: 0 0 0 15px;
+          }
+
+          & img {
+            @include mq(max, md) {
+              width: 25px !important;
+            }
+          }
+        }
+
+        & a {
+          &:hover {
+            & img {
+              @include mq(min, md) {
+                opacity: 0.8;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &-no3 {
+      @include mq(max, md) {
+        position: absolute;
+        right: 15px;
+        top: 20px;
+      }
+    }
+  }
+
+  &-logo {
+    &__img {
+      @include mq(max, md) {
+        width: 90px;
+      }
+      @include screen(980px,1100px){
+        width: 90px;
+      }
+    }
+  }
+
+  &_search_area {
+    display: none;
+    background-color: $color-semi-light-gray ;
+    position: fixed;
+    width: 100%;
+    top: 64px;
+    z-index: 10002;
+
+    @include mq(min, md) {
+      padding: 30px 0;
+      top: 100px;
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.5s;
+
+    }
+
+    @include mq(max, md) {
+      padding: 20px 0;
+      display: none;
+    }
+
+    &.is-active {
+      display: block;
+      @include mq(min, md) {
+        opacity: 1;
+        visibility: visible;
+        display: block !important;
+      }
+    }
+
+  }
+
+  &_search_area {
+    &_inner {
+      background-color: $color-red;
+
+      @include mq(max, md) {
+        width: calc(100% - 60px) !important;
+        margin-left: 30px !important;
+        margin-right: 30px !important;
+        padding: 0 !important;
+      }
+
+      & .search_txt {
+        width: calc(100% - 64px);
+        background-color: $color-white;
+        border: 0;
+        outline: 0;
+        padding: 24px 25px;
+        line-height: 1.3;
+        -webkit-appearance: none;
+        border-radius: 0;
+        height: 65px;
+
+        @include mq(max, md) {
+          width: calc(100% - 40px);
+          padding: 12px 15px;
+          height: 40px;
+
+        }
+      }
+
+      & .submit_btn {
+        padding: 25px 30px;
+        background-color: $color-red;
+        background-image: url("/dcms_media/image/common/new-en_ico_04.png");
+        background-repeat: no-repeat;
+        border: 0;
+        outline: 0;
+        vertical-align: top;
+        cursor: pointer;
+        background-size: 30px;
+        background-position: center center;
+        height: 65px;
+
+        @include mq(max, md) {
+          padding: 18px 16px 8px 16px;
+          background-size: 14px;
+          height: 40px;
+        }
+      }
+    }
+  }
+
+  &_btn01 {
+    &:hover {
+      @include mq(min, md) {
+        color: $color-red;
+      }
+    }
+  }
+}
+
+#js-search-btn {
+  position: relative;
+
+  & img {
+    visibility: visible;
+    transition: all 0.5s;
+  }
+
+  &.is-active {
+    & img {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+  }
+
+}

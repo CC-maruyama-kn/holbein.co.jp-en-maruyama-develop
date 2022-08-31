@@ -1,0 +1,470 @@
+/* *************************************** */
+/* CV style 1*/
+/* *************************************** */
+.cv_style01 {
+  width: 100%;
+  background-color: #f5f5f5;
+  padding-top: 56px;
+  padding-bottom: 56px;
+  margin-top: 120px;
+  background: url(../image/common/footer_contact_bg.jpg) no-repeat center center/cover;
+}
+@media only screen and (max-width: 690px) {
+  .cv_style01 {
+    margin-top: 60px;
+    padding-top: 30px;
+    padding-bottom: 25px;
+  }
+}
+.cv_style01 .cv_style01_in {
+  max-width: 1100px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+@media only screen and (max-width: 979px) {
+  .cv_style01 .cv_style01_in {
+    width: calc(100% - 10%);
+  }
+}
+.cv_style01 .cv_style01_lead {
+  margin-bottom: 40px;
+}
+@media only screen and (max-width: 690px) {
+  .cv_style01 .cv_style01_lead {
+    text-align: left;
+    margin-bottom: 25px;
+  }
+}
+.cv_style01 .cv_style01_btn a {
+  display: inline-block;
+  max-width: 400px;
+  padding: 16px 10px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 20px;
+  background-color: #329bd2;
+  transition: background-color .2s;
+  position: relative;
+  /*&:before{
+  	@include mail;
+  	font-size: 80%;
+  }*/
+  width: 100%;
+  max-width: 400px;
+}
+@media only screen and (max-width: 690px) {
+  .cv_style01 .cv_style01_btn a {
+    font-size: 16px;
+  }
+}
+.cv_style01 .cv_style01_btn a:hover {
+  background-color: #0E86C7;
+  text-decoration: none;
+}
+
+/* *************************************** */
+/* CV style 2*/
+/* *************************************** */
+.cv_style02 {
+  width: 100%;
+  background-color: #f5f5f5;
+  padding-top: 56px;
+  padding-bottom: 56px;
+  margin-top: 120px;
+}
+@media only screen and (max-width: 690px) {
+  .cv_style02 {
+    margin-top: 60px;
+    padding-top: 30px;
+    padding-bottom: 25px;
+  }
+}
+.cv_style02 .cv_style02_in {
+  max-width: 960px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+@media only screen and (max-width: 979px) {
+  .cv_style02 .cv_style02_in {
+    width: calc(100% - 6%);
+  }
+}
+@media only screen and (max-width: 690px) {
+  .cv_style02 .cv_style02_in {
+    width: calc(100% - 10%);
+  }
+}
+.cv_style02 .cv_style02_lead {
+  margin-bottom: 50px;
+  font-size: 1.5rem;
+}
+@media only screen and (max-width: 690px) {
+  .cv_style02 .cv_style02_lead {
+    margin-bottom: 15px;
+  }
+}
+.cv_style02 .cv_style02_btn {
+  font-size: 0;
+  text-align: center;
+}
+.cv_style02 .cv_style02_btn a.btn {
+  display: inline-block;
+  max-width: 400px;
+  padding: 16px 10px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 20px;
+  background-color: #329bd2;
+  transition: background-color .2s;
+  position: relative;
+  /*&:before{
+  	@include mail;
+  	font-size: 80%;
+  }*/
+  background-color: #0E86C7;
+  width: 44%;
+  margin: 0 3%;
+}
+@media only screen and (max-width: 690px) {
+  .cv_style02 .cv_style02_btn a.btn {
+    font-size: 16px;
+  }
+}
+.cv_style02 .cv_style02_btn a.btn:hover {
+  background-color: #0E86C7;
+  text-decoration: none;
+}
+.cv_style02 .cv_style02_btn a.btn:hover {
+  background-color: #329bd2;
+}
+.cv_style02 .cv_style02_btn a.btn.right {
+  display: inline-block;
+  max-width: 400px;
+  padding: 16px 10px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 20px;
+  background-color: #329bd2;
+  transition: background-color .2s;
+  position: relative;
+  /*&:before{
+  	@include mail;
+  	font-size: 80%;
+  }*/
+}
+@media only screen and (max-width: 690px) {
+  .cv_style02 .cv_style02_btn a.btn.right {
+    font-size: 16px;
+  }
+}
+.cv_style02 .cv_style02_btn a.btn.right:hover {
+  background-color: #0E86C7;
+  text-decoration: none;
+}
+
+/* *************************************** */
+/* CV style 3*/
+/* *************************************** */
+.cv_style03 {
+  width: 100%;
+  background-color: #f5f5f5;
+  padding-top: 56px;
+  padding-bottom: 56px;
+  margin-top: 120px;
+}
+@media only screen and (max-width: 690px) {
+  .cv_style03 {
+    margin-top: 60px;
+    padding-top: 30px;
+    padding-bottom: 25px;
+  }
+}
+.cv_style03 .cv_style03_in {
+  max-width: 880px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+@media only screen and (max-width: 979px) {
+  .cv_style03 .cv_style03_in {
+    width: calc(100% - 6%);
+  }
+}
+@media only screen and (max-width: 690px) {
+  .cv_style03 .cv_style03_in {
+    width: calc(100% - 10%);
+  }
+}
+.cv_style03 .cv_style03_lead {
+  margin-bottom: 40px;
+  font-size: 15px;
+}
+@media only screen and (max-width: 690px) {
+  .cv_style03 .cv_style03_lead {
+    margin-bottom: 15px;
+  }
+}
+.cv_style03 .cv_style03_btn {
+  font-size: 0;
+  text-align: center;
+}
+.cv_style03 .cv_style03_btn a.btn {
+  display: inline-block;
+  max-width: 400px;
+  padding: 16px 10px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 20px;
+  background-color: #329bd2;
+  transition: background-color .2s;
+  position: relative;
+  /*&:before{
+  	@include mail;
+  	font-size: 80%;
+  }*/
+  background-color: #0E86C7;
+  width: 44%;
+  margin: 0 3%;
+}
+@media only screen and (max-width: 690px) {
+  .cv_style03 .cv_style03_btn a.btn {
+    font-size: 16px;
+  }
+}
+.cv_style03 .cv_style03_btn a.btn:hover {
+  background-color: #0E86C7;
+  text-decoration: none;
+}
+.cv_style03 .cv_style03_btn a.btn:hover {
+  background-color: #329bd2;
+}
+.cv_style03 .cv_style03_btn a.btn.right {
+  display: inline-block;
+  max-width: 400px;
+  padding: 16px 10px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 20px;
+  background-color: #329bd2;
+  transition: background-color .2s;
+  position: relative;
+  /*&:before{
+  	@include mail;
+  	font-size: 80%;
+  }*/
+}
+@media only screen and (max-width: 690px) {
+  .cv_style03 .cv_style03_btn a.btn.right {
+    font-size: 16px;
+  }
+}
+.cv_style03 .cv_style03_btn a.btn.right:hover {
+  background-color: #0E86C7;
+  text-decoration: none;
+}
+.cv_style03 .cv_style03_tel {
+  font-size: 36px;
+  color: #329bd2;
+  font-weight: bold;
+  line-height: 1.2;
+}
+.cv_style03 .cv_style03_tel a {
+  color: #329bd2;
+  text-decoration: none;
+}
+@media only screen and (max-width: 690px) {
+  .cv_style03 .cv_style03_tel {
+    font-size: 32px;
+  }
+}
+
+/* *************************************** */
+/* CV style 4*/
+/* *************************************** */
+.t-default .cv_style04 {
+  background-color: #ffffff;
+}
+
+.cv_style04 {
+  width: 100%;
+  background-color: #f5f5f5;
+  padding-top: 56px;
+  padding-bottom: 56px;
+  margin-top: 120px;
+  background: url(../image/common/footer_contact_bg.jpg) no-repeat center center/cover;
+  /*background-attachment: fixed;*/
+}
+@media only screen and (max-width: 690px) {
+  .cv_style04 {
+    margin-top: 60px;
+    padding-top: 30px;
+    padding-bottom: 25px;
+  }
+}
+.cv_style04 .cv_style04_in {
+  max-width: 900px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+@media only screen and (max-width: 979px) {
+  .cv_style04 .cv_style04_in {
+    width: calc(100% - 3%);
+  }
+}
+@media only screen and (max-width: 690px) {
+  .cv_style04 .cv_style04_in {
+    width: calc(100% - 15%);
+  }
+}
+.cv_style04 .cv_style04_lead {
+  margin-bottom: 40px;
+}
+@media only screen and (max-width: 690px) {
+  .cv_style04 .cv_style04_lead {
+    margin-bottom: 15px;
+  }
+}
+.cv_style04 .cv_style04_cv {
+  display: table;
+  width: 100%;
+}
+.cv_style04 .cv_style04_tel {
+  display: table-cell;
+  vertical-align: top;
+  width: 50%;
+}
+@media only screen and (max-width: 690px) {
+  .cv_style04 .cv_style04_tel {
+    width: 100%;
+    display: block;
+  }
+}
+.cv_style04 .cv_style04_tel .cv_style04_num {
+  font-size: 36px;
+  color: #329bd2;
+  font-weight: bold;
+  line-height: 1.2;
+}
+.cv_style04 .cv_style04_tel .cv_style04_num a {
+  color: #329bd2;
+  text-decoration: none;
+}
+@media only screen and (max-width: 690px) {
+  .cv_style04 .cv_style04_tel .cv_style04_num {
+    font-size: 32px;
+  }
+}
+@media only screen and (max-width: 690px) {
+  .cv_style04 .cv_style04_tel .cv_style04_num {
+    width: 100%;
+    display: block;
+  }
+}
+.cv_style04 .cv_style04_tel .cv_style04_num::before {
+  font-family: FontAwesome;
+  content: "\f095";
+  display: inline-block;
+  padding-right: 5px;
+  vertical-align: middle;
+  font-size: 22px;
+  font-size: 32px;
+}
+.cv_style04 .cv_style04_form {
+  display: table-cell;
+  vertical-align: top;
+  width: 50%;
+  padding: 0 2%;
+}
+@media only screen and (max-width: 690px) {
+  .cv_style04 .cv_style04_form {
+    width: 100%;
+    display: block;
+  }
+}
+.cv_style04 .cv_style04_btn a {
+  display: inline-block;
+  max-width: 400px;
+  padding: 16px 10px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 20px;
+  background-color: #329bd2;
+  transition: background-color .2s;
+  position: relative;
+  /*&:before{
+  	@include mail;
+  	font-size: 80%;
+  }*/
+  width: 100%;
+}
+@media only screen and (max-width: 690px) {
+  .cv_style04 .cv_style04_btn a {
+    font-size: 16px;
+  }
+}
+.cv_style04 .cv_style04_btn a:hover {
+  background-color: #0E86C7;
+  text-decoration: none;
+}
+@media only screen and (max-width: 690px) {
+  .cv_style04 .cv_style04_btn {
+    margin-top: 20px;
+  }
+}
+
+/* *************************************** */
+/* tel mail icon */
+/* *************************************** */
+p.cv_icon_tel,
+p.cv_icon_form {
+  margin-bottom: 10px;
+}
+
+.cv_icon_tel:before,
+.cv_icon_form:before {
+  font-family: FontAwesome;
+  display: inline-block;
+  padding-right: 5px;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+.cv_icon_tel:before {
+  content: "\f095";
+}
+
+.cv_icon_form:before {
+  content: "\f0e0";
+  padding-right: 10px;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+@media only screen and (max-width: 690px) {
+  .cv_icon_tel, .cv_icon_form {
+    margin-bottom: 5px;
+  }
+}
+/****************************************************************/
+/* footer contact */
+/****************************************************************/
+.w_100 {
+  display: table;
+  margin-top: 56px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 690px) {
+  .w_100 {
+    margin-top: 30px;
+  }
+}
+
+/*# sourceMappingURL=cv.css.map */

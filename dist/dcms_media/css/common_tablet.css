@@ -1,0 +1,99 @@
+/* screens smaller than 980---------------------------------------------------------- */
+@media only screen and (min-width: 980px) and (max-width: 1024px) {
+
+#headnav .headnav_in .headnav_link01 {
+	display:block;
+
+}
+
+#headnav .headnav_in .headnav_link01 li {
+
+	font-size:12px;
+	display:inline-table;
+	margin:0 5px;
+	letter-spacing:0;
+}
+
+
+}
+
+/* screens smaller than 980---------------------------------------------------------- */
+@media only screen and (min-width: 691px) and (max-width: 979px) {
+  /*header*/
+  /*------------------------------------------------------------------------------*/
+  /*#headnav .headnav_in {
+    float: right; }*/
+    #headnav .headnav_in .headnav_link01 li {
+      margin: 0 6px 0 0;
+      font-size: 11px;
+      line-height: 3.18; }
+    #headnav .headnav_in .headnav_link02{
+      width: 110px; }
+	#headnav .headnav_in .headnav_link03{
+      width: 125px; }
+      #headnav .headnav_in .headnav_link02 p, #headnav .headnav_in .headnav_link03 p {
+        font-size: 11px;
+        line-height: 3.18; }
+        #headnav .headnav_in .headnav_link02 p a{
+          padding: 0 5px;
+          background-position: 98px 14px; }
+		#headnav .headnav_in .headnav_link03 p a {
+          padding: 0 5px;
+          background-position: 113px 14px; }
+      #headnav .headnav_in .headnav_link02 ul, #headnav .headnav_in .headnav_link03 ul {
+        width: 110px; }
+        #headnav .headnav_in .headnav_link02 ul li, #headnav .headnav_in .headnav_link03 ul li {
+          font-size: 11px; }
+          #headnav .headnav_in .headnav_link02 ul li a, #headnav .headnav_in .headnav_link03 ul li a {
+            padding: 0 5px; }
+    #headnav .headnav_in .headnav_link04 {
+      width: 135px; }
+      #headnav .headnav_in .headnav_link04 form .search_txt {
+        width: 100px;
+        font-size: 11px; }
+
+  #globalnav .globalnav_menu a {
+    font-size: 13px;
+    line-height: 3.846; }
+  #globalnav .globalnav_menu .globalnav_subnav01 li a, #globalnav .globalnav_menu .globalnav_subnav02 li a, #globalnav .globalnav_menu .globalnav_subnav03 li a, #globalnav .globalnav_menu .globalnav_subnav04 li a, #globalnav .globalnav_menu .globalnav_subnav05 li a {
+    font-size: 12px;
+    line-height: 1;
+    padding: 5px 0; }
+  #globalnav .globalnav_contact a {
+    font-size: 13px;
+    line-height: 3.846; }
+  #globalnav .globalnav_onlineshop a {
+    font-size: 13px;
+    line-height: 3.846; }
+    #globalnav .globalnav_onlineshop a:after {
+      content: none; }
+
+  /*footer*/
+  /*------------------------------------------------------------------------------*/
+  #footer_middle .foorter_middle_in {
+    padding: 20px 10px 0 10px; }
+  #footer_middle .footnav_table01 .footnav_table01_row .footnav01 li {
+    font-size: 12px; }
+    #footer_middle .footnav_table01 .footnav_table01_row .footnav01 li ul li {
+      font-size: 11px; }
+  #footer_middle .footnav_table02 .footnav02 {
+    font-size: 12px; }
+  #footer_middle .footnav_table02 .footnav03 {
+    right: 0px; }
+    #footer_middle .footnav_table02 .footnav03 a {
+      width: 24px; }
+
+  #footer_bottom {
+    padding: 0 10px; }
+    #footer_bottom .footnav_b li {
+      margin: 0 10px 0 0;
+      font-size: 12px; }
+    #footer_bottom #copyright {
+      font-size: 12px; }
+
+  /* pagetop */
+  /*------------------------------------------------------------------------------*/
+  #topcontrol {
+    display: none; }
+
+  /*------------------------------------------------------------------------------*/ }

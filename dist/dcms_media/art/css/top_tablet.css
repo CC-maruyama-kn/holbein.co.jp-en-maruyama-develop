@@ -1,0 +1,29 @@
+@media only screen and (min-width:691px) and (max-width:979px) {
+
+
+
+/*mainimage*/
+/*------------------------------------------------------------------------------*/
+.flexslider .slides > li{
+    height: auto;
+    background: none;
+}
+.flexslider .slides > li img{
+	width: 100%;
+	height: auto;
+}
+
+#topIcon li img {
+	max-width:98%;
+	height:auto;
+}
+
+
+
+#top_banner li img {
+	max-width:100%;
+	height:auto;
+}
+
+
+}

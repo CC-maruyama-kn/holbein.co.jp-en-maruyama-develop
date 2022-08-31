@@ -1,0 +1,37 @@
+// variable
+
+//  画像パス指定 #{$**}
+$img: "/dcms_media/image/";
+
+//  color
+
+$color-white: #FFFFFF;
+$color-black: #000000;
+$color-red :#CD1B2F;
+$color-light-gray :#4E5355;
+$color-dark-gray :#231815;
+$color-semi-light-gray :#F3F3F3;
+
+$text-size-base: 1rem;
+
+// font-weight
+$thin: 100;
+$ex-light: 200;
+$light: 300;
+$normal: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$ex-bold: 800;
+$black: 900;
+$ex-black: 950;
+
+// content-width
+
+$content-width-full: 1430px;
+$content-width: 1240px;
+$content-width-md: 1120px;
+
+
+
+$transition: all .2s ease-in;

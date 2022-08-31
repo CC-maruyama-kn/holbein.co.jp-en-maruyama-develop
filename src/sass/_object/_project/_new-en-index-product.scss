@@ -1,0 +1,38 @@
+.p-new-en-index-product {
+    &__inner {
+        padding: 0 50px;
+
+        @include mq(max, md) {
+            padding: 0 30px;
+        }
+
+        @include mq(max, sm) {
+            padding: 0 15px;
+        }
+    }
+
+    &__img {
+        width: 70%;
+        overflow: hidden;
+
+        & img {
+            width: 100%;
+        }
+
+        @include mq(max, md) {
+            width: 100%;
+        }
+    }
+
+    &__article {
+        width: 30%;
+
+        @include mq(max, md) {
+            width: 100%;
+        }
+
+        & p {
+            word-break: break-all;
+        }
+    }
+}

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+<meta name="format-detection" content="telephone=no">
+<title>ホルベイン オフィシャルウェブサイト</title>
+<meta name="keywords" content="holbein,color,ホルベイン,画材,絵具,画筆,水彩紙,イーゼル"/>
+<meta name="description" content="ホルベインのオフィシャルサイトです。絵具、画材の新製品、イベント、キャンペーン情報など、アートライフを豊かにする各種情報を提供します。"/>
+
+<link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+<link href="//fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
+<link rel="stylesheet" href="/dcms_media/css/utility.css">
+<link rel="stylesheet" href="/dcms_media/css/jquery.flexslider.css" />
+<link rel="stylesheet" href="/dcms_media/css/jquery.jscrollpane.css" />
+<link rel="stylesheet" href="/dcms_media/css/common.css">
+<link rel="stylesheet" href="/dcms_media/css/common_tablet.css">
+<link rel="stylesheet" href="/dcms_media/css/common_smartphone.css">
+<link rel="stylesheet" href="/dcms_media/css/top.css">
+<link rel="stylesheet" href="/dcms_media/css/top_tablet.css">
+<link rel="stylesheet" href="/dcms_media/css/top_smartphone.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/dcms_media/css/original.css">
+
+<script src="/dcms_media/js/jquery-1.11.1.min.js"></script>
+<script src="/dcms_media/js/slidemenu.js"></script>
+<script src="/dcms_media/js/scrolltopcontrol.js"></script>
+<script src="/dcms_media/js/jquery.matchHeight-min.js"></script>
+<script src="/dcms_media/js/jquery.flexslider-min.js"></script>
+<script src="/dcms_media/js/jquery.mousewheel.js"></script>
+<script src="/dcms_media/js/jquery.jscrollpane.min.js"></script>
+<script src="/dcms_media/js/jQuery.BiggerLink.js"></script>
+
+<script>
+	var lh = "";
+	lh = location.href;
+	if (lh.match(/dcmsadm/)) {
+	} else {
+
+		document.write('<script src="/dcms_media/js/header_menu.js"></scri' + 'pt>');
+
+		(function($) {
+			$(document).ready(function() {
+
+				//mainimage
+				$('#top_mainimage').flexslider({
+					slideshowSpeed : 4000,
+					animationSpeed : 800,
+					directionNav : false,
+					controlNav : false,
+				});
+				
+				//mainimage　Tablet対応
+				var ua = navigator.userAgent.toLowerCase();
+				if (ua.indexOf('ipad') > -1 || (ua.indexOf('android') > -1) && (ua.indexOf('mobile') == -1)) {
+					$('#top_mainimage').addClass('tablet');
+				}
+
+				//jscrollpane
+				$('.top_notices_box .top_notices_txt_inner, .top_newsrelease .top_newsrelease_inner').jScrollPane();
+
+				//matchHeight
+				$('.top_news_box .top_news_inner_box').matchHeight();
+				$('.top_content01 ul li').matchHeight();
+
+				//BiggerLink
+				$('a[target="_blank"]').click(function(){
+				        window.open(this.href);
+				        return false;
+				    });
+
+				$('a[rel="external"]').click(function(){
+				        window.open(this.href);
+				        return false;
+				    });
+				$('.top_news_box .top_news_inner_box ul li').biggerlink();
+				$('.top_pickup_box .top_pickup_inner_box').biggerlink();
+				$('.top_brand_box').biggerlink();
+				$('.top_content01 ul li').biggerlink();
+
+				//banner
+				$('#top_banner').flexslider({
+					animation : "slide",
+					itemWidth : 48,
+					itemMargin : 4,
+					minItems : 2,
+					maxItems : 2,
+					controlNav : false,
+				});
+				$(window).on('load', function() {
+					var winWidth = $(window).innerWidth();
+					if (winWidth >= 690) {
+						$('#top_banner').addClass('top_banner_pc');
+					}
+				});
+
+				//リサイズ時処理
+				var resizeTimer = null;
+				$(window).on('resize', function() {
+					clearTimeout(resizeTimer);
+					resizeTimer = setTimeout(function() {
+						$('.top_notices_box .top_notices_txt_inner, .top_newsrelease .top_newsrelease_inner').jScrollPane();
+						var winWidth = $(window).innerWidth();
+						if (winWidth >= 690) {
+							$('#top_banner').addClass('top_banner_pc');
+						} else {
+							$('#top_banner').removeClass('top_banner_pc');
+						}
+					}, 200);
+				});
+
+			});
+		})(jQuery);
+	}
+</script>
+
+<script>
+var _bownow_trace_id_ = "UTC_596ebfc965cbf";
+var hm = document.createElement("script");
+hm.src = "https://contents.bownow.jp/js/trace.js";
+document.getElementsByTagName("head")[0].appendChild(hm);
+</script>
+<meta name="google-site-verification" content="6ttNmXPLGZWp6P8FNZblx0nFEGk9cHSzdaAzv0ShDh8" />
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KZZBVVW');</script>
+<!-- End Google Tag Manager -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZZBVVW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<meta name="google-site-verification" content="6-rKPFoMiGrCzNF6AwLw2ukrY8Ax9_hV6SloMX7GWNQ" />
+</head>
+
+
+<body class="page_index2">
+<header>
+<div id="headnav">
+<div class="headnav_in">
+<ul class="headnav_link01">
+<li class="icon_mail"><a href="/mailmagazine">メルマガ</a></li>
+<li class="icon_contest"><a href="/contest">コンテスト</a></li>
+<li class="icon_faq"><a href="https://technical-info.holbein.co.jp/">技術情報Ｑ＆Ａ</a></li>
+<li class="icon_dealer"><a href="/dealer">ディーラー様向けご案内</a></li>
+</ul>
+<div class="headnav_link02">
+<p class="headnav_link02_ttl"><a href="#">Languages - Art</a></p>
+<ul class="headnav_link02_dropdown">
+<li><a href="/">Japanese</a></li>
+<li><a href="/en.html">English</a></li>
+<li><a href="/es.html">Spanish</a></li>
+<li><a href="/fr.html">French</a></li>
+<li><a href="/ch.html">Chinese</a></li>
+<li><a href="/kr.html">Korean</a></li>
+</ul>
+</div>
+<div class="headnav_link03">
+<p class="headnav_link03_ttl"><a href="#">Languages - works</a></p>
+<ul class="headnav_link03_dropdown">
+<li><a href="/">Japanese</a></li>
+<li><a href="/english/index.html">English</a></li>
+<li><a href="/worldwide/espanol/index.html">Spanish</a></li>
+<li><a href="/worldwide/france/index.html">French</a></li>
+<li><a href="/worldwide/italiano/index.html">Italiano</a></li>
+<li><a href="/worldwide/deutsch/index.html">Deutsch</a></li>
+<li><a href="/worldwide/korean/index.html">Korean</a></li>
+</ul>
+</div>
+<div class="headnav_link04"><form action="/dcms-search/"><input class="search_txt" name="schKeyword" type="text" placeholder="サイト内検索" /> <input name="schBlog" type="hidden" value="1" /><input class="submit_btn" type="submit" value="サイト内検索" /></form></div>
+</div>
+</div>
+<h1 id="logo"><a href="/"><img src="/dcms_media/image/logo01.png" alt="絵具、絵画材料のホルベイン" /></a></h1>
+<div id="globalnav">
+<div id="gnav_btn01"><a href="#">MENU</a></div>
+<nav id="globalnav_in">
+<div id="gnav_btn02"><a href="#">閉じる</a></div>
+<div id="logo02"><a href="/"><img src="/dcms_media/image/logo02.png" alt="holbein" /></a></div>
+<ul class="cf">
+<li class="globalnav_menu"><a href="/product">製品情報</a>
+<ul class="globalnav_subnav01">
+<li><a href="/product">製品情報</a></li>
+<li><a href="/product/catalog">WEBカタログ</a></li>
+</ul>
+</li>
+<li class="globalnav_menu"><a href="/business">事業案内</a>
+<ul class="globalnav_subnav02">
+<li><a href="/business/oem">生産受託</a></li>
+<li><a href="/business/restoration.html">絵画修復</a></li>
+<li><a href="/business/abulabo.html">あぶLABO</a></li>
+</ul>
+</li>
+<li class="globalnav_menu"><a href="/company">会社情報</a>
+<ul class="globalnav_subnav03">
+<li><a href="/company/history">ブランドストーリー</a></li>
+<li><a href="/company/about">会社概要</a></li>
+<li><a href="/company/about.html#a01">アクセス</a></li>
+<li><a href="/company/holbein_gallery">ホルベインギャラリー</a></li>
+<li><a href="/company/holbein_gallery#showroom">ショールーム</a></li>
+<li><a href="/company/recruit.html">採用情報</a></li>
+</ul>
+</li>
+<li class="globalnav_menu"><a href="/resources">資料室</a>
+<ul class="globalnav_subnav04">
+<li><a href="/resources/publishing">出版活動</a></li>
+<li><a href="/resources/publishement">広告・メディア</a></li>
+<li><a href="/resources/histoir">画家たちの美術史</a></li>
+<li><a href="/resources/anatomy">色材の解剖学</a></li>
+<li><a href="/resources/acrylart_separate.html">ACRYLART別冊</a></li>
+<li><a href="/resources/acrylart.html">ACRYLART</a></li>
+</ul>
+</li>
+<li class="globalnav_menu"><a href="/shop">販売店一覧</a>
+<ul class="globalnav_subnav05">
+<li><a href="/shop/list_1">北海道・東北</a></li>
+<li><a href="/shop/list_2">関東</a></li>
+<li><a href="/shop/list_3">信州・北陸・東海</a></li>
+<li><a href="/shop/list_4">近畿</a></li>
+<li><a href="/shop/list_5">中国・四国</a></li>
+<li><a href="/shop/list_6">九州・沖縄</a></li>
+</ul>
+</li>
+<li class="globalnav_contact"><a href="/contact.html">お問い合わせ</a></li>
+<li class="globalnav_onlineshop"><a href="https://holbein-shop.com/" target="_blank" rel="noopener">オンラインショップ</a></li>
+</ul>
+<ul class="sp_head_link01">
+<li><a href="/mailmagazine">メルマガ</a></li>
+<li><a href="/contest">コンテスト</a></li>
+<li><a href="https://technical-info.holbein.co.jp/" target="_blank" rel="noopener">技術情報Ｑ＆Ａ</a></li>
+<li><a href="/dealer">ディーラー様向けご案内</a></li>
+</ul>
+<div class="sp_head_link02"><form action="/dcms-search/"><input class="search_txt" name="schKeyword" type="text" placeholder="サイト内検索" /> <input class="submit_btn" type="submit" value="サイト内検索" /></form></div>
+<div class="sp_head_link03"><a href="https://www.facebook.com/HobeinArt/" target="_blank" rel="noopener"><img src="/dcms_media/image/icon_fb01.png" alt="facebook" /></a> <a href="https://twitter.com/HolbeinArt" target="_blank" rel="noopener"><img src="/dcms_media/image/icon_tw01.png" alt="twitter" /></a> <a href="https://www.youtube.com/channel/UCGeANPugv7Q_c2LlZ4w9MHw" target="_blank" rel="noopener"><img src="/dcms_media/image/icon_youtbe01.png" alt="youtube" /></a> <a href="https://www.instagram.com/holbein_gazai/" target="_blank" rel="noopener"><img src="/dcms_media/image/icon_insta01.png" alt="instagram" /></a></div>
+</nav></div>
+</header>
+
+<div id="mainimage">
+<div class="good_for_art_box">
+<div id="top_mainimage" class="flexslider">
+<ul class="slides">
+<li class="mainimage01"> </li>
+<li class="mainimage02"> </li>
+<li class="mainimage03"> </li>
+</ul>
+</div>
+<div class="good_for_art"><a title="第35回 ホルベイン・スカラシップ奨学生募集" href="https://www.holbein.co.jp/blog/topics/a727" target="_blank" rel="noopener"><img title="scholarship" src="/dcms_media/image/good_for_art.jpg" alt="scholarship" /></a></div>
+</div>
+</div>
+
+
+<!-- ブロック貼り付けエリア -->
+<div id="dcms_layoutPageBlockPasteArea">
+	<!-- ブロック -->
+	<div id="dcms_layoutPageBlock">
+		<!--###_DCMS_BLOCK_START_###-->
+<div class="top_notices_box cf">
+<div class="top_notices_ttl">
+<h2>重要なお知らせ</h2>
+<p class="top_btn01"><a href="/notices">詳しくはこちら</a></p>
+</div>
+<div class="top_notices_txt">
+<div class="top_notices_txt_inner">###_DCMS_BLOCK_RSS_important_3_### <!-- <dl>
+<dt class="rss_date">2017/08/00</dt>
+<dd class="rss_title"><a href="#">ここに重要なお知らせが入りますこの文章はダミーですここに重要なお知らせが入りますこの文章はダミーです</a></dd>
+<dd class="rss_contents"> </dd>
+</dl>
+<dl>
+<dt class="rss_date">2017/08/00</dt>
+<dd class="rss_title"><a href="#">ここに重要なお知らせが入りますこの文章はダミーですここに重要なお知らせが入りますこの文章はダミーです</a></dd>
+<dd class="rss_contents"> </dd>
+</dl>
+<dl>
+<dt class="rss_date">2017/08/00</dt>
+<dd class="rss_title"><a href="#">ここに重要なお知らせが入りますこの文章はダミーですここに重要なお知らせが入りますこの文章はダミーですここに重要なお知らせが入りますこの文章はダミーです</a></dd>
+<dd class="rss_contents"> </dd>
+</dl> --></div>
+</div>
+<p class="top_btn01_sp"><a href="/notices">詳しくはこちら</a></p>
+</div>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<section class="top_news_box top_box01 cf">
+<h2 class="top_title01"><span class="color_red">N</span>EWS</h2>
+<div class="top_news_inner_box top_news01">
+<h3><a href="/blog/category/newproducts">新製品</a></h3>
+<ul>###_DCMS_BLOCK_BLOG_LIST_CATEGORY_newproducts_2_###</ul>
+</div>
+<div class="top_news_inner_box top_news02">
+<h3><a href="/blog/category/topics">トピックス</a></h3>
+<ul>###_DCMS_BLOCK_BLOG_LIST_CATEGORY_topics_2_###</ul>
+</div>
+<div class="top_news_inner_box top_news03">
+<h3><a href="/blog/category/event">イベント</a></h3>
+<ul>###_DCMS_BLOCK_BLOG_LIST_CATEGORY_event_2_###</ul>
+</div>
+<div class="top_news_inner_box top_news04">
+<h3><a href="/blog/category/art">アートをはじめよう</a></h3>
+<ul>###_DCMS_BLOCK_BLOG_LIST_CATEGORY_art_2_###</ul>
+</div>
+<div class="top_news_inner_box top_news05">
+<h3><a href="/blog/category/gallary">ホルベインギャラリー</a></h3>
+<ul>###_DCMS_BLOCK_BLOG_LIST_CATEGORY_gallary_2_###</ul>
+</div>
+<div class="top_news_inner_box top_news06">
+<h3><a href="/blog/category/workshop">ホルベインワークショップ</a></h3>
+<ul>###_DCMS_BLOCK_BLOG_LIST_CATEGORY_workshop_2_###</ul>
+</div>
+</section>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<section class="top_box02 top_pickup_box">
+<h2 class="top_title01"><span class="color_red">P</span>ICKUP</h2>
+<ul class="cf">
+<li class="top_pickup_inner_box top_pickup01">
+<h4><a href="https://holbein-shop.com/">オンラインショップ・製品情報</a></h4>
+<p>ホルベインの公式オンラインショップです。<br /> 製品情報はこちらからご覧ください。</p>
+</li>
+<li class="top_pickup_inner_box top_pickup02">
+<h4><a href="/blog/category/art">アートをはじめよう</a></h4>
+<p>「絵を描くことは難しい」「知識がない」と敬遠していませんか？ <br /> 画材やアートのキホンのキから<br /> 絵具に関する情報まで幅広くお伝えしていきます。</p>
+</li>
+<li class="top_pickup_inner_box top_pickup03">
+<h4><a href="https://www.youtube.com/user/holbeinART" target="_blank" rel="noopener">ホルベイン動画チャンネル</a></h4>
+<p>ホルベインの公式Youtubeチャンネルです。 <br /> 様々な動画を配信していきます。</p>
+</li>
+</ul>
+</section>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<section class="top_box02 top_brand_box">
+<div class="top_brand_box_img">
+<p><a href="/company/history">BRAND STORY</a></p>
+</div>
+</section>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<section class="top_box02 top_content01">
+<ul class="cf">
+<li>
+<h2><a href="/scholarship"><span class="top_content01_circle"><img src="/dcms_media/image/top_content01_img01.png" alt="スカラシップ" /></span>スカラシップ</a></h2>
+<p>スカラシップはコンテンポラリーアートの領域において、選出した作家に各種材料・用具を提供し創作活動の支援を目的とした奨学制度です。</p>
+</li>
+<li>
+<h2><a href="/resources"><span class="top_content01_circle"><img src="/dcms_media/image/top_content01_img02.png" alt="資料室" /></span>資料室</a></h2>
+<p>ホルベイン工業・技術部が携わった絵具に関する出版物や歴代の広告、情報誌アクリラートなど歴史にも通じる広報活動をご紹介いたします。</p>
+</li>
+<li>
+<h2><a href="https://technical-info.holbein.co.jp/"><span class="top_content01_circle"><img src="/dcms_media/image/top_content01_img03.png" alt="Q&A技術資料" /></span>Q&A 技術情報</a></h2>
+<p>ホルベインの技術担当者が様々な絵具・画材や絵画技法について、初心者からプロ作家に至るまで様々な質問にQ&A形式でお答えしています。</p>
+</li>
+<li>
+<h2><a href="/mailmagazine"><span class="top_content01_circle"><img src="/dcms_media/image/top_content01_img04.png" alt="メルマガ募集" /></span>メルマガ募集</a></h2>
+<p>新製品やキャンペーン、各種イベントなどアートライフを豊かにするニュースがお手元に届きます。配信は月2回。ぜひご登録ください。</p>
+</li>
+</ul>
+</section>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<div class="top_box02">
+<div id="top_banner" class="top_box03">
+<div class="flexslider">
+<ul class="slides">
+<li><a href="/company/holbein_gallery"><img src="/dcms_media/image/top_banner01.png" alt="ホルベインギャラリー" /></a></li>
+<li><a href="/contest"><img src="/dcms_media/image/top_banner02.png" alt="コンテスト" /></a></li>
+<li><a href="/business/oem.html"><img src="/dcms_media/image/top_banner03.png" alt="生産受託のご案内" /></a></li>
+<li><a href="/business/restoration.html"><img src="/dcms_media/image/top_banner04.png" alt="絵画修復" /></a></li>
+<li class="mr0"><a href="hobbyt_artistprogram.html"><img src="/dcms_media/image/top_banner05.png" alt="ホビット アーティスト プログラム" /></a></li>
+<li><a href="/mailmagazine/"><img src="/dcms_media/image/top_banner06.png" alt="メルマガ" /></a></li>
+<li><a href="http://www.holbein-artistnavi.com/" target="_blank" rel="noopener"><img src="/dcms_media/image/top_banner07.png" alt="アーチストナビ" /></a></li>
+<li><a href="/scholarship/"><img src="/dcms_media/image/top_banner08.png" alt="スカラシップ" /></a></li>
+<li><a href="/blog/category/workshop"><img src="/dcms_media/image/top_banner09.png" alt="ワークショップ" /></a></li>
+<li class="mr0"><a href="https://technical-info.holbein.co.jp/"><img src="/dcms_media/image/top_banner10.png" alt="技術情報" /></a></li>
+</ul>
+</div>
+</div>
+</div>
+<!--###_DCMS_BLOCK_END_###-->
+<!--###_DCMS_BLOCK_START_###-->
+<section class="top_box02">
+<div class="top_newsrelease top_box03">
+<h2>お知らせ<span class="top_newsrelease_ttl_english">News release</span></h2>
+<div class="top_newsrelease_inner">###_DCMS_BLOCK_RSS_news_3_###</div>
+<p class="top_btn02"><a href="/news">一覧を見る</a></p>
+</div>
+</section>
+<!--###_DCMS_BLOCK_END_###-->
+
+	</div>
+	<!-- // ブロック -->
+</div>
+<!-- // ブロック貼り付けエリア -->
+
+<footer>
+<div id="footer_top" class="cf">
+<div id="footer_logo"><a href="/"><img src="/dcms_media/image/logo01.png" alt="holbein" /></a></div>
+</div>
+<div id="footer_middle">
+<div class="foorter_middle_in cf">
+<div class="footnav_table01">
+<div class="footnav_table01_row">
+<ul class="footnav01">
+<li><a href="/product">製品情報</a>
+<ul>
+<li><a href="/product">製品情報</a></li>
+<li><a href="/product/catalog">WEBカタログ</a></li>
+</ul>
+</li>
+</ul>
+<ul class="footnav01">
+<li><a href="/business">事業案内</a>
+<ul>
+<li><a href="/business/oem.html">生産受託</a></li>
+<li><a href="/business/restoration.html">絵画修復</a></li>
+<li><a href="/business/abulabo.html">あぶLABO</a></li>
+</ul>
+</li>
+</ul>
+<ul class="footnav01">
+<li><a href="/company">会社情報</a>
+<ul>
+<li><a href="/company/history">ブランドストーリー</a></li>
+<li><a href="/company/about">会社概要</a></li>
+<li><a href="/company/holbein_gallery">ホルベインギャラリー</a></li>
+<li><a href="/company/holbein_gallery#showroom">ショールーム</a></li>
+<li><a href="/company/recruit.html">採用情報</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="footnav_table01_row">
+<ul class="footnav01"><!--<li><a href="/paints">どんな絵が描きたい？ で絵具マッチング！</a></li>-->
+<li><a href="/blog/archives/category/art">アートをはじめよう</a></li>
+<li><a href="/contest">コンテスト</a>
+<ul>
+<li><a href="/contest/pcl.html">大きなポストカードコンテスト</a></li>
+<li><a href="/contest/duo">デュオはじめての油絵コンテスト</a></li>
+<li><a href="/contest/highschool">高校生の油絵コンテスト</a></li>
+</ul>
+</li>
+<li><a href="/scholarship">スカラシップ</a></li>
+</ul>
+<ul class="footnav01">
+<li><a href="/resources">資料室</a>
+<ul>
+<li><a href="/resources/publishing">出版活動</a></li>
+<li><a href="/resources/publishement">広告・メディア</a></li>
+<li><a href="/resources/histoir">画家の美術史</a></li>
+<li><a href="/resources/anatomy">色材の解剖学</a></li>
+<li><a href="/resources/acrylart_separate">ACRYLART別冊</a></li>
+<li><a href="/resources/acrylart">ACRYLART</a></li>
+</ul>
+</li>
+</ul>
+<ul class="footnav01">
+<li><a href="/shop">販売店一覧</a>
+<ul>
+<li><a href="/shop/list_1">北海道・東北</a></li>
+<li><a href="/shop/list_2">関東</a></li>
+<li><a href="/shop/list_3">信州・北陸・東海</a></li>
+<li><a href="/shop/list_4">近畿</a></li>
+<li><a href="/shop/list_5">中国・四国</a></li>
+<li><a href="/shop/list_6">九州・沖縄</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="footnav_table02">
+<ul class="footnav02">
+<li><a href="https://technical-info.holbein.co.jp/index.html" target="_blank" rel="noopener">技術情報Ｑ＆Ａ</a></li>
+<li><a href="/mailmagazine">メルマガ</a></li>
+<li><a href="/notices">重要なお知らせ</a></li>
+<li><a href="/news">お知らせ</a></li>
+<li><a href="/contact.html">お問い合わせ</a></li>
+</ul>
+<div class="footnav03"><a href="https://www.facebook.com/HobeinArt/" target="_blank" rel="noopener"><img src="/dcms_media/image/facebook_mono.png" alt="facebook" width="50" height="30" /></a> <a href="https://twitter.com/HolbeinArt" target="_blank" rel="noopener"><img src="/dcms_media/image/twitter_mono.png" alt="twitter" width="50" height="30" /></a> <a href="https://www.youtube.com/channel/UCGeANPugv7Q_c2LlZ4w9MHw" target="_blank" rel="noopener"><img src="/dcms_media/image/youtube_mono.png" alt="youtube" width="50" height="30" /></a> <a href="https://www.instagram.com/holbein_art/" target="_blank" rel="noopener"><img src="/dcms_media/image/instagram_mono.png" alt="instagram" width="50" height="30" /></a></div>
+</div>
+</div>
+</div>
+<div id="footer_bottom" class="cf">
+<ul class="footnav_b cf">
+<li><a href="/privacy.html">プライバシーポリシー</a></li>
+<li><a href="/sitemap.html">サイトマップ</a></li>
+</ul>
+<small id="copyright">HOLBEIN. ALL Rights Reserved.</small></div>
+</footer>
+
+</body>
+
+</html>

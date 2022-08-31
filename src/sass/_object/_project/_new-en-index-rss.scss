@@ -1,0 +1,117 @@
+.p-new-en-index-rss {
+    &__inner{
+        border-top: 1px solid #ccc;
+    }
+
+    & dl {
+        display: flex;
+        flex-wrap: wrap;
+        color: $color-white;
+        padding: 20px 0;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid #ccc;
+
+        @include mq(max, md) {
+            display: block;
+            position: relative;
+        }
+
+        & a {
+            color: $color-white;
+            font-weight: bold;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            @include mq(max, md) {
+                line-height: 1.5;
+            }
+
+            @include mq(min, md) {
+                font-size: 1.25rem;
+                letter-spacing: 1px;
+            }
+
+            & span {
+
+                font-weight: normal;
+                color: $color-white;
+                background-color: $color-dark-gray ;
+                display: inline-block;
+                padding: 2px 15px;
+                line-height: 1.3;
+                border-radius: 3px;
+                margin-right: 20px;
+
+                @include mq(min, md) {
+                    font-size: 1.125rem;
+                }
+
+            }
+            & .rss-category{
+                font-weight: normal;
+                color: $color-white;
+                background-color: $color-dark-gray ;
+                display: inline-block;
+                padding: 2px 15px;
+                line-height: 1.3;
+                border-radius: 3px;
+                margin-right: 20px;
+
+                @include mq(min, md) {
+                    font-size: 1.125rem;
+                }               
+            }
+
+            &:hover {
+
+                text-decoration: underline;
+
+            }
+
+            & .rss-text {
+                min-width: 162px;
+
+                @include mq(max, md)  {
+                    position: absolute;
+                    left: 109px;
+                    top: 19px;
+                }
+            }
+        }
+
+        & dt {
+            width: 10%;
+
+            @include mq(min, md) {
+                font-size: 1.125rem;
+            }
+
+            @include mq(max, md) {
+                min-width: 117px;
+            }
+        }
+
+        & .rss_title {
+            width: 90%;
+
+            @include mq(max, md) {
+                width: 100%;
+                margin-top: 15px;
+            }
+
+        }
+        & .rss_contents{
+            display: none;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: flex-end;
+        margin: 30px 0 0 0;
+        @include mq(max, md) {
+            margin: 20px 0 0 0;
+        }
+    }
+}

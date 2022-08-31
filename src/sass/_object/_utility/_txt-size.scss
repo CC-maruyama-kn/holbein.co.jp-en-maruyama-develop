@@ -1,0 +1,157 @@
+.u-txt-size {
+  &-ft14 {
+    font-size: 0.875rem;
+  }
+
+  &-ft20 {
+    font-size: 1.25rem;
+  }
+
+  &-ft28 {
+    font-size: 1.75rem;
+  }
+
+  &-ft18 {
+    font-size: 1.125rem;
+  }
+
+  &-ft70 {
+    font-size: 4.375rem;
+  }
+
+  &-ft78 {
+    font-size: 4.875rem;
+  }
+
+  &-ft98 {
+    font-size: 6.125rem;
+  }
+}
+
+.u-txt-size-pc {
+  &-ft14 {
+    @include mq(min, md) {
+      font-size: 0.875rem;
+    }
+  }
+
+  &-ft20 {
+    @include mq(min, md) {
+      font-size: 1.25rem;
+    }
+
+  }
+
+  &-ft28 {
+    @include mq(min, md) {
+      font-size: 1.75rem;
+    }
+
+  }
+
+  &-ft18 {
+    @include mq(min, md) {
+      font-size: 1.125rem;
+    }
+
+  }
+
+  &-ft70 {
+    @include mq(min, md) {
+      font-size: 4.375rem;
+    }
+
+  }
+
+  &-ft78 {
+    @include mq(min, md) {
+      font-size: 4.875rem;
+    }
+
+  }
+
+  &-ft98 {
+    @include mq(min, md) {
+      font-size: 6.125rem;
+    }
+
+  }
+}
+
+.u-txt-size-tab {
+  &-ft14 {
+    @include mq(max, md) {
+      font-size: 0.875rem !important;
+    }
+  }
+
+  &-ft28 {
+    @include mq(max, md) {
+      font-size: 1.75rem !important;
+    }
+  }
+
+  &-ft16 {
+    @include mq(max, md) {
+      font-size: 1rem !important;
+    }
+  }
+
+  &-ft18 {
+    @include mq(max, md) {
+      font-size: 1.125rem !important;
+    }
+  }
+
+  &-ft40 {
+    @include mq(max, md) {
+      font-size: 2.5rem !important;
+    }
+  }
+
+  &-ft50 {
+    @include mq(max, md) {
+      font-size: 3.125rem !important;
+    }
+  }
+
+}
+
+.u-txt-size-sp {
+  &-ft14 {
+    @include mq(max, sm) {
+      font-size: 0.875rem !important;
+    }
+  }
+
+  &-ft28 {
+    @include mq(max, sm) {
+      font-size: 1.75rem !important;
+    }
+  }
+
+  &-ft16 {
+    @include mq(max, sm) {
+      font-size: 1rem !important;
+    }
+  }
+
+  &-ft18 {
+    @include mq(max, sm) {
+      font-size: 1.125rem !important;
+    }
+  }
+
+  &-ft40 {
+    @include mq(max, sm) {
+      font-size: 2.5rem !important;
+    }
+  }
+
+  &-ft50 {
+    @include mq(max, sm) {
+      font-size: 3.125rem !important;
+    }
+  }
+
+}

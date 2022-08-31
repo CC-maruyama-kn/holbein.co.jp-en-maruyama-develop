@@ -1,0 +1,54 @@
+.u-only {
+  &-pc {
+    display: none;
+    @include mq(min,md) {
+      display: block;
+    }
+  }
+  &-tabyoko {
+    display: none;
+    @include mq(max,lg) {
+      display: block;
+    }
+  }
+
+  &-pc-tab {
+    display: none;
+    @include mq(min,sm) {
+      display: block;
+    }
+  }
+
+  &-tab {
+    display: none;
+    @include mq(bw,sm,md) {
+      display: block;
+    }
+  }
+
+  &-sp {
+    display: none;
+    @include mq(max,sm) {
+      display: block;
+    }
+  }
+
+  &-tab-sp {
+    display: none;
+    @include mq(max,md) {
+      display: block;
+    }
+  }
+  &-pc{
+    display: none;
+    @include mq(min,md) {
+      display: block;
+    }
+  }
+
+  &-pc-sp {
+    @include mq(bw,sm,md) {
+      display: none;
+    }
+  }
+}

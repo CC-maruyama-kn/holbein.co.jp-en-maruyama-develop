@@ -1,0 +1,1282 @@
+@charset "UTF-8";
+
+/*layout*/
+/*------------------------------------------------------------------------------*/
+
+.lp_aqua_oil_inner {
+  width: 100%;
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lp_aqua_oil_inner_in {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+@media only screen and (max-width: 1119px) {
+.lp_aqua_oil_inner_in_sp {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+}
+
+/*common*/
+/*--------------------------------------------------------------------------------*/
+
+body {
+  font-size: 15px;
+  background-color: #fff;
+  font-size: 90% !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+.sp_only {
+  display: none;
+}
+#pageTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 63px;
+  height: 63px;
+  overflow: hidden;
+  display: block;
+  background-color: rgba(0, 184, 238, .7);
+  text-indent: -500%;
+}
+#pageTop:after {
+  position: fixed;
+  display: block;
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  transform: rotate(45deg);
+  bottom: 36px;
+  right: 42px;
+}
+#pageTop:hover{
+  opacity: .7;
+}
+@media only screen and (min-width: 691px) {
+  a[id*="anchor-"] {
+    position: relative;
+    display: block;
+    height: 0;
+    top: -100px;
+  }
+}
+@media only screen and (max-width: 690px) {
+.sp_only {
+  display: inherit;
+}
+.sp_w80 {
+  width: 80%;
+}
+img.sp_w80 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.sp_no_link {
+  pointer-events: none;
+}
+#pageTop {
+  display: none;
+}
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #00b8ee;
+}
+
+header nav {
+  width: 100%;
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header ul {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+header li {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 17px;
+}
+
+header li+li {
+  border-left: 1px solid #fff;
+}
+
+header li a {
+  position: relative;
+  display: block;
+  color: #fff;
+}
+
+header li a::after {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border: 1px solid rgba(255, 255, 255, 0);
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  transition: all 100ms ease-in-out;
+  width: 0;
+}
+
+header li a:hover::after {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border-color: #fff;
+  transition: width 350ms ease-in-out;
+  width: 70%;
+}
+.h-sp-menu {
+  display: none;
+}
+
+.body-tablet-sp header li a::after,
+.body-tablet-sp header li a:hover::after {
+  display: none;
+}
+
+.drawer-toggle.drawer-hamburger, .smenu_block{
+  display: none;
+}
+
+@media only screen and (max-width: 690px) {
+  .smenu_block {
+      width: 100%;
+      background: #ff00a2;
+      height: 59px;
+      position: fixed;
+      top: 0;
+      left: 0;
+  }
+  .drawer-toggle.drawer-hamburger{
+    display: block;
+  }
+  .drawer-toggle.drawer-hamburger::after {
+      content: "";
+      display: block;
+      width: 100vw;
+      height: 50px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #00b8ee;
+      z-index: -1;
+  }
+  .drawer-open .drawer-toggle.drawer-hamburger::after {
+      background-color: #99e7ff;
+  }
+  header nav {
+      display: flex;
+      align-items: center;
+  }
+  header ul{
+    width: 94%;
+    margin: auto !important;
+    flex-wrap: wrap; 
+  }
+  header li {width: 100%; text-align: left;}
+  header li+li{border: none; }
+  header li a::after,
+  header li a::after {
+    display: none;
+  }
+  header nav > ul.drawer-menu ul li {
+    position: relative;
+    font-size: 14px;
+  }
+  header nav > ul ul {
+    padding-top: .75rem;
+    padding-bottom: 0;
+  }
+  header nav > ul ul li a::before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 10px;
+    left: -15px;
+    width: 4px;
+    height: 4px;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(-45deg);
+  }
+  .h-sp-menu {
+    display: block;
+    position: absolute;
+    background-color: #00b8ee;
+    top: 14px;
+    right: 15px;
+    cursor: pointer;
+    outline: 0;
+    box-shadow: none;
+    border: 0;
+    width: 38px;
+    height: 38px;
+    text-align: center;
+    border-radius: 5px;
+    -webkit-appearance: none;
+    appearance: none;
+    padding: 0;
+    margin-left: auto;
+    top: 10px;
+    right: 10px;
+  }
+  .h-sp-menu .line {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #fff;
+    border-radius: 5px;
+    margin: 0 auto 7px;
+    -webkit-transition: all ease-in .3s;
+    -moz-transition: all ease-in .3s;
+    transition: all ease-in .3s
+  }
+  .h-sp-menu .line:last-child {
+    margin-bottom: 0
+  }
+  .sp-menu-open.h-sp-menu .line {
+    margin: 5px auto 7.5px;
+  }
+  .sp-menu-open.h-sp-menu .line1 {
+    -webkit-transform: translateY(9px) rotateZ(-45deg);
+    -moz-transform: translateY(9px) rotateZ(-45deg);
+    transform: translateY(10px) rotateZ(-45deg)
+  }
+  .sp-menu-open.h-sp-menu .line2 {
+    background: 0 0;
+    opacity: 0
+  }
+  .sp-menu-open.h-sp-menu .line3 {
+    -webkit-transform: translateY(-9px) rotateZ(45deg);
+    -moz-transform: translateY(-9px) rotateZ(45deg);
+    transform: translateY(-9px) rotateZ(45deg)
+  }
+}
+
+
+/* footer */
+footer {
+  text-align: center;
+  padding-bottom: 45px;
+}
+.lp_footer_logo {
+  width: 160px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.lp_copyright {font-size: 12px; }
+
+@media only screen and (max-width: 690px) {
+footer {padding-bottom: 20px; }
+.lp_footer_logo {width: 28.9vw; padding: 0 0 4.3vw;}
+}
+
+
+
+/*title*/
+.lp_title2_bg_blue {
+  font-size: 26px;
+  line-height: 1.2;
+  color: #fff;
+  background-color: #00b8ee;
+  padding: 10px 25px;
+  margin-bottom: 30px;
+}
+
+.lp_title2_bg_grey {
+  font-size: 26px;
+  line-height: 1.2;
+  background-color: #eee;
+  padding: 10px 25px;
+  margin-bottom: 30px;
+}
+
+.lp_title2_nl {
+  font-size: 33px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.lp_title2_ns {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.lp_title2_r_bd {
+  font-size: 36px;
+  font-weight: bold;
+  color: #e6325a;
+  border-bottom: 4px dotted #e6325a;
+  padding-bottom: 15px;
+  margin-bottom: 50px;
+}
+
+.lp_title2_r_bd .fs90 {
+  font-size: 75%;
+}
+
+.lp_title2_r_bd .fs160 {
+  font-size: 200%;
+  font-weight: normal;
+}
+
+.lp_title2_r_bd .deg45 {
+  display: inline-block;
+  transform: rotate(30deg);
+  font-weight: 300;
+  vertical-align: middle;
+  line-height: 0.7;
+  margin-left: 10px;
+}
+
+.lp_title2_aq_bd {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 10px;
+  margin-bottom: 30px;
+}
+
+.lp_title2_aq_bd:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-top: 4px dotted #00b8ee;
+  top: calc(50% - 2px);
+  left: 0;
+  z-index: -1
+}
+
+.lp_title2_aq_bd_in {
+  position: relative;
+  display: inline-block;
+  background-color: #fff;
+  line-height: 1.4;
+  padding-left: 45px;
+  z-index: 1;
+}
+
+.lp_title2_aq_bd_in:before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 26px;
+  height: 26px;
+  background-color: #00b8ee;
+  top: 9px;
+  left: 0;
+}
+
+.lp_title4_ns {
+  font-size: 21px;
+}
+
+
+
+
+@media only screen and (min-width: 691px) and (max-width: 1119px) {
+.lp_title2_aq_bd_in {
+  padding-left: 55px;
+}
+.lp_title2_aq_bd_in:before {
+  left: 10px;
+}
+}
+
+
+@media only screen and (max-width: 690px) {
+
+.lp_title2_bg_blue {
+  font-size: 28px;
+  line-height: 1.2;
+  color: #fff;
+  background-color: #00b8ee;
+  padding: 10px 25px;
+  margin-bottom: 30px;
+}
+
+.lp_title2_bg_grey {
+  /*font-size: 28px;*/
+  line-height: 1.2;
+  background-color: #eee;
+  padding: 10px 25px;
+  margin-bottom: 30px;
+}
+
+.lp_title2_nl {
+  font-size: 22px;
+}
+
+.lp_title2_ns {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.lp_title2_r_bd {
+  font-size: 24px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.lp_title2_aq_bd {
+  position: relative;
+  font-size: 33px;
+  font-weight: bold;
+  letter-spacing: 10px;
+  margin-bottom: 30px;
+}
+
+.lp_title2_aq_bd:after {
+  top: auto;
+  bottom: -4px;
+}
+
+.lp_title2_aq_bd_in {
+  background-color: transparent;
+  padding-left: 55px;
+}
+
+.lp_title2_aq_bd_in:before {
+  left: 15px;
+}
+
+.lp_title4_ns {
+  font-size: 21px;
+}
+}
+
+
+/*button*/
+
+
+/*------------------------------------------------------------------------------*/
+
+.lp_aqua_oil_btn a,
+.lp_aqua_oil_btn_s a {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1.4;
+  border: 3px solid #00b8ee;
+  color: #00b8ee;
+  background-color: #fff;
+}
+
+.lp_aqua_oil_btn a {
+  font-size: 32px;
+  width: 386px;
+  text-align: center;
+  padding: 20px;
+  letter-spacing: 10px;
+}
+
+.lp_aqua_oil_btn_s a {
+  font-size: 23px;
+  padding: 5px 70px 5px 20px;
+}
+
+.lp_aqua_oil_btn a::before,
+.lp_aqua_oil_btn_s a::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-right: 3px solid rgba(0, 0, 0, .1);
+  border-bottom: 3px solid rgba(0, 0, 0, .1);
+  bottom: -6px;
+  right: -6px;
+}
+
+.lp_aqua_oil_btn a::after,
+.lp_aqua_oil_btn_s a::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-bottom: 3px solid #00b8ee;
+  border-right: 3px solid #00b8ee;
+  top: calc(50% - 8px);
+  right: 30px;
+  transform: rotate(-45deg);
+  transition: all 100ms ease-in-out;
+}
+.lp_aqua_oil_btn a:hover,
+.lp_aqua_oil_btn_s a:hover {
+  color: #fff;
+  background-color: #00b8ee;
+}
+.lp_aqua_oil_btn a:hover::after,
+.lp_aqua_oil_btn_s a:hover::after {
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
+  right: 20px;
+}
+
+.lp_aqua_oil_btn a .lp_aqua_oil_btn_note {
+  display: block;
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+.lp_aqua_oil_txt_link a {
+  font-size: 18px;
+  color: #00b9f0;
+  border-bottom: 1px solid #00b9f0;
+  padding-bottom: 5px;
+}
+
+.lp_aqua_oil_txt_link a::after {
+  content: "\00ff1e";
+  margin-left: 5px;
+}
+
+.lp_aqua_oil_txt_link a:hover {
+  border-bottom: 0;
+}
+
+
+
+.body-tablet-sp .lp_aqua_oil_btn a:hover::after,
+.body-tablet-sp .lp_aqua_oil_btn_s a:hover::after  {
+  display: none;
+}
+.body-tablet-sp .lp_aqua_oil_btn a:hover,
+.body-tablet-sp .lp_aqua_oil_btn_s a:hover {
+  color: #00b8ee;
+  background-color: #fff;
+}
+.body-tablet-sp .lp_aqua_oil_txt_link a:hover {
+  border-bottom: 1px solid #00b9f0;
+}
+
+@media only screen and (min-width: 691px) and (max-width: 1119px) {
+
+.lp_aqua_oil_btn a,
+.lp_aqua_oil_btn_s a {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1.4;
+  border: 3px solid #00b8ee;
+  color: #00b8ee;
+  background-color: #fff;
+}
+
+.lp_aqua_oil_btn a {
+  width: 100%;
+}
+
+.lp_aqua_oil_btn_s a {
+  font-size: 25px;
+  padding: 5px 70px 5px 20px;
+}
+
+.lp_aqua_oil_btn a::before,
+.lp_aqua_oil_btn_s a::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-right: 3px solid rgba(0, 0, 0, .1);
+  border-bottom: 3px solid rgba(0, 0, 0, .1);
+  bottom: -6px;
+  right: -6px;
+}
+
+.lp_aqua_oil_btn a::after,
+.lp_aqua_oil_btn_s a::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-bottom: 3px solid #00b8ee;
+  border-right: 3px solid #00b8ee;
+  top: calc(50% - 8px);
+  right: 30px;
+  transform: rotate(-45deg);
+}
+
+.lp_aqua_oil_btn a .lp_aqua_oil_btn_note {
+  display: block;
+  font-size: 18px;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+.lp_aqua_oil_txt_link a {
+  font-size: 20px;
+  color: #00b9f0;
+  border-bottom: 1px solid #00b9f0;
+  padding-bottom: 5px;
+}
+
+.lp_aqua_oil_txt_link a::after {
+  content: "\00ff1e";
+  margin-left: 5px;
+}
+
+.lp_aqua_oil_txt_link a:hover {
+  border-bottom: 0;
+}
+}
+
+@media only screen and (max-width: 690px) {
+
+.lp_aqua_oil_btn a,
+.lp_aqua_oil_btn_s a {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1.4;
+  border: 3px solid #00b8ee;
+  color: #00b8ee;
+  background-color: #fff;
+}
+
+.lp_aqua_oil_btn a {
+  font-size: 34px;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  letter-spacing: 10px;
+}
+
+.lp_aqua_oil_btn_s a {
+  font-size: 20px;
+  font-size: 5.5vw;
+  padding: 10px 40px 10px 15px;
+}
+
+.lp_aqua_oil_btn a::before,
+.lp_aqua_oil_btn_s a::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-right: 3px solid rgba(0, 0, 0, .1);
+  border-bottom: 3px solid rgba(0, 0, 0, .1);
+  bottom: -6px;
+  right: -6px;
+}
+
+.lp_aqua_oil_btn a::after,
+.lp_aqua_oil_btn_s a::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  top: calc(50% - 8px);
+  right: 15px;
+  transform: rotate(-45deg);
+}
+
+.lp_aqua_oil_btn a .lp_aqua_oil_btn_note {
+  display: block;
+  font-size: 18px;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+.lp_aqua_oil_txt_link a {
+  font-size: 20px;
+  color: #00b9f0;
+  border-bottom: 1px solid #00b9f0;
+  padding-bottom: 5px;
+}
+
+.lp_aqua_oil_txt_link a::after {
+  content: "\00ff1e";
+  margin-left: 5px;
+}
+
+.lp_aqua_oil_txt_link a:hover {
+  border-bottom: 0;
+}
+}
+
+/* aqua oil　*/
+
+
+/*------------------------------------------------------------------------------*/
+
+
+/* mainimage */
+
+.aqua_oil_main_image {
+  position: relative;
+  background-color: #00b8ee;
+  margin-bottom: 100px;
+}
+
+.aqua_oil_main_image:after {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 40px;
+  background-image: url(../image/lp_wavy_line_b.png);
+  background-position: right top;
+  background-size: auto 40px;
+  background-repeat: repeat-x;
+  bottom: -40px;
+}
+
+.aqua_oil_main_image {
+  position: relative;
+  background-color: #00b8ee;
+}
+
+.aqua_oil_main_image_in {
+  position: relative;
+  width: 90%;
+  max-width: 1056px;
+  padding-top: 140px;
+  padding-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.aqua_oil_main_logo {
+  position: absolute;
+  width: 175px;
+}
+
+.aqua_oil_main_txt {
+  display: block;
+  width: 905px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.aqua_oil_deadline {
+  display: block;
+  max-width: 675px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+}
+
+.lp_aqua_oil_main_note {
+  font-size: 16px;
+  text-align: center;
+  color: #fff000;
+  margin-bottom: 40px;
+}
+
+.lp_aqua_oil_main_btn {
+  display: flex;
+  max-width: 905px;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.lp_aqua_oil_main_btn .lp_aqua_oil_btn {
+  width: 48%;
+}
+.lp_aqua_oil_main_btn .lp_aqua_oil_btn a {
+  padding: 10px;
+}
+
+@media only screen and (max-width: 690px) {
+  .aqua_oil_main_image {
+    position: relative;
+    background-color: #00b8ee;
+    margin-bottom: 70px;
+  }
+  .aqua_oil_main_image:after {
+    width: 80%;
+    height: 10px;
+    background-size: auto 10px;
+    bottom: -10px;
+  }
+
+  .aqua_oil_main_image {
+    position: relative;
+    background-color: #00b8ee;
+  }
+
+  .aqua_oil_main_image_in {
+    padding-top: 70px;
+    padding-bottom: 30px;
+
+  }
+  .aqua_oil_main_logo {
+    position: absolute;
+    width: 20vw;
+  }
+
+  .aqua_oil_main_txt {
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .aqua_oil_deadline {
+    display: none;
+  }
+
+  .lp_aqua_oil_main_note {
+    display: none;
+  }
+
+  .lp_aqua_oil_main_btn {
+    display: none;
+  }
+  .lp_aqua_oil_main_btn .lp_aqua_oil_btn a {
+    padding: 10px;
+  }
+}
+
+
+/* aqua_oil_bg_peason */
+
+.lp_aqua_oil_bg_peason {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.lp_aqua_oil_bg_peason>figure {
+  width: 48.5%;
+}
+
+@media only screen and (max-width: 690px) {
+  .lp_aqua_oil_bg_peason {
+    display: none;
+  }
+  .aqua_oil_main_image .lp_aqua_oil_bg_peason {
+    display: block;
+  }
+  .lp_aqua_oil_bg_peason>figure {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* lp_aqua_oil_ti */
+
+.lp_aqua_oil_ti::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.lp_aqua_oil_ti_title,
+.lp_aqua_oil_ti_txt {
+  float: left;
+  width: 77%;
+}
+
+.lp_aqua_oil_ti_img {
+  position: relative;
+  float: right;
+  width: 23%;
+  margin-top: -60px;
+  right: -25px;
+}
+
+
+@media only screen and (max-width: 690px) {
+  .lp_aqua_oil_ti_title {
+  width: 55%;
+}
+  .lp_aqua_oil_ti_txt {
+  float: none;
+    width: 100%;
+    clear: both;
+  }
+.lp_aqua_oil_ti_img {
+  position: static;
+  width: 42%;
+  margin-top: 0;
+}
+
+}
+
+/* aqua_oil_contest_summary */
+
+#aqua_oil_contest_summary {
+  margin-bottom: 45px;
+}
+
+
+/* aqua_oil_news */
+
+#aqua_oil_news {
+  background-color: #eee;
+  margin-bottom: 124px;
+  padding: 15px 25px;
+}
+
+#aqua_oil_news .lp_title2_bg_grey {
+  padding: 0 10px;
+  margin-bottom: 15px;
+}
+
+.lp_aqua_oil_news_in {
+  background-color: #fff;
+  padding: 30px;
+}
+
+#aqua_oil_news dl {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#aqua_oil_news dl:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+#aqua_oil_news .rss_date {
+  width: 120px;
+}
+
+#aqua_oil_news .rss_title {
+  width: calc(100% - 120px);
+}
+
+#aqua_oil_news .rss_title a {
+  color: #cf2122;
+  text-decoration: underline;
+}
+
+#aqua_oil_news .rss_title a:hover {
+  text-decoration: none;
+}
+
+#aqua_oil_news .rss_contents {
+  display: none;
+}
+
+@media only screen and (max-width: 690px) {
+#aqua_oil_news .rss_date {
+  width: 100%;
+}
+
+#aqua_oil_news .rss_title {
+  width: 100%;
+}
+}
+
+/* aqua_oil_what_duo */
+
+#aqua_oil_what_duo,
+#aqua_oil_see_works {
+  position: relative;
+  background-color: #e7f5ff;
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+
+#aqua_oil_what_duo {
+  margin-bottom: 140px;
+}
+
+#aqua_oil_see_works {
+  margin-bottom: 80px;
+}
+
+#aqua_oil_what_duo::before,
+#aqua_oil_see_works::before {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 40px;
+  background-image: url(../image/lp_wavy_line_w.png);
+  background-position: left top;
+  background-size: auto 40px;
+  background-repeat: repeat-x;
+  top: 0;
+  right: 0;
+}
+
+#aqua_oil_what_duo::after,
+#aqua_oil_see_works::after {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 40px;
+  background-image: url(../image/lp_wavy_line_lb.png);
+  background-position: right top;
+  background-size: auto 40px;
+  background-repeat: repeat-x;
+  bottom: -39px;
+  left: 0;
+}
+#aqua_oil_what_duo .lp_aqua_oil_inner {
+  position: relative;
+}
+.aqua_oil_what_duo_img {
+  position: absolute;
+  top: 8%;
+  right: 0;
+  width: 30%;
+}
+@media only screen and (min-width: 691px) and (max-width: 1119px) {
+  #aqua_oil_what_duo .lp_aqua_oil_inner,
+  #aqua_oil_see_works .lp_aqua_oil_inner {
+    width: 96%;
+  }
+#aqua_oil_what_duo::before,
+#aqua_oil_see_works::before {
+  width: 60%;
+  height: 25px;
+  background-size: auto 25px;
+}
+
+#aqua_oil_what_duo::after,
+#aqua_oil_see_works::after {
+  width: 60%;
+  height: 25px;
+  background-size: auto 25px;
+  bottom: -24px;
+}
+}
+@media only screen and (max-width: 800px) {
+  .aqua_oil_what_duo_img {
+    position: static;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 690px) {
+  #aqua_oil_what_duo,
+  #aqua_oil_see_works {
+    position: relative;
+    background-color: #e7f5ff;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  #aqua_oil_what_duo {
+    margin-bottom: 70px;
+  }
+
+  #aqua_oil_what_duo .lp_aqua_oil_btn_s a {
+    width: 100%;
+  }
+
+  #aqua_oil_what_duo .lp_aqua_oil_inner {
+    width: 94%;
+  }
+
+  #aqua_oil_what_duo::before,
+  #aqua_oil_see_works::before {
+    display: none;
+  }
+
+  #aqua_oil_what_duo::after,
+  #aqua_oil_see_works::after {
+    width: 80%;
+    height: 10px;
+    background-size: auto 10px;
+    bottom: -10px;
+  }
+}
+
+/* lp_aqua_oil_table_list */
+
+.lp_aqua_oil_table_list table tr {
+  display: block;
+  padding-bottom: 5px;
+}
+.lp_aqua_oil_table_list table th {
+  width: 160px;
+}
+.quotation_marks {
+  display: inline-block;
+  width: 140px;
+  -moz-text-align-last: justify;
+  text-align-last: justify;
+  text-justify:inter-ideograph;
+}
+.aqua_oil_application_note {
+  position: relative;
+  padding-left: 20px;
+}
+.aqua_oil_application_note::before {
+  position: absolute;
+  content: "\00203b";
+  margin-right: 5px;
+  top: 0;
+  left: 0;
+}
+
+
+@media only screen and (max-width: 690px) {
+.lp_aqua_oil_table_list.lp_aqua_oil_inner_in,
+.lp_aqua_oil_table_list + .lp_aqua_oil_inner_in {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.lp_aqua_oil_table_list table tr {
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.lp_aqua_oil_table_list table th,
+.lp_aqua_oil_table_list table td {
+  display: block;
+  width: 100%;
+}
+}
+
+/* lp_aqua_oil_it */
+
+.lp_aqua_oil_it {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.lp_aqua_oil_it_txt {
+  width: 67%;
+}
+
+.lp_aqua_oil_it_img {
+  width: 30%;
+}
+
+@media only screen and (max-width: 690px) {
+.lp_aqua_oil_it_txt {
+  width: 100%;
+}
+.lp_aqua_oil_it_img {
+  width: 100%;
+}
+}
+
+/* lp_aqua_oil_col2 */
+
+.lp_aqua_oil_col2 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.lp_aqua_oil_col2 .lp_aqua_oil_cell {
+  width: 45.8%;
+}
+
+.lp_aqua_oil_application .lp_aqua_oil_cell img {
+  height: 192px;
+  max-width: auto;
+}
+
+
+
+@media only screen and (max-width: 690px) {
+.lp_aqua_oil_col2 .lp_aqua_oil_cell {
+  width: 100%;
+}
+
+.lp_aqua_oil_application .lp_aqua_oil_cell img {
+  height: auto;
+  max-width: 80%;
+}
+}
+
+
+
+
+
+/* aqua_oil_see_works */
+
+.lp_aqua_oil_see_works_in {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.lp_see_works_item {
+  width: 23.8%;
+  margin-right: 1.6%;
+  border-left: 1px solid #f5f5f5;
+  border-right: 1px solid #f5f5f5;
+  background-color: #fff;
+}
+
+.lp_aqua_oil_see_works_in .lp_see_works_item:nth-of-type(4n) {
+  margin-right: 0;
+}
+
+.lp_see_works_item_detail {
+  padding: 15px 20px 20px;
+}
+
+.lp_see_works_item_ydm_tag {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.lp_see_works_item_ydm_tag time {
+  font-size: 10px;
+}
+
+.lp_see_works_item_tag {
+  font-size: 12px;
+  color: #fff;
+  background-color: #061558;
+  padding: 3px 5px;
+}
+
+.lp_see_works_item_title {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+@media only screen and (max-width: 690px) {
+.lp_aqua_oil_see_works_in {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.lp_see_works_item {
+  width: 48%;
+  margin-right: 4%;
+  margin-bottom: 15px;
+}
+.lp_aqua_oil_see_works_in .lp_see_works_item:nth-of-type(2n) {
+  margin-right: 0;
+}
+}
